@@ -238,8 +238,8 @@ function Save-SynapseSampleArtifacts{
       foreach($database in $sampleArtifactCollection.artifacts.databases)
       {
         $fileContent = Invoke-WebRequest $database.definitionFilePath
-	Write-Host $CuratedDataLakeAccountName
-	$fileContent=$fileContent -replace "<adworksls>",$CuratedDataLakeAccountName
+	Write-Host $RawDataLakeAccountName
+	$fileContent=$fileContent -replace "<adworksls>",$RawDataLakeAccountName
 	Write-Host $fileContent
 	
         if ($database.interface.ToLower() -eq "powershell") {
@@ -259,7 +259,7 @@ function Save-SynapseSampleArtifacts{
 	     foreach($table in $sampleArtifactCollection.artifacts.databases.tables)
      		 {
 		 $fileContent = Invoke-WebRequest $table.definitionFilePath
-		 $fileContent=$fileContent -replace "<adworksls>",$CuratedDataLakeAccountName
+		 $fileContent=$fileContent -replace "<adworksls>",$RawDataLakeAccountName
         	 Write-Host $fileContent
 
        		 if ($table.interface.ToLower() -eq "powershell") {
