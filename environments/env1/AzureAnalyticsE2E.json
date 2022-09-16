@@ -68,11 +68,9 @@
     },
     "sampleArtifactCollectionName": {
       "type": "string",
-      "defaultValue": "SynapseRetail",
+      "defaultValue": "SynapseLab",
       "allowedValues": [
-        "OpenDatasets",
-        "SynapseRetail",
-        "OneClickPoC"
+        "SynapseLab"
       ]
     },
     "ctrlNewOrExistingVNet": {
