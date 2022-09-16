@@ -52,7 +52,7 @@
                     "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/adworkstarget.json",
                     "tables": [],
                     "relationships":[]
-                }
+                },
                 {
                     "name": "adworks",
                     "interface": "rest",
