@@ -14,10 +14,10 @@
 		},
 		"Source": {
 			"Provider": "ADLS",
-			"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget",
+			"Location": "abfss://raw@<adworkstargetls>.dfs.core.windows.net/SynapseRetailFiles",
 			"Properties": {
 				"FormatType": "parquet",
-				"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage"
+				"LinkedServiceName": "<adworkstargetls>"
 			}
 		},
 		"PublishStatus": "PUBLISHED",
