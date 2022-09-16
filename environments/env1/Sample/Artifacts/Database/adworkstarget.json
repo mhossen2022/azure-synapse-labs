@@ -14,7 +14,7 @@
 		},
 		"Source": {
 			"Provider": "ADLS",
-			"Location": "abfss://raw@<adworkstargetls>.dfs.core.windows.net/SynapseRetailFiles",
+			"Location": "abfss://raw@<adworkstargetls>.dfs.core.windows.net/adworkstarget",
 			"Properties": {
 				"FormatType": "parquet",
 				"LinkedServiceName": "<adworkstargetls>"
