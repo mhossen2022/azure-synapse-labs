@@ -48,42 +48,42 @@
                 {
                     "name": "adworks",
                     "interface": "rest",
-                    "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/adworks.json",
+                    "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/adworks.json",
                     "tables": [
                         {
                             "name": "ProductData",
                             "interface": "rest",
-                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/Tables/ProductData.json"
+                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Tables/ProductData.json"
                         },
                         {
                             "name": "Sales",
                             "interface": "rest",
-                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/Tables/Sales.json"
+                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Tables/Sales.json"
                         },
                         {
                             "name": "Calendar",
                             "interface": "rest",
-                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/Tables/Calendar.json"
+                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Tables/Calendar.json"
                         },
                         {
                             "name": "CustomerData",
                             "interface": "rest",
-                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/Tables/CustomerData.json"
+                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Tables/CustomerData.json"
                         },
                         {
                             "name": "Location",
                             "interface": "rest",
-                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/Tables/Location.json"
+                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Tables/Location.json"
                         },
                         {
                             "name": "Reseller",
                             "interface": "rest",
-                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/Tables/Reseller.json"
+                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Tables/Reseller.json"
                         },
                         {
                             "name": "SalesTerritory",
                             "interface": "rest",
-                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/Tables/SalesTerritory.json"
+                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Tables/SalesTerritory.json"
                         }
                     ],
                     "relationships":[
@@ -91,22 +91,22 @@
                         {
                             "name": "relationship-SalesCustomerData",
                             "interface": "rest",
-                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/Relatioship/rsSalesCustomerData.json"
+                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Relatioship/rsSalesCustomerData.json"
                         },
                         {
                             "name": "relationship-SalesDate",
                             "interface": "rest",
-                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/Relatioship/rsSalesDate.json"
+                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Relatioship/rsSalesDate.json"
                         },
                         {
                             "name": "relationship-SalesProductData",
                             "interface": "rest",
-                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/Relatioship/rsSalesProductData.json"
+                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Relatioship/rsSalesProductData.json"
                         },
                         {
                             "name": "relationship-SalesReseller",
                             "interface": "rest",
-                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azure-synapse/Sample/OpenDatasets/Database/Relatioship/rsSalesReseller.json"
+                            "definitionFilePath": https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Relatioship/rsSalesReseller.json"
                         }
                         
                        
