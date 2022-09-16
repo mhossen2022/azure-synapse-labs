@@ -106,7 +106,7 @@
                         {
                             "name": "relationship-SalesReseller",
                             "interface": "rest",
-                            "definitionFilePath": https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Relatioship/rsSalesReseller.json"
+                            "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Database/Relatioship/rsSalesReseller.json"
                         }
                         
                        
