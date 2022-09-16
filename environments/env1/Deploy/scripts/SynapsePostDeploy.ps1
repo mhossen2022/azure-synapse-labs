@@ -254,6 +254,8 @@ function Save-SynapseSampleArtifacts{
             #Assign Synapse Workspace Administrator Role to UAMI
             $body = $fileContent
             Invoke-RestMethod -Method Put -ContentType "application/json" -Uri $uri -Headers $headers -Body $body
+	    if ($database.name -eq "adworks")
+	    {
 	     foreach($table in $sampleArtifactCollection.artifacts.databases.tables)
      		 {
 		 $fileContent = Invoke-WebRequest $table.definitionFilePath
@@ -275,6 +277,7 @@ function Save-SynapseSampleArtifacts{
 	 		}
 		 
      		 }
+	     }
 	    foreach($relationship in $sampleArtifactCollection.artifacts.databases.relationships)
      		 {
 		 $fileContent = Invoke-WebRequest $relationship.definitionFilePath
