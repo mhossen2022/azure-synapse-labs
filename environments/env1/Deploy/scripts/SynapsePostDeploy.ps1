@@ -600,17 +600,6 @@ $ctx17 = New-AzStorageContext -StorageAccountName $RawDataLakeAccountName -Stora
 Invoke-WebRequest -Uri $uri17 -OutFile $bacpacFileName17 
 Set-AzStorageBlobContent -File $bacpacFileName17 -Container "raw" -Blob 'SynapseRetailFiles/SalesTerritory.csv' -Context $ctx17
 
-$uri18 = "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/SynapseRetailFiles/SalesTerritory.csv";
-$bacpacFileName18 = "SalesTerritory.csv";
-#$storageaccount18 = Get-AzStorageAccount -ResourceGroupName $Resourcegroupname;
-$storageaccountkey18 = Get-AzStorageAccountKey -ResourceGroupName $Resourcegroupname -Name $CuratedDataLakeAccountName;
-
-$ctx18 = New-AzStorageContext -StorageAccountName $CuratedDataLakeAccountName -StorageAccountKey $storageaccountkey18.Value[0]
-
-Invoke-WebRequest -Uri $uri18 -OutFile $bacpacFileName18 
-Set-AzStorageBlobContent -File $bacpacFileName18 -Container "raw" -Blob 'adworks/SalesTerritory.csv' -Context $ctx18
-
-
 Write-Host "copying CSV files Completed." 
 }
 
