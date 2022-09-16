@@ -14,7 +14,7 @@
 		},
 		"Source": {
 			"Provider": "ADLS",
-			"Location": "abfss://raw@<adworksls>.dfs.core.windows.net/adworkstarget",
+			"Location": "abfss://raw@<adworksls>.dfs.core.windows.net/adworks",
 			"Properties": {
 				"FormatType": "parquet",
 				"LinkedServiceName": "<adworksls>"
