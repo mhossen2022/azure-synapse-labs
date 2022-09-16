@@ -278,6 +278,8 @@ function Save-SynapseSampleArtifacts{
 		 
      		 }
 	     }
+	    if ($database.name -eq "adworks")
+	    {
 	    foreach($relationship in $sampleArtifactCollection.artifacts.databases.relationships)
      		 {
 		 $fileContent = Invoke-WebRequest $relationship.definitionFilePath
@@ -298,7 +300,8 @@ function Save-SynapseSampleArtifacts{
            		 Invoke-RestMethod -Method Put -ContentType "application/json" -Uri $uri1 -Headers $headers -Body $body
 	 		}
 		 
-     		 }	 
+     		 }
+	     }
         }
       }
 
