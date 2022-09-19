@@ -11,7 +11,7 @@ In this section, you will use dedicated SQL Pool to create tables.
 
 1. In Workspace open **Develop** from the left side navigation
 2. Click on  **SQL Script** to open new sql script file.
-3. Copy below query to create tables
+3. For creating the Date table run the below query.
 
 ``` sql
 CREATE TABLE [dbo].[Date]
@@ -56,88 +56,124 @@ WITH
 );
 
 ```
+4.  For creating the Geography table run the below query.
 
-2. Open Windows Powershell
-3. Navigate to the folder containing your downloaded copy of the repo
-4. Inside the repo, navigate to the **dotnet\setup** folder:
+``` sql
+CREATE TABLE [dbo].[Geography]
+(
+    [GeographyID] int NOT NULL,
+    [ZipCodeBKey] varchar(10) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [County] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [City] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [State] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [Country] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [ZipCode] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
+WITH
+(
+    DISTRIBUTION = ROUND_ROBIN,
+    CLUSTERED COLUMNSTORE INDEX
+);
+```
+5. For creating the HackneyLicense table run the below query
 
-   ```powershell
-   cd .\dotnet\setup\
-   ```
+``` sql
+CREATE TABLE [dbo].[HackneyLicense]
+(
+    [HackneyLicenseID] int NOT NULL,
+    [HackneyLicenseBKey] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [HackneyLicenseCode] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
+WITH
+(
+    DISTRIBUTION = ROUND_ROBIN,
+    CLUSTERED COLUMNSTORE INDEX
+);
+```
+6. For creating the Medallion table run the below query
 
-5. To enable the setup scripts to run in your current Powershell session, enter the following:
+``` sql
+CREATE TABLE [dbo].[Medallion]
+(
+    [MedallionID] int NOT NULL,
+    [MedallionBKey] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [MedallionCode] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
+WITH
+(
+    DISTRIBUTION = ROUND_ROBIN,
+    CLUSTERED COLUMNSTORE INDEX
+);
+```
+8. For creating the Time table run the below query
 
-   ```powershell
-   Set-ExecutionPolicy Unrestricted -Scope Process
-   ```
+``` sql
+CREATE TABLE [dbo].[Time]
+(
+    [TimeID] int NOT NULL,
+    [TimeBKey] varchar(8) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [HourNumber] tinyint NOT NULL,
+    [MinuteNumber] tinyint NOT NULL,
+    [SecondNumber] tinyint NOT NULL,
+    [TimeInSecond] int NOT NULL,
+    [HourlyBucket] varchar(15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [DayTimeBucketGroupKey] int NOT NULL,
+    [DayTimeBucket] varchar(100) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
+)
+WITH
+(
+    DISTRIBUTION = ROUND_ROBIN,
+    CLUSTERED COLUMNSTORE INDEX
+);
+```
+10. For creating the Trip table run the below query
 
-   > This setting will only apply within your current Powershell window.
+``` sql
+CREATE TABLE [dbo].[Trip]
+(
+    [DateID] int NOT NULL,
+    [MedallionID] int NOT NULL,
+    [HackneyLicenseID] int NOT NULL,
+    [PickupTimeID] int NOT NULL,
+    [DropoffTimeID] int NOT NULL,
+    [PickupGeographyID] int NULL,
+    [DropoffGeographyID] int NULL,
+    [PickupLatitude] float NULL,
+    [PickupLongitude] float NULL,
+    [PickupLatLong] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [DropoffLatitude] float NULL,
+    [DropoffLongitude] float NULL,
+    [DropoffLatLong] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [PassengerCount] int NULL,
+    [TripDurationSeconds] int NULL,
+    [TripDistanceMiles] float NULL,
+    [PaymentType] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [FareAmount] money NULL,
+    [SurchargeAmount] money NULL,
+    [TaxAmount] money NULL,
+    [TipAmount] money NULL,
+    [TollsAmount] money NULL,
+    [TotalAmount] money NULL
+)
+WITH
+(
+    DISTRIBUTION = ROUND_ROBIN,
+    CLUSTERED COLUMNSTORE INDEX
+);
+```
+12. For creating the Weather table run the below query
 
-6. Many of the labs refer to pre-built code to use as a starting point for the lab instructions. To automatically copy this starter code for the labs into a **CosmosLabs** folder in your **Documents** folder run the labCodeSetup.ps1 script:
-
-   ```powershell
-   .\labCodeSetup.ps1
-   ```
-
-   > The starter code for each lab is located inside the **templates** folder. To use a folder other that **Documents\CosmosLabs** for your lab code, the files can be copied manually instead.
-
-7. To begin Azure resource setup, first connect to your Azure account:
-
-   ```powershell
-   Connect-AzAccount
-   ```
-
-   or
-
-   ```powershell
-   Connect-AzAccount -subscription <subscription id>
-   ```
-
-8. To create the Azure resources for the labs run the labSetup.ps1 script:
-
-   ```powershell
-   .\labSetup.ps1 -resourceGroupName 'name'
-   ```
-
-   and please choose a `name` which is likely to be unique i.e. `cosmoslabsXXXXX` where `XXXXX` are some random digits.
-
-   - This script creates resources in the _West US_ region by default. To use another region add **-location 'region name'** to the above command.
-
-   - This script will fail if the specified resource group already exists, you may want to choose another `name` value. Alternatively to bypass this failure and create the resources anyway, add **-overwriteGroup** to the above command.
-
-9. Some Azure resources can take 10 minutes or more to complete setup so expect the script to run for a while before completing. After the script completes, your account should contain a **cosmoslabs** resource group with several pre-configured resources:
-
-   - Azure CosmosDB Account
-   - Stream Analytics Job
-   - Azure Data Factory
-   - Event Hubs Namespace
-
-## Log-in to the Azure Portal
-
-1. In a new window, sign in to the **Azure Portal** (<https://portal.azure.com>).
-
-1. Once you have logged in, you may be prompted to start a tour of the Azure portal. You can safely skip this step.
-
-### Retrieve Account Credentials
-
-The .NET SDK requires credentials to connect to your Azure Cosmos DB account. You will collect and store these credentials for use throughout the lab.
-
-1. On the left side of the portal, select the **Resource groups** link.
-
-   ![Resource groups is highlighted](./assets/02-resource_groups.jpg "Select resource groups")
-
-1. In the **Resource groups** blade, locate and select the **cosmoslabs** _Resource Group_.
-
-   ![The recently cosmosdb resource group is highlighted](./assets/02-lab_resource_group.jpg "Select the CosmosDB resource group")
-
-1. In the **cosmoslabs** blade, select the **Azure Cosmos DB** account you recently created.
-
-   ![The Cosmos DB resource is highlighted](./assets/02-cosmos_resource.jpg "Select the Cosmos DB resource")
-
-1. In the **Azure Cosmos DB** blade, locate the **Settings** section and select the **Keys** link.
-
-   ![The Keys pane is highlighted](./assets/02-keys_pane.jpg "Select the Keys Pane")
-
-1. In the **Keys** pane, record the values in the **CONNECTION STRING**, **URI** and **PRIMARY KEY** fields. You will use these values later in this lab.
-
-   ![The URI, Primary Key and Connection string credentials are highlighted](./assets/02-keys.jpg "Copy the URI, primary key and the connection string")
+``` sql
+CREATE TABLE [dbo].[Weather]
+(
+    [DateID] int NOT NULL,
+    [GeographyID] int NOT NULL,
+    [PrecipitationInches] float NOT NULL,
+    [AvgTemperatureFahrenheit] float NOT NULL
+)
+WITH
+(
+    DISTRIBUTION = ROUND_ROBIN,
+    CLUSTERED COLUMNSTORE INDEX
+);
+```
