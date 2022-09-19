@@ -1,11 +1,11 @@
-# Account Setup
+# SQL Script to create tables using dedicated SQL Pool
 
-In this lab, you will setup your Azure subscription with the required resources needed to perform the Cosmos DB labs. The estimated cost to run these labs if you do it in one sitting is ~$100 USD.
+In this section, you will use dedicated SQL Pool to create tables.
 
 ## Prerequisites
 
-- Azure Paid Subscription
-- [Azure PowerShell Module](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
+- Set Azure Active Directory admin 
+
 
 ## Lab Content Setup
 
