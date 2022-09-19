@@ -178,7 +178,7 @@ WITH
 );
 ```
 
-## Validate Table Created
+## Validate Tables Created
 
 1. In Workspace open **Data** from the left side navigation
 2. Expand **SQL database**
