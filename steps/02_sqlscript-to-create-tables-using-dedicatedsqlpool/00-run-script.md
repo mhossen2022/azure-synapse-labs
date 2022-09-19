@@ -177,3 +177,11 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
+
+## Validate Table Created
+
+1. In Workspace open **Data** from the left side navigation
+2. Expand **SQL database**
+3. Expand **EnterpriseDW (SQL)**
+4. Expand **Tables**
+5. Check the tables created.
