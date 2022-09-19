@@ -3,7 +3,24 @@
         "template": "SynapseLab",
         "artifacts" : {
             "sqlScripts": [],
-            "pipelines": [],
+            "pipelines": [
+             {
+                    "name": "DependentDimensions",
+                    "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Pipelines/DependentDimensions.json",
+                    "tokens": []
+              },
+              {
+                    "name": "FactTables",
+                    "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Pipelines/FactTables.json",
+                    "tokens": []
+              },
+              {
+                    "name": "IndependentDimensions",
+                    "definitionFilePath": "https://raw.githubusercontent.com/CSALabsAutomation/azure-synapse-labs/main/environments/env1/Sample/Artifacts/Pipelines/IndependentDimensions.json",
+                    "tokens": []
+              }
+            
+            ],
             "datasets":[],
             "notebooks": [],
             "linkedServices":[],
