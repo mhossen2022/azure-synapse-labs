@@ -14,7 +14,7 @@ In this section, you will use dedicated SQL Pool to create tables.
 
 ![openSQLScript](./assets/1_openSQLScript.JPG "Select resource groups")
 
-4. For creating the **Date** table run the below query.
+3. For creating the **Date** table run the below query.
 
 ``` sql
 CREATE TABLE [dbo].[Date]
@@ -108,7 +108,7 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
-8. For creating the **Time** table run the below query
+7. For creating the **Time** table run the below query
 
 ``` sql
 CREATE TABLE [dbo].[Time]
@@ -129,7 +129,7 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
-10. For creating the **Trip** table run the below query
+8. For creating the **Trip** table run the below query
 
 ``` sql
 CREATE TABLE [dbo].[Trip]
@@ -164,7 +164,7 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
-12. For creating the **Weather** table run the below query
+9. For creating the **Weather** table run the below query
 
 ``` sql
 CREATE TABLE [dbo].[Weather]
