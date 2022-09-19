@@ -12,7 +12,7 @@ In this section, you will use dedicated SQL Pool to create tables.
 1. In Workspace open **Develop** from the left side navigation
 2. Click on  **SQL Script** to open new sql script file.
 
-(./assets/1_openSQLScript.JPG "Select resource groups")
+![openSQLScript](./assets/1_openSQLScript.JPG "Select resource groups")
 
 4. For creating the **Date** table run the below query.
 
