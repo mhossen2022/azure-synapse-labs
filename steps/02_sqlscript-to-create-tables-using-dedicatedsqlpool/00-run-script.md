@@ -188,3 +188,5 @@ WITH
 3. Expand **EnterpriseDW (SQL)**
 4. Expand **Tables**
 5. Check the tables created.
+
+![TablesCreated](./assets/2_validateTablesCreated.JPG "Select resource groups")
