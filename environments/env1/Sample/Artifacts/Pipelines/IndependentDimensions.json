@@ -128,9 +128,7 @@
 				"type": "String"
 			}
 		},
-		"folder": {
-			"name": "3. adworkstarget"
-		},
+		
 		"annotations": [],
 		"lastPublishTime": "2022-04-12T04:46:38Z"
 	},
