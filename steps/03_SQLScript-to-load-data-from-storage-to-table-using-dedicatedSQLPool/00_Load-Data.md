@@ -108,7 +108,7 @@ WITH
 OPTION (LABEL = 'COPY : Load [dbo].[Weather] - Taxi dataset');
 ```
 
-## Validate Tables Created
+## Validate loading data
 
 1. In Workspace open **Data** from the left side navigation
 2. Expand **SQL database**
