@@ -7,13 +7,13 @@ You can access data on ADLS Gen2 with Synapse Spark via the following URL:
  
 This notebook provides examples of how to write the output of Spark jobs directly into an ADLS Gen2 location.
 
-Steps for creating notebook:
-1.	In Synapse Studio, under Develop tab, click on the + (add new resource) icon, select Notebook.
+**Steps for creating notebook:**
+1.	In Synapse Studio, under **_Develop_** tab, click on the **+** (**add new resource**)  icon, select **Notebook**.
  
  ![addSqlScript](./assets/05-create_notebook_adls.jpg "create notebook adls")
  
-2.	Select the Spark Pool in the ‘Attach To’ section. 
-3.	In the properties section on the right pane , renaming the notebook as Open_DataSet_To_ADLS.
+2.	Select the Spark Pool in the **‘Attach To’** section. 
+3.	In the properties section on the right pane , renaming the notebook as ``Open_DataSet_To_ADLS``.
 4.	Run the below scripts in the command cell. And use (+Code) icon for new cells.
  
  ![addSqlScript](./assets/05-run_notebook_adls.jpg "run notebook adls")
@@ -122,7 +122,7 @@ If you have an RDD, you can convert it to a text file like the following:
 hol_RDD.saveAsTextFile(text_path)
 ```
  
-### Validate  file created in   ADLS Gen2 storage
+### Validate file created in ADLS Gen2 storage
  
 Create a dataframe from parquet files
 
