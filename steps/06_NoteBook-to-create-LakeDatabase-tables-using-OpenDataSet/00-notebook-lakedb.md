@@ -8,7 +8,9 @@ Synapse has Azure Open Datasets package pre-installed. This notebook provides ex
 ### Steps for creating a notebook:
 
 1.	In Synapse Studio, under **_Develop_** tab, click on the **_+(add new resource)_** icon, select Notebook.
+
     ![createNotebooks](./assets/06-create_notebook_dl.jpg "create notebook")
+    
 1.	Select the Spark Pool in the **_‘Attach To’_** section. 
 1.	In the properties section on the right pane renaming the notebook as **_Open_DataSet_To_LakeDB_**
 1.	Run the below code in the command cell. And use **_(+Code)_** icon for new cells.
