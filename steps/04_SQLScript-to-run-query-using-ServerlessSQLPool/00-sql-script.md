@@ -3,6 +3,8 @@
 Authoring SQL Script and Run the SQL script:
 
 1.	After opening Synapse Studio, navigate to Develop menu at left side, then select the "+" icon and choose SQL script.
+     
+     ![addSqlScript](./assets/04-add_sql_script.jpg "add sql script")
 
 2.	Copy and paste the snippet on the place given
 
