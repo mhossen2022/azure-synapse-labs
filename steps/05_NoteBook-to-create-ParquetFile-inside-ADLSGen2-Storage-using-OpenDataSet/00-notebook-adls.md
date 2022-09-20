@@ -37,7 +37,16 @@ Displaying 5 rows
  hol_df.show(5, truncate = False)
  ```
  
-+---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ |countryOrRegion|holidayName |normalizeHolidayName |isPaidTimeOff|countryRegionCode|date | +---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ |Belarus |День женщин |День женщин |null |BY |2022-03-08 00:00:00| |Ukraine |Міжнародний жіночий день |Міжнародний жіночий день |null |UA |2022-03-08 00:00:00| |Norway |Søndag |Søndag |null |NO |2022-03-13 00:00:00| |Sweden |Söndag |Söndag |null |SE |2022-03-13 00:00:00| |Hungary |Nemzeti ünnep előtti pihenőnap|Nemzeti ünnep előtti pihenőnap|null |HU |2022-03-14 00:00:00| +---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ only showing top 5 rows 
++---------------+-------------------------+-------------------------+-------------+-----------------+-------------------+
+|countryOrRegion|holidayName              |normalizeHolidayName     |isPaidTimeOff|countryRegionCode|date               |
++---------------+-------------------------+-------------------------+-------------+-----------------+-------------------+
+|Ukraine        |День незалежності України|День незалежності України|null         |UA               |2020-08-24 00:00:00|
+|Norway         |Søndag                   |Søndag                   |null         |NO               |2020-08-30 00:00:00|
+|Sweden         |Söndag                   |Söndag                   |null         |SE               |2020-08-30 00:00:00|
+|England        |Late Summer Bank Holiday |Late Summer Bank Holiday |null         |null             |2020-08-31 00:00:00|
+|Isle of Man    |Late Summer Bank Holiday |Late Summer Bank Holiday |null         |IM               |2020-08-31 00:00:00|
++---------------+-------------------------+-------------------------+-------------+-----------------+-------------------+
+only showing top 5 rows
  
  Markdown | Less | Pretty
 --- | --- | ---
