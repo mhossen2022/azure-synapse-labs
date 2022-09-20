@@ -13,7 +13,7 @@ In this section, you will use dedicated SQL Pool to create tables.
   2.Select Set Admin
   3.Enter your userId or name or emailID for search and click Select
   
-  ![AdminSetting](./assets/prereq1.JPG "Admin Setting")
+  ![AdminSetting](./assets/prereq2.JPG "Admin Setting")
   
   4.Click on Save 
 
