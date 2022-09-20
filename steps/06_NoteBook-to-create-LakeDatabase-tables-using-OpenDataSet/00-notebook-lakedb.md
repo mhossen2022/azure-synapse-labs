@@ -317,7 +317,8 @@ spark.sql("SELECT COUNT(*) FROM nyc_taxi_holiday_weather").show();
 
 **_Out[23]:_**
 
-``+--------+
+``
++--------+
 |count(1)|
 +--------+
 |  337444|
