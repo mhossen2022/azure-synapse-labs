@@ -15,7 +15,10 @@ Authoring SQL Script and Run the SQL script:
 8.	Select the Run button to execute your SQL script.
      
      ![runSqlScript](./assets/04-run_sql_script.jpg "run sql script")
-     
+ 
+ **SQL Scripts**
+ 
+ i. This query fetches top 100 records present in the mentioned path from azraw-storage_account.
    
 ```sql
 
@@ -26,6 +29,8 @@ SELECT TOP 100 * FROM
     )
     AS [nyc];
 ```
+
+ii. This query will fetch number of rides per every year in increasing order.
 
 ```sql
 
@@ -41,6 +46,8 @@ WHERE nyc.filepath(1) >= '2009' AND nyc.filepath(1) <= '2022'
 GROUP BY YEAR(tpepPickupDateTime)
 ORDER BY 1 ASC;
 ```
+
+iii. This query will fetch number of rides every day in date format with increasing order.
 
 ```sql
 
