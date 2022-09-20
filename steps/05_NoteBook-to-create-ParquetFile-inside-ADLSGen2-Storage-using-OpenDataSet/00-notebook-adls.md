@@ -10,13 +10,13 @@ This notebook provides examples of how to write the output of Spark jobs directl
 Steps for creating notebook:
 1.	In Synapse Studio, under Develop tab, click on the + (add new resource) icon, select Notebook.
  
-   ![addSqlScript](./assets/05-create_notebook_adls.jpg "create notebook adls")
+        ![addSqlScript](./assets/05-create_notebook_adls.jpg "create notebook adls")
  
 2.	Select the Spark Pool in the ‘Attach To’ section. 
 3.	In the properties section on the right pane , renaming the notebook as Open_DataSet_To_ADLS.
 4.	Run the below scripts in the command cell. And use (+Code) icon for new cells.
  
-   ![addSqlScript](./assets/05-run_notebook_adls.jpg "run notebook adls")
+        ![addSqlScript](./assets/05-run_notebook_adls.jpg "run notebook adls")
 
 Load sample data
 Let's first load the public holidays of last 6 months from Azure Open datasets as a sample.
@@ -42,6 +42,7 @@ Displaying 5 rows
  hol_df.show(5, truncate = False)
 ```
 out[]:
+
 ``
 +---------------+-------------------------+-------------------------+-------------+-----------------+-------------------+
 |countryOrRegion|holidayName              |normalizeHolidayName     |isPaidTimeOff|countryRegionCode|date               |
@@ -92,14 +93,12 @@ print('parquet file path: ' + parquet_path)
 ```
  
 out[]: 
-``
-parquet file path: abfss://raw@azwksdatalakejea3xm.dfs.core.windows.net/holiday.parquet
- 
-``
+
+``parquet file path: abfss://raw@azwksdatalakejea3xm.dfs.core.windows.net/holiday.parquet``
 
 ```python
 
- hol_df.write.parquet(parquet_path, mode = 'overwrite')
+hol_df.write.parquet(parquet_path, mode = 'overwrite')
 
  
 ```
@@ -115,10 +114,10 @@ text_path = adls_path + 'holiday.txt'
 print('text file path: ' + text_path)
 ```
  
-out[]: 
-``
-text file path: abfss://sandpit@azwksdatalakejea3xm.dfs.core.windows.net/holiday.txt
-``
+out[]:
+ 
+``text file path: abfss://sandpit@azwksdatalakejea3xm.dfs.core.windows.net/holiday.txt``
+
  
 ```python
 # Covert spark dataframe into RDD 
@@ -150,8 +149,8 @@ df_parquet.show(5, truncate = False)
 ```
 
 out[] 
-``
 
+``
 +---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ |countryOrRegion|holidayName |normalizeHolidayName |isPaidTimeOff|countryRegionCode|date | +---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ |Belarus |День женщин |День женщин |null |BY |2022-03-08 00:00:00| |Ukraine |Міжнародний жіночий день |Міжнародний жіночий день |null |UA |2022-03-08 00:00:00| |Norway |Søndag |Søndag |null |NO |2022-03-13 00:00:00| |Sweden |Söndag |Söndag |null |SE |2022-03-13 00:00:00| |Hungary |Nemzeti ünnep előtti pihenőnap|Nemzeti ünnep előtti pihenőnap|null |HU |2022-03-14 00:00:00| +---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ only showing top 5 rows
 ``
 
