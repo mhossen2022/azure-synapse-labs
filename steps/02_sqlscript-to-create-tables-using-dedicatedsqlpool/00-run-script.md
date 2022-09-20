@@ -5,6 +5,17 @@ In this section, you will use dedicated SQL Pool to create tables.
 ## Prerequisites
 
 - Set Azure Active Directory admin 
+  
+  1.Once you open workspace from resource group, click on the "Azure Active Directory" under settings using the left side navigation
+  
+  ![AdminSetting](./assets/prereq.JPG "Admin Setting")
+  
+  2.Select Set Admin
+  3.Enter your userId or name or emailID for search and click Select
+  
+  ![AdminSetting](./assets/prereq1.JPG "Admin Setting")
+  
+  4.Click on Save 
 
 
 ## Create Script
