@@ -6,13 +6,13 @@
      
      ![addSqlScript](./assets/04-add_sql_script.jpg "add sql script")
 
-1.	Copy and paste the snippet on the place given
+1.	Copy and paste the snippet on the place given below in SQL Scripts section
 
 1.	Choose the specific serverless SQL pool(built-in) from the Connect to drop-down menu. And  if necessary, database can be selected.
 
 1.	In the properties section on the right pane renaming the notebook as  ``nyc_sql``
 
-1.	Select the Run button to execute your SQL script.
+1.	Select the Run button to execute your SQL script and observe the results.
      
      ![runSqlScript](./assets/04-run_sql_script.jpg "run sql script")
  
