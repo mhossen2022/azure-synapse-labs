@@ -32,6 +32,7 @@ nyc_tlc_df = nyc_tlc.to_spark_dataframe()
 ```
 
 Displaying 5 rows
+
 **_In[2]:_** 
 ```python
 nyc_tlc_df.show(5, truncate = False)
