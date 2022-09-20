@@ -14,7 +14,12 @@ In this section, you will use dedicated SQL Pool to create tables.
 
 ![openSQLScript](./assets/1_openSQLScript.JPG "Select resource groups")
 
-3. For creating the **Date** table run the below query.
+3. In the properties section rename the script to **"create_table_dedicated"**
+4. Select the **EnterpriseDW** from the Connect to dropdown.
+
+![openSQLScript](./assets/3_renameScript.JPG "rename sql script")
+
+5. For creating the **Date** table run the below query.
 
 ``` sql
 CREATE TABLE [dbo].[Date]
@@ -59,7 +64,7 @@ WITH
 );
 
 ```
-4.  For creating the **Geography** table run the below query.
+6.  For creating the **Geography** table run the below query.
 
 ``` sql
 CREATE TABLE [dbo].[Geography]
@@ -78,7 +83,7 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
-5. For creating the **HackneyLicense** table run the below query
+7. For creating the **HackneyLicense** table run the below query
 
 ``` sql
 CREATE TABLE [dbo].[HackneyLicense]
@@ -93,7 +98,7 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
-6. For creating the **Medallion** table run the below query
+8. For creating the **Medallion** table run the below query
 
 ``` sql
 CREATE TABLE [dbo].[Medallion]
@@ -108,7 +113,7 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
-7. For creating the **Time** table run the below query
+9. For creating the **Time** table run the below query
 
 ``` sql
 CREATE TABLE [dbo].[Time]
@@ -129,7 +134,7 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
-8. For creating the **Trip** table run the below query
+10. For creating the **Trip** table run the below query
 
 ``` sql
 CREATE TABLE [dbo].[Trip]
@@ -164,7 +169,7 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
-9. For creating the **Weather** table run the below query
+11. For creating the **Weather** table run the below query
 
 ``` sql
 CREATE TABLE [dbo].[Weather]
