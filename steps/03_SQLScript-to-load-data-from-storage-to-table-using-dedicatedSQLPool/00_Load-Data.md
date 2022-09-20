@@ -14,7 +14,11 @@ In this section, you will use dedicated SQL Pool to load tables using the files 
 
 ![openSQLScript](./assets/1_openSQLScript.JPG "Select resource groups")
 
-3. For loading the **Date** table run the below query.
+3. In the properties section rename the script to **"load_table_dedicated"**
+4. Select the **EnterpriseDW** from the Connect to dropdown.
+5. Replace the <azrawStorageAccount> placeholder with the **Raw storage account** name
+	
+6. For loading the **Date** table run the below query.
 
 ``` sql
 COPY INTO [dbo].[Date]
