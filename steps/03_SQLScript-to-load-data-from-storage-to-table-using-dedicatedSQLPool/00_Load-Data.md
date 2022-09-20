@@ -18,8 +18,8 @@ In this section, you will use dedicated SQL Pool to load tables using the files 
 4. Select the **EnterpriseDW** from the Connect to dropdown.
 5. Replace the "azrawStorageAccount" placeholder with the **Raw storage account** name
 
- ```sh
-    eg. https://azrawdatalakefa256z.dfs.core.windows.net/raw/date.csv'
+    ```sh
+    eg. https://azrawdatalakefa256z.dfs.core.windows.net/raw/date.csv
     ```
 	
 6. For loading the **Date** table run the below query.
