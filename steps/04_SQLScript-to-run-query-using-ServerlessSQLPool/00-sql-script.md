@@ -17,4 +17,42 @@ Authoring SQL Script and Run the SQL script:
      ![runSqlScript](./assets/04-run_sql_script.jpg "run sql script")
      
    
+```sql
 
+SELECT TOP 100 * FROM
+    OPENROWSET(
+        BULK 'https:// azrawdatalakefa276z.dfs.core.windows.net/raw/yellow/puYear=*/puMonth=*/*.parquet',
+        FORMAT='PARQUET'
+    )
+    AS [nyc];
+```
+
+```sql
+
+SELECT
+    YEAR(tpepPickupDateTime) AS current_year,
+    COUNT(*) AS rides_per_year
+FROM
+    OPENROWSET(
+        BULK 'https://azrawdatalakefa276z.dfs.core.windows.net/raw/yellow/puYear=*/puMonth=*/*.parquet',
+        FORMAT='PARQUET'
+    ) AS [nyc]
+WHERE nyc.filepath(1) >= '2009' AND nyc.filepath(1) <= '2022'
+GROUP BY YEAR(tpepPickupDateTime)
+ORDER BY 1 ASC;
+```
+
+```sql
+
+SELECT
+    CAST([tpepPickupDateTime] AS DATE) AS [current_day],
+    COUNT(*) as rides_per_day
+FROM
+    OPENROWSET(
+        BULK 'https://azrawdatalakefa276z.dfs.core.windows.net/raw/yellow/puYear=*/puMonth=*/*.parquet',
+        FORMAT='PARQUET'
+    ) AS [nyc]
+WHERE nyc.filepath(1) = '2022'
+GROUP BY CAST([tpepPickupDateTime] AS DATE)
+ORDER BY 1 ASC;
+```
