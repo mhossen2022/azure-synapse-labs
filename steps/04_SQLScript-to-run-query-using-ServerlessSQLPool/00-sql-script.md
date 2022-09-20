@@ -16,7 +16,13 @@ Authoring SQL Script and Run the SQL script:
      
      ![runSqlScript](./assets/04-run_sql_script.jpg "run sql script")
      
-     ```sh 
-       dotnet new console
+     ```sql
+        SELECT TOP 100 * FROM
+    OPENROWSET(
+        BULK 'https:// azrawdatalakefa276z.dfs.core.windows.net/raw/yellow/puYear=*/puMonth=*/*.parquet',
+        FORMAT='PARQUET'
+    )
+    AS [nyc];
+
      ```
 
