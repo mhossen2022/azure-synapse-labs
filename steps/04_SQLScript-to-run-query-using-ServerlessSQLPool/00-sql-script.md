@@ -13,4 +13,6 @@ Authoring SQL Script and Run the SQL script:
 6.	In the properties section on the right pane renaming the notebook as   nyc_sql
 
 8.	Select the Run button to execute your SQL script.
+     
+     ![runSqlScript](./assets/04-run_sql_script.jpg "run sql script")
 
