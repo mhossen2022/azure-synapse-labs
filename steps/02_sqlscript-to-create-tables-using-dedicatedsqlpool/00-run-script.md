@@ -10,12 +10,13 @@ In this section, you will use dedicated SQL Pool to create tables.
   
   ![AdminSetting](./assets/prereq.JPG "Admin Setting")
   
-  2.Select Set Admin
-  3.Enter your userId or name or emailID for search and click Select
+  2.Select **Set Admin**
+  
+  3.Enter your userId or name or emailID for search and click **Select**
   
   ![AdminSetting](./assets/prereq2.JPG "Admin Setting")
   
-  4.Click on Save 
+  4.Click on **Save** 
 
 
 ## Create Script
