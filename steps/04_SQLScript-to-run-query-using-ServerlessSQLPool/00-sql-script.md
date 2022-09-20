@@ -16,7 +16,7 @@ Authoring SQL Script and Run the SQL script:
      
      ![runSqlScript](./assets/04-run_sql_script.jpg "run sql script")
      
-     ``sh 
+     ```sh 
        dotnet new console
-     ``
+     ```
 
