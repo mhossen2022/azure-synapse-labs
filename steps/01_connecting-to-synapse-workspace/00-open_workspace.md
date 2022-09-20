@@ -16,7 +16,7 @@ In this lab, you will be redirected to the resource group and using below steps 
     -	Synapse Workspace name starts with **“azsynapsewks”** 
     
     
-![storage](./assets/1_chk_storage_accounts.JPG "Select storage accounts")
+![storage](./assets/1_chk_storage_accounts.jpg "Select storage accounts")
 
 2. Note down the Raw Storage Account name, this will be used later in the lab.
 3. Select Synapse workspace. It will open synapse workspace overview.
