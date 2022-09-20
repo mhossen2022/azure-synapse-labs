@@ -15,4 +15,8 @@ Authoring SQL Script and Run the SQL script:
 8.	Select the Run button to execute your SQL script.
      
      ![runSqlScript](./assets/04-run_sql_script.jpg "run sql script")
+     
+     ``sh 
+       dotnet new console
+     ``
 
