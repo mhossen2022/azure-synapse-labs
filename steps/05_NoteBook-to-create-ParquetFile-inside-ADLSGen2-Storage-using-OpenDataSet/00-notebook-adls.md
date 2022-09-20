@@ -81,6 +81,7 @@ Dataframes can be saved in any format, regardless of the input format.
 But here in this lab, we have demonstrated with Parquet method only.
  
 ```python
+ In[]:
 
  parquet_path = adls_path + 'holiday.parquet'
 
@@ -88,7 +89,9 @@ print('parquet file path: ' + parquet_path)
 
 ```
  
-``parquet file path: abfss://raw@azwksdatalakejea3xm.dfs.core.windows.net/holiday.parquet``
+``
+ out[]: parquet file path: abfss://raw@azwksdatalakejea3xm.dfs.core.windows.net/holiday.parquet
+ ``
 
 ```python
 
