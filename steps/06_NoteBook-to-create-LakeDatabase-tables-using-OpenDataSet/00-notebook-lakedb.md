@@ -8,13 +8,11 @@ Synapse has Azure Open Datasets package pre-installed. This notebook provides ex
 ### Steps for creating a notebook:
 
 1.	In Synapse Studio, under **_Develop_** tab, click on the **_+(add new resource)_** icon, select Notebook.
-
-    ![createNotebooks](./assets/06-create_notebook_dl.jpg "create notebook")
-    
-1.	Select the Spark Pool in the **_‘Attach To’_** section. 
-1.	In the properties section on the right pane renaming the notebook as **_Open_DataSet_To_LakeDB_**
-1.	Run the below code in the command cell. And use **_(+Code)_** icon for new cells.
-    ![runSqlScript](./assets/06-run_notebook_dl.jpg "run notebook ")
+  
+3.	Select the Spark Pool in the **_‘Attach To’_** section. 
+3.	In the properties section on the right pane renaming the notebook as **_Open_DataSet_To_LakeDB_**
+4.	Run the below code in the command cell. And use **_(+Code)_** icon for new cells.
+   
 
 ### Data loading
 
@@ -31,7 +29,7 @@ start_date = parser.parse('2018-05-01')
 
 nyc_tlc = NycTlcGreen(start_date=start_date, end_date=end_date)
 nyc_tlc_df = nyc_tlc.to_spark_dataframe()
-'''
+```
 
 Displaying 5 rows
 **_In[2]:_** 
@@ -90,7 +88,7 @@ hol_df = hol.to_spark_dataframe()
 
 # Display data
 hol_df.show(5, truncate = False)
-'''
+```
 
 **_Out[6]:_**
 +---------------+----------------------------+----------------------------+-------------+-----------------+-------------------+ |countryOrRegion|holidayName |normalizeHolidayName |isPaidTimeOff|countryRegionCode|date | +---------------+----------------------------+----------------------------+-------------+-----------------+-------------------+ |Argentina |Día del Trabajo [Labour Day]|Día del Trabajo [Labour Day]|null |AR |2018-05-01 00:00:00| |Austria |Staatsfeiertag |Staatsfeiertag |null |AT |2018-05-01 00:00:00| |Belarus |Праздник труда |Праздник труда |null |BY |2018-05-01 00:00:00| |Belgium |Dag van de Arbeid |Dag van de Arbeid |null |BE |2018-05-01 00:00:00| |Brazil |Dia Mundial do Trabalho |Dia Mundial do Trabalho |null |BR |2018-05-01 00:00:00| +---------------+----------------------------+----------------------------+-------------+-----------------+-------------------+ only showing top 5 rows
@@ -172,6 +170,7 @@ weather_df_clean = weather_df.select([column for column in weather_df.columns if
 
 weather_df_clean.show(5, truncate = False)
 ```
+
 **_Out[13]: _**
 +-------------------+---------+---------+---------+-----------+--------------+-------------+-----------------------+--------------------+----------+-----------+---------+------------------------------------+---------------+------------+----+---+-------+-----+----------+ |datetime_full |elevation|windAngle|windSpeed|temperature|seaLvlPressure|cloudCoverage|presentWeatherIndicator|pastWeatherIndicator|precipTime|precipDepth|snowDepth|stationName |countryOrRegion|p_k |year|day|version|month|datetime | +-------------------+---------+---------+---------+-----------+--------------+-------------+-----------------------+--------------------+----------+-----------+---------+------------------------------------+---------------+------------+----+---+-------+-----+----------+ |2018-05-20 15:00:00|7.0 |230 |8.2 |23.9 |1014.3 |BKN |null |null |null |null |null |JOHN F KENNEDY INTERNATIONAL AIRPORT|US |744860-94789|2018|20 |1.0 |5 |2018-05-20| |2018-05-26 12:51:00|7.0 |220 |5.1 |23.9 |1010.6 |FEW |null |null |1.0 |0.0 |null |JOHN F KENNEDY INTERNATIONAL AIRPORT|US |744860-94789|2018|26 |1.0 |5 |2018-05-26| |2018-05-27 13:51:00|7.0 |80 |6.2 |17.2 |1015.9 |null |63 |null |1.0 |53.0 |null |JOHN F KENNEDY INTERNATIONAL AIRPORT|US |744860-94789|2018|27 |1.0 |5 |2018-05-27| |2018-05-17 11:49:00|7.0 |100 |2.6 |14.0 |null |null |61 |null |null |null |null |JOHN F KENNEDY INTERNATIONAL AIRPORT|US |744860-94789|2018|17 |1.0 |5 |2018-05-17| |2018-05-04 18:51:00|7.0 |170 |6.2 |22.8 |1011.9 |null |null |null |1.0 |0.0 |null |JOHN F KENNEDY INTERNATIONAL AIRPORT|US |744860-94789|2018|4 |1.0 |5 |2018-05-04| +-------------------+---------+---------+---------+-----------+--------------+-------------+-----------------------+--------------------+----------+-----------+---------+------------------------------------+---------------+------------+----+---+-------+-----+----------+ only showing top 5 rows
 
@@ -236,7 +235,7 @@ The summary statistics shows that the totalAmount field has negative values, whi
 # Remove invalid rows with less than 0 taxi fare or tip
 final_df = nyc_taxi_holiday_weather_df.filter(nyc_taxi_holiday_weather_df.tipAmount > 0)\
                                       .filter(nyc_taxi_holiday_weather_df.totalAmount > 0)
-'''
+```
 
 ### Cleaning up the existing Database
 
