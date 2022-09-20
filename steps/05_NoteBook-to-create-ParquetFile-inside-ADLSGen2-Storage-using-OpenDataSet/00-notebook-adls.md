@@ -19,7 +19,7 @@ Steps for creating notebook:
 Load sample data
 Let's first load the public holidays of last 6 months from Azure Open datasets as a sample.
 
- ```python
+```python
  
 from azureml.opendatasets import PublicHolidays
 
@@ -60,7 +60,7 @@ Replace the "azrawStorageAccount" placeholder with the **Raw storage account** n
 
 ```python
  
- from pyspark.sql import SparkSession
+from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 
 # Primary storage info
@@ -90,6 +90,7 @@ print('parquet file path: ' + parquet_path)
  
 ``
  out[]: parquet file path: abfss://raw@azwksdatalakejea3xm.dfs.core.windows.net/holiday.parquet
+ 
 ``
 
 ```python
@@ -108,9 +109,10 @@ If you have a dataframe that you want to save as text file, you must first cover
 # Define the text file path
 text_path = adls_path + 'holiday.txt'
 print('text file path: ' + text_path)
-
+```
+ 
 ``
- out[]: text file path: abfss://sandpit@azwksdatalakejea3xm.dfs.core.windows.net/holiday.txt
+out[]: text file path: abfss://sandpit@azwksdatalakejea3xm.dfs.core.windows.net/holiday.txt
 ``
  
 ```python
@@ -120,8 +122,31 @@ type(hol_RDD)
  
 ```
  
-
+If you have an RDD, you can convert it to a text file like the following:
  
+```python
+ 
+# Save RDD as text file
+hol_RDD.saveAsTextFile(text_path)
+```
+ 
+### Validate  file created in   ADLS Gen2 storage
+ 
+Create a dataframe from parquet files
+
+```python
+
+df_parquet = spark.read.parquet(parquet_path)
+```
+```python
+ 
+#Displaying 5 records
+df_parquet.show(5, truncate = False)
+```
+``
+out[] 
++---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ |countryOrRegion|holidayName |normalizeHolidayName |isPaidTimeOff|countryRegionCode|date | +---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ |Belarus |День женщин |День женщин |null |BY |2022-03-08 00:00:00| |Ukraine |Міжнародний жіночий день |Міжнародний жіночий день |null |UA |2022-03-08 00:00:00| |Norway |Søndag |Søndag |null |NO |2022-03-13 00:00:00| |Sweden |Söndag |Söndag |null |SE |2022-03-13 00:00:00| |Hungary |Nemzeti ünnep előtti pihenőnap|Nemzeti ünnep előtti pihenőnap|null |HU |2022-03-14 00:00:00| +---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ only showing top 5 rows
+``
 
 
 
