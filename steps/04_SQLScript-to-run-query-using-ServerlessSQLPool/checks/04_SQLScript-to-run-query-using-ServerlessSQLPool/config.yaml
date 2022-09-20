@@ -1,5 +1,5 @@
-title: Created Partitioned Container with .NET SDK
-internal_name: Created a Partitioned Container with .NET SDK
+title: SQL Script to run query using Serverless SQL Pool
+internal_name: SQL Script to run query using Serverless SQL Pool
 vendor: azure
 runtime: python3.8
 memory: 128
