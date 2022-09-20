@@ -39,7 +39,8 @@ Displaying 5 rows
  
  hol_df.show(5, truncate = False)
 ```
-`` out[]:
+out[]:
+``
 +---------------+-------------------------+-------------------------+-------------+-----------------+-------------------+
 |countryOrRegion|holidayName              |normalizeHolidayName     |isPaidTimeOff|countryRegionCode|date               |
 +---------------+-------------------------+-------------------------+-------------+-----------------+-------------------+
@@ -82,14 +83,15 @@ But here in this lab, we have demonstrated with Parquet method only.
  
 ```python
 
- parquet_path = adls_path + 'holiday.parquet'
+parquet_path = adls_path + 'holiday.parquet'
 
 print('parquet file path: ' + parquet_path)
 
 ```
  
+out[]: 
 ``
- out[]: parquet file path: abfss://raw@azwksdatalakejea3xm.dfs.core.windows.net/holiday.parquet
+parquet file path: abfss://raw@azwksdatalakejea3xm.dfs.core.windows.net/holiday.parquet
  
 ``
 
@@ -111,8 +113,9 @@ text_path = adls_path + 'holiday.txt'
 print('text file path: ' + text_path)
 ```
  
+out[]: 
 ``
-out[]: text file path: abfss://sandpit@azwksdatalakejea3xm.dfs.core.windows.net/holiday.txt
+text file path: abfss://sandpit@azwksdatalakejea3xm.dfs.core.windows.net/holiday.txt
 ``
  
 ```python
@@ -126,7 +129,7 @@ If you have an RDD, you can convert it to a text file like the following:
  
 ```python
  
-# Save RDD as text file
+#Save RDD as text file
 hol_RDD.saveAsTextFile(text_path)
 ```
  
@@ -143,8 +146,10 @@ df_parquet = spark.read.parquet(parquet_path)
 #Displaying 5 records
 df_parquet.show(5, truncate = False)
 ```
-``
+
 out[] 
+``
+
 +---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ |countryOrRegion|holidayName |normalizeHolidayName |isPaidTimeOff|countryRegionCode|date | +---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ |Belarus |День женщин |День женщин |null |BY |2022-03-08 00:00:00| |Ukraine |Міжнародний жіночий день |Міжнародний жіночий день |null |UA |2022-03-08 00:00:00| |Norway |Søndag |Søndag |null |NO |2022-03-13 00:00:00| |Sweden |Söndag |Söndag |null |SE |2022-03-13 00:00:00| |Hungary |Nemzeti ünnep előtti pihenőnap|Nemzeti ünnep előtti pihenőnap|null |HU |2022-03-14 00:00:00| +---------------+------------------------------+------------------------------+-------------+-----------------+-------------------+ only showing top 5 rows
 ``
 
