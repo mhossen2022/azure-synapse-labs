@@ -53,6 +53,52 @@ only showing top 5 rows
 *Still* | `renders` | **nicely**
 1 | 2 | 3
  
+### Write data to the default ADLS Gen2 storage
+We are going to write the spark dataframe to your default ADLS Gen2 storage account.
+Note: 
+Replace the "azrawStorageAccount" placeholder with the **Raw storage account** name before running the below code.
+
+ ```python
+ 
+ from pyspark.sql import SparkSession
+from pyspark.sql.types import *
+
+# Primary storage info
+account_name = ' <azrawStorageAccount> ' # fill in your primary account name
+container_name = 'raw' # fill in the container name
+relative_path = ''
+
+adls_path = 'abfss://%s@%s.dfs.core.windows.net/%s' % (container_name, account_name, relative_path)
+print('Primary storage account path: ' + adls_path)
+
+ ```
+ 
+### Save a dataframe as Parquet
+If you have a dataframe, you can save it to Parquet or JSON with the .write.parquet(), .write.json() and .write.csv() methods respectively.
+ 
+Dataframes can be saved in any format, regardless of the input format.
+ 
+But here in this lab, we have demonstrated with Parquet method only.
+ 
+```python
+
+ parquet_path = adls_path + 'holiday.parquet'
+
+print('parquet file path: ' + parquet_path)
+
+```
+ 
+``parquet file path: abfss://raw@azwksdatalakejea3xm.dfs.core.windows.net/holiday.parquet``
+
+```python
+
+ hol_df.write.parquet(parquet_path, mode = 'overwrite')
+
+ 
+```
+
+
+
  
  
  
