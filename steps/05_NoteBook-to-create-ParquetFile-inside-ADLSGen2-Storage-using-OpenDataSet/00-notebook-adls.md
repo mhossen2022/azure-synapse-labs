@@ -3,26 +3,25 @@
 Azure Data Lake Storage Gen2 (ADLS Gen2) is used as the storage account associated with a Synapse workspace. A synapse workspace can have a default ADLS Gen2 storage account and additional linked storage accounts.
 You can access data on ADLS Gen2 with Synapse Spark via the following URL:
 
-abfss://<container_name>@<storage_account_name>.dfs.core.windows.net/<path>
+``abfss://<container_name>@<storage_account_name>.dfs.core.windows.net/<path>``
  
 This notebook provides examples of how to write the output of Spark jobs directly into an ADLS Gen2 location.
 
 Steps for creating notebook:
 1.	In Synapse Studio, under Develop tab, click on the + (add new resource) icon, select Notebook.
  
-        ![addSqlScript](./assets/05-create_notebook_adls.jpg "create notebook adls")
+ ![addSqlScript](./assets/05-create_notebook_adls.jpg "create notebook adls")
  
 2.	Select the Spark Pool in the ‘Attach To’ section. 
 3.	In the properties section on the right pane , renaming the notebook as Open_DataSet_To_ADLS.
 4.	Run the below scripts in the command cell. And use (+Code) icon for new cells.
  
-        ![addSqlScript](./assets/05-run_notebook_adls.jpg "run notebook adls")
+ ![addSqlScript](./assets/05-run_notebook_adls.jpg "run notebook adls")
 
 Load sample data
 Let's first load the public holidays of last 6 months from Azure Open datasets as a sample.
 
 ```python
- 
 from azureml.opendatasets import PublicHolidays
 
 from datetime import datetime
@@ -38,8 +37,7 @@ hol_df = hol.to_spark_dataframe()
 Displaying 5 rows
  
 ```python
- 
- hol_df.show(5, truncate = False)
+hol_df.show(5, truncate = False)
 ```
 out[]:
 
@@ -63,7 +61,6 @@ Note:
 Replace the "azrawStorageAccount" placeholder with the **Raw storage account** name before running the below code.
 
 ```python
- 
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 
@@ -74,7 +71,6 @@ relative_path = ''
 
 adls_path = 'abfss://%s@%s.dfs.core.windows.net/%s' % (container_name, account_name, relative_path)
 print('Primary storage account path: ' + adls_path)
-
 ```
  
 ### Save a dataframe as Parquet
@@ -85,11 +81,9 @@ Dataframes can be saved in any format, regardless of the input format.
 But here in this lab, we have demonstrated with Parquet method only.
  
 ```python
-
 parquet_path = adls_path + 'holiday.parquet'
 
 print('parquet file path: ' + parquet_path)
-
 ```
  
 out[]: 
@@ -97,10 +91,7 @@ out[]:
 ``parquet file path: abfss://raw@azwksdatalakejea3xm.dfs.core.windows.net/holiday.parquet``
 
 ```python
-
 hol_df.write.parquet(parquet_path, mode = 'overwrite')
-
- 
 ```
  
 ### Save a dataframe as text files
@@ -108,7 +99,6 @@ hol_df.write.parquet(parquet_path, mode = 'overwrite')
 If you have a dataframe that you want to save as text file, you must first covert it to an RDD and then save that RDD as a text file.
  
 ```python
-
 # Define the text file path
 text_path = adls_path + 'holiday.txt'
 print('text file path: ' + text_path)
@@ -123,13 +113,11 @@ out[]:
 # Covert spark dataframe into RDD 
 hol_RDD = hol_df.rdd
 type(hol_RDD)
- 
 ```
  
 If you have an RDD, you can convert it to a text file like the following:
  
 ```python
- 
 #Save RDD as text file
 hol_RDD.saveAsTextFile(text_path)
 ```
@@ -139,11 +127,10 @@ hol_RDD.saveAsTextFile(text_path)
 Create a dataframe from parquet files
 
 ```python
-
 df_parquet = spark.read.parquet(parquet_path)
 ```
+
 ```python
- 
 #Displaying 5 records
 df_parquet.show(5, truncate = False)
 ```
