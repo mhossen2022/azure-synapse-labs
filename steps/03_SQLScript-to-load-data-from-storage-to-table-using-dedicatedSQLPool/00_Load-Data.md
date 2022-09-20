@@ -16,7 +16,11 @@ In this section, you will use dedicated SQL Pool to load tables using the files 
 
 3. In the properties section rename the script to **"load_table_dedicated"**
 4. Select the **EnterpriseDW** from the Connect to dropdown.
-5. Replace the "azrawStorageAccount" placeholder with the **Raw storage account** name before running the below sql script.
+
+![renameSQLScript](./assets/2_rename_load_script.JPG "rename script")
+
+
+6. Replace the "azrawStorageAccount" placeholder with the **Raw storage account** name before running the below sql script.
 
     ```sh
     eg. https://azrawdatalakefa256z.dfs.core.windows.net/raw/date.csv
@@ -122,6 +126,10 @@ OPTION (LABEL = 'COPY : Load [dbo].[Weather] - Taxi dataset');
 2. Expand **SQL database**
 3. Expand **EnterpriseDW (SQL)**
 4. Expand **Tables**
-5. Check the tables created.
+5. Right click on any table then select **New SQL Script > Select TOP 100 Rows**.
 
-![TablesCreated](./assets/2_validateTablesCreated.JPG "Select resource groups")
+![selecttop100](./assets/3_select_top100.JPG "Select top 100")
+
+7. Run the script to check the data loaded in the table.
+
+![RunQuery](./assets/4_query_result.JPG "run query")
