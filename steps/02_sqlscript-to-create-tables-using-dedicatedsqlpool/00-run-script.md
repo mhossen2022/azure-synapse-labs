@@ -21,7 +21,7 @@ In this section, you will use dedicated SQL Pool to create tables.
 
 ## Create Script
 
-1. In Workspace open **Develop** from the left side navigation
+1. In Synapse studio open **Develop** from the left side navigation
 2. Click on  **SQL Script** to open new sql script file.
 
 ![openSQLScript](./assets/1_openSQLScript.JPG "Select resource groups")
