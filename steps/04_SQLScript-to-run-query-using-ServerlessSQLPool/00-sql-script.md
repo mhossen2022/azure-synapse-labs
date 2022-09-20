@@ -1,4 +1,4 @@
-## SQLScript-to-run-query-using-ServerlessSQLPool
+## SQL Script to run query using Serverless SQL Pool
 
 Authoring SQL Script and Run the SQL script:
 
