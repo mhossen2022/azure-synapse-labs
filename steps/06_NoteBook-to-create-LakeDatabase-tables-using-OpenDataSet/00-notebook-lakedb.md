@@ -14,6 +14,8 @@ Synapse has Azure Open Datasets package pre-installed. This notebook provides ex
 3.	Select the Spark Pool in the **_‘Attach To’_** section. 
 3.	In the properties section on the right pane renaming the notebook as **_Open_DataSet_To_LakeDB_**
 4.	Run the below code in the command cell. And use **_(+Code)_** icon for new cells.
+       
+       ![runSqlScript](./assets/06-run_notebook_dl.jpg "run notebook ")
    
 
 ### Data loading
