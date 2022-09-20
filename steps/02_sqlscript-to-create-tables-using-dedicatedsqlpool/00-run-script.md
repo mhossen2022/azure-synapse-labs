@@ -185,6 +185,8 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
+12. Publish the script for future references. 
+
 
 ## Validate Tables Created
 
