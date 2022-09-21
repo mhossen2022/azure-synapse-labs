@@ -66,7 +66,7 @@ Select Variable to create below pipeline variables
         
         ![pipeline](./assets/pl8.png "Create pipeline")
         
-   1. Set parameter tableName value as @variables('tableName') 
+   1. Set parameter tableName value as ``@variables('tableName')`` 
     
         ![pipeline](./assets/pl9.png "Create pipeline")
 
