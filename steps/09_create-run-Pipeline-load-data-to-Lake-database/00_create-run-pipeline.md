@@ -20,9 +20,9 @@ Select Variable to create below pipeline variables
   3.	Click on “Get Metadata” to set below settings
   
   4.	Select General section and give name as **"Get File List"**  and Timeout **""7.00:00:00"**
-     
-    ![pipeline](./assets/pl3.png "Create pipeline")
-    
+  
+  ![pipeline](./assets/pl3.png "Create pipeline")
+  
   5.	Select “Settings” and set dataset name as “raw”. 
   6.	After selecting dataset it will be populated with Dataset Properties.
   7.	Set folderPath to “@variables('adworksSourceFolderPath')”
