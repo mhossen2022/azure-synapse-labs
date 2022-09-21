@@ -18,9 +18,9 @@ Select Variable to create below pipeline variables
    ![pipeline](./assets/pl2.png "Create pipeline")
    
   3.	Click on “Get Metadata” to set below settings
-  4.	Select General section and give name as “Get File List”  and Timeout “7.00:00:00”
- 
-    
+  
+  4.	Select General section and give name as **"Get File List"**  and Timeout **""7.00:00:00"**
+     
     ![pipeline](./assets/pl3.png "Create pipeline")
     
   5.	Select “Settings” and set dataset name as “raw”. 
