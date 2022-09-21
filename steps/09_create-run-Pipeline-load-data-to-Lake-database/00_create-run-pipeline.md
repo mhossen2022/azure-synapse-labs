@@ -64,7 +64,5 @@ Select Variable to create below pipeline variables
         -Folderpath as ``“@variables('adworksSourceFolderPath')”``
         
         ![pipeline](./assets/pl8.png "Create pipeline")
-          
-    ![pipeline](./assets/pl9.png "Create pipeline")
 
 
