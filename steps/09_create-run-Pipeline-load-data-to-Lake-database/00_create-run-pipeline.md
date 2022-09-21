@@ -40,8 +40,8 @@ Select Variable to create below pipeline variables
   ![pipeline](./assets/pl5.png "Create pipeline")
      
    10.	Give name to foreach activity under section “General.
-
-       Select Section and select Sequential as True and  mention Items as    ``“@activity('Get File List').output.childItems”``
+   
+       Select Section and select Sequential as True and  mention Items as ``“@activity('Get File List').output.childItems”``
        
    11.	Double click on **“Foreach”** activity  to add activities.
    
@@ -64,9 +64,7 @@ Select Variable to create below pipeline variables
         -Folderpath as ``“@variables('adworksSourceFolderPath')”``
         
         ![pipeline](./assets/pl8.png "Create pipeline")
-        
-    17.	Set parameter tableName value as ``“@variables('tableName')``
-    
+          
     ![pipeline](./assets/pl9.png "Create pipeline")
 
 
