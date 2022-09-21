@@ -39,7 +39,7 @@ Select Variable to create below pipeline variables
   
   ![pipeline](./assets/pl5.png "Create pipeline")
      
-   10.	Give name to foreach activity under section “General.
+   10.	Give name to foreach activity under section **“General"**.
    
        Select Section and select Sequential as True and  mention Items as ``“@activity('Get File List').output.childItems”``
        
@@ -51,7 +51,8 @@ Select Variable to create below pipeline variables
    
    ![pipeline](./assets/pl6.png "Create pipeline")
       
-   14.	Add output source to **“set variable”** by click on **“-->”** and add **“Dataflow”** activity  and name it as **“Load adworks”** , set Timeout to **“1.00:00:00”**
+   14.	Add output source to **“set variable”** by click on **“-->”** and 
+       add **“Dataflow”** activity  and name it as **“Load adworks”** ,set Timeout to **“1.00:00:00”**
    
    ![pipeline](./assets/pl7.png "Create pipeline")
        
@@ -64,5 +65,9 @@ Select Variable to create below pipeline variables
         -Folderpath as ``“@variables('adworksSourceFolderPath')”``
         
         ![pipeline](./assets/pl8.png "Create pipeline")
+   
+    17. Set parameter tableName value as ``“@variables('tableName')"``
+    
+      ![pipeline](./assets/pl9.png "Create pipeline")
 
 
