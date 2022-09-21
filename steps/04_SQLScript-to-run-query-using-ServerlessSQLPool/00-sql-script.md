@@ -63,3 +63,8 @@ WHERE nyc.filepath(1) = '2022'
 GROUP BY CAST([tpepPickupDateTime] AS DATE)
 ORDER BY 1 ASC;
   ```
+### Publishing the SQL Script
+
+Once executing all the code cells. Click **_Validate All_** and **_Publish All_** at the top.
+
+![publishSqlScript](./assets/04-publish_sql_script.jpg "publish sql script")
