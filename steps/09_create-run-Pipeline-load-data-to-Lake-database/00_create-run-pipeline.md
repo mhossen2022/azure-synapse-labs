@@ -27,12 +27,12 @@ Select Variable to create below pipeline variables
   6.	After selecting dataset it will be populated with Dataset Properties.
   7.	Set folderPath to “@variables('adworksSourceFolderPath')”
   8.	Add FieldList by click on “+New” and select “ChildItem” from selection.
-
-     ![pipeline](./assets/pl4.png "Create pipeline") 
-     
-    9.	Add Output source as Foreach activity from Iteration & conditionals
+  
+  ![pipeline](./assets/pl4.png "Create pipeline")
+  
+  9.	Add Output source as Foreach activity from Iteration & conditionals
     
-     ![pipeline](./assets/pl5.png "Create pipeline") 
+     ![pipeline](./assets/pl5.png "Create pipeline")
      
    10.	Give name to foreach activity under section “General.
        Select Section and select Sequential as True and  mention Items as    “@activity('Get File List').output.childItems”
@@ -44,20 +44,20 @@ Select Variable to create below pipeline variables
      ![pipeline](./assets/pl6.png "Create pipeline")
       
     
-14.	Add output source to “set variable” by click on “” and add “Dataflow”activity  and name it as “Load adworks” , set Timeout to “1.00:00:00”
+   14.	Add output source to “set variable” by click on “” and add “Dataflow”activity  and name it as “Load adworks” , set Timeout to “1.00:00:00”
   
       ![pipeline](./assets/pl7.png "Create pipeline")
        
-  15.	 Select Section “Settings” and select dataflow as “adworks_DF”
-16.	Set CSVSourceParamters as below
-•	Filename as “@item().name”
-•	Folderpath as “@variables('adworksSourceFolderPath')”      
+   15.	 Select Section “Settings” and select dataflow as “adworks_DF”
+   16.	Set CSVSourceParamters as below
+        •	Filename as “@item().name”
+        •	Folderpath as “@variables('adworksSourceFolderPath')”      
     
        ![pipeline](./assets/pl8.png "Create pipeline")
         
      
 17.	Set parameter tableName value as “@variables('tableName')
-   
-        ![pipeline](./assets/pl9.png "Create pipeline")
+
+![pipeline](./assets/pl9.png "Create pipeline")
 
 
