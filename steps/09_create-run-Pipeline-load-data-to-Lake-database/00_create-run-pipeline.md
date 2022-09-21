@@ -56,7 +56,7 @@ Select Variable to create below pipeline variables
    
    ![pipeline](./assets/pl7.png "Create pipeline")
        
-   15.	 Select Section **“Settings”** and select dataflow as **“adworks_DF”**
+   15.	Select Section **“Settings”** and select dataflow as **“adworks_DF”**
    
    16.	Set CSVSourceParamters as below
         
@@ -66,8 +66,7 @@ Select Variable to create below pipeline variables
         
         ![pipeline](./assets/pl8.png "Create pipeline")
         
-   
-    17. Set parameter tableName value as ``@variables('tableName')``
+   1. Set parameter tableName value as @variables('tableName') 
     
         ![pipeline](./assets/pl9.png "Create pipeline")
 
