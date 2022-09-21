@@ -51,7 +51,7 @@ Select Variable to create below pipeline variables
         •	Filename as “@item().name”
         •	Folderpath as “@variables('adworksSourceFolderPath')”
         
-    ![pipeline](./assets/pl8.png "Create pipeline")
+        ![pipeline](./assets/pl8.png "Create pipeline")
         
      
     17.	Set parameter tableName value as “@variables('tableName')
