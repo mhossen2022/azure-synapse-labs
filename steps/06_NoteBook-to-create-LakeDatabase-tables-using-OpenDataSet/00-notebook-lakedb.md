@@ -14,7 +14,7 @@ Synapse has Azure Open Datasets package pre-installed. This notebook provides ex
 3.	Select the Spark Pool in the **_‘Attach To’_** section. 
 3.	In the properties section on the right pane rename the notebook as **ntb_Open_DataSet_To_LakeDB**
 4.	Run the below code in the command cell. And use **_(+Code)_** icon for new cells.
-       
+       ![runNotebooks](./assets/06-run_notebook_dl.jpg "run notebook")
        
    
 
@@ -324,3 +324,13 @@ spark.sql("SELECT COUNT(*) FROM nyc_taxi_holiday_weather").show();
 |  337444|
 +--------+
 ``
+
+## Steps for validating the table created in Lake database
+
+1)	Once executing all the code cells. Click **_Validate All_** and **_Publish All_** at the top.
+       ![publishNotebooks](./assets/06-publish_notebook_dl.jpg "publish notebook")
+3)	Navigate to **_Data Tab_**. Under Workspace expand **_Lake database_**.
+4)	Check for the **_NycTaxi database and expand it_**.
+5)	Make sure you have **_nyc_taxi_holiday_weather table created_**.
+
+       ![validateNotebooks](./assets/06-validate_notebook_dl.jpg "validate notebook")
