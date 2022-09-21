@@ -16,14 +16,14 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
 
     ![dataformat](./assets/07-raw-data-format.jpg "data format")
 
-1.	Set properties by giving Name as **``raw``**  and select  __azure raw data lake storage account__ as linked service.
+1.	Set properties by giving Name as **``raw``**  and select  *__azure raw data lake storage account__* as linked service.
 
 1.	Set the  filepath to **``raw/SynapseRetailFiles``** and select **OK** .
     
     ![setProperties](./assets/07-raw-set-properties.jpg "set properties")
     
 
-1.	Select **+** under Parameter section to create parameters
+1.	Select  **+** under Parameter section to create parameters
     Create parameter with Name as *__folderPath__* with default value ``“@dataset().folderPath”``.
     
     ![createParameter](./assets/07-raw-create-parameters.jpg "create parameter")
