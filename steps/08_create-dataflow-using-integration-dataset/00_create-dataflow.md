@@ -42,13 +42,13 @@ In this section, you will use integration datasets for creating a dataflow for l
   
 15.	Select “Recreate table” as Table action under settings.
 
-  ![Dataflow](./assets/df8.jpg "Create Dataflow")
+  ![Dataflow](./assets/df9.jpg "Create Dataflow")
  
 16.	Select Mapping and select below checkboxes
     i.	Skip duplicate input column
     ii.	Skip duplicate output column
     
-   ![Dataflow](./assets/df9.jpg "Create Dataflow")
+   ![Dataflow](./assets/df8.jpg "Create Dataflow")
 
      
 
