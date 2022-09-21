@@ -8,28 +8,28 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
 
     ![integratedDataset](./assets/07-raw-integrated-dataset.jpg "select integrated dataset")
     
-1.	Select Azure Data Lake Storage Gen2 --> Continue .
+1.	Select *__Azure Data Lake Storage Gen2__* --> *__Continue__* .
 
     ![rawdatastore](./assets/07-raw-data-store.jpg "raw data store")
     
-1.	Select *__Delimited Text__* and press *__Continue*__
+1.	Select *__Delimited Text__* and press *__Continue__*.
 
     ![dataformat](./assets/07-raw-data-format.jpg "data format")
 
-1.	Set properties by giving Name as *__“raw”__*  and select  __“azure raw data lake storage account”__ as linked service.
+1.	Set properties by giving Name as **``raw``**  and select  __azure raw data lake storage account__ as linked service.
 
-1.	Set the  filepath to ``“raw/SynapseRetailFiles”`` and select **“OK” .
+1.	Set the  filepath to **``raw/SynapseRetailFiles``** and select **OK** .
     
     ![setProperties](./assets/07-raw-set-properties.jpg "set properties")
     
 
-1.	Select **“+”** under Parameter section to create parameters
-    Create parameter with Name as *__“folderPath”__* with default value ``“@dataset().folderPath”``.
+1.	Select **+** under Parameter section to create parameters
+    Create parameter with Name as *__folderPath__* with default value ``“@dataset().folderPath”``.
     
     ![createParameter](./assets/07-raw-create-parameters.jpg "create parameter")
     
     
-1. 	Under connections set folder path with  parameter value ``“@dataset().folderPath”`` and set ``first row as Header`` as **“True”**.
+1. 	Under connections set folder path with  parameter value **``@dataset().folderPath``** and set ``first row as Header`` as **True**.
 
     ![setConnections](./assets/07-raw-set-connections.jpg "set connections")
 
