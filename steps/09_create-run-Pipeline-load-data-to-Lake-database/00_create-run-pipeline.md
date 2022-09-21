@@ -60,11 +60,11 @@ Select Variable to create below pipeline variables
    16.	Set CSVSourceParamters as below
         
         -Filename as ``“@item().name”``
+        
         -Folderpath as ``“@variables('adworksSourceFolderPath')”``
         
         ![pipeline](./assets/pl8.png "Create pipeline")
         
-     
     17.	Set parameter tableName value as ``“@variables('tableName')``
     
     ![pipeline](./assets/pl9.png "Create pipeline")
