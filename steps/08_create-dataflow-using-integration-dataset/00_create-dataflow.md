@@ -11,7 +11,9 @@ In this section, you will use integration datasets for creating a dataflow for l
  ![Dataflow](./assets/df2.jpg "Create Dataflow")
  
 2.	Create new Parameter and name as “tableName”
+
  ![Dataflow](./assets/df1.jpg "Create Dataflow")
+ 
 3.	Click on Add source, it will display prepopulated options. Then select “AddSource”.
 4.	Under source settings give 
 5.	Output stream name as “CSVSource”,
