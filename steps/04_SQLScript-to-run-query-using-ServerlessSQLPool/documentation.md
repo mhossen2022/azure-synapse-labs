@@ -30,6 +30,7 @@ SELECT TOP 100 * FROM
     AS [nyc];
 ```
 
+
 ii. This query will fetch number of rides per every year in increasing order.
 
 ```sql
