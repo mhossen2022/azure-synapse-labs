@@ -55,11 +55,11 @@ In this section, you will use integration datasets for creating a dataflow for l
  
 16.	Select **_Mapping_** and select below checkboxes
     
-    i.	 Skip duplicate input column
+    i.	  Skip duplicate input column.
     
-   ii.  Skip duplicate output column
+    ii.   Skip duplicate output column.
     
-   ![Dataflow](./assets/df8.jpg "Create Dataflow")
+ ![Dataflow](./assets/df8.jpg "Create Dataflow")
 
      
 
