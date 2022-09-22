@@ -1,1 +1,1 @@
-Creating a Partitioned Container with .NET SDK
+Connect Synapse Workspace
