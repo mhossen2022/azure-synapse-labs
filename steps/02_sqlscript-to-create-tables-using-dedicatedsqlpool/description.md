@@ -1,1 +1,1 @@
-Creating a Partitioned Container with .NET SDK
+SQL Script to create tables using dedicated SQL Pool
