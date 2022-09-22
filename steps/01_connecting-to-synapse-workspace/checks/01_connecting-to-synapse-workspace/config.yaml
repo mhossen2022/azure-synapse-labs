@@ -1,6 +1,0 @@
-title: Connected to Synapse workspace
-internal_name: Connected to Synapse workspace
-vendor: azure
-runtime: python3.8
-memory: 128
-timeout: 10
