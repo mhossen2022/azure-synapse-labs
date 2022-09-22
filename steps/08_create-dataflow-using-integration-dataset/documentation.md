@@ -27,8 +27,9 @@ In this section, you will use integration datasets for creating a dataflow for l
 7.	Select dataset  as **_adworksraw_**.
 
 8.	Set below options as **true**.
-   I.	Allow schema drift
-  II.	Infer drifted column types
+
+   i.	 Allow schema drift
+  ii.  Infer drifted column types
 
   ![Dataflow](./assets/df5.jpg "Create Dataflow")
   
@@ -56,7 +57,7 @@ In this section, you will use integration datasets for creating a dataflow for l
     
     i.	 Skip duplicate input column
     
-    ii. Skip duplicate output column
+   ii.  Skip duplicate output column
     
    ![Dataflow](./assets/df8.jpg "Create Dataflow")
 
