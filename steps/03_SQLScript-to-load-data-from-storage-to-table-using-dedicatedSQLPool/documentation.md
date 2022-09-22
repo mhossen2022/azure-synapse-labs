@@ -9,24 +9,25 @@ In this section, you will use dedicated SQL Pool to load tables using the files 
 
 ## Create Script
 
-1. In Workspace open **Develop** from the left side navigation
-2. Click on  **SQL Script** to open new sql script file.
+1.  In Workspace open **_Develop_** from the left side navigation.
 
-![openSQLScript](./assets/1_openSQLScript.JPG "Select resource groups")
+3.  Click on  **SQL Script** to open new sql script file.
 
-3. In the properties section rename the script to **"load_table_dedicated"**
-4. Select the **EnterpriseDW** from the Connect to dropdown.
+  ![openSQLScript](./assets/1_openSQLScript.JPG "Select resource groups")
 
-![renameSQLScript](./assets/2_rename_load_script.JPG "rename script")
+3.  In the properties section rename the script to **_``load_table_dedicated``_**.
 
+5.  Select the **EnterpriseDW** from the Connect to dropdown.
 
-6. Replace the "azrawStorageAccount" placeholder with the **Raw storage account** name before running the below sql script.
+  ![renameSQLScript](./assets/2_rename_load_script.JPG "rename script")
+
+6.  Replace the **azrawStorageAccount** placeholder with the **_``Raw storage account``_** name before running the below sql script.
 
     ```sh
     eg. https://azrawdatalakefa256z.dfs.core.windows.net/raw/date.csv
     ```
 	
-6. For loading the **Date** table run the below query.
+6.  For loading the **Date** table run the below query.
 
 ``` sql
 COPY INTO [dbo].[Date]
@@ -40,6 +41,7 @@ WITH
 OPTION (LABEL = 'COPY : Load [dbo].[Date] - Taxi dataset');
 
 ```
+
 4.  For creating the **Geography** table run the below query.
 
 ``` sql
@@ -53,6 +55,7 @@ WITH
 )
 OPTION (LABEL = 'COPY : Load [dbo].[Geography] - Taxi dataset');
 ```
+
 5. For creating the **HackneyLicense** table run the below query
 
 ``` sql
@@ -66,6 +69,7 @@ WITH
 )
 OPTION (LABEL = 'COPY : Load [dbo].[HackneyLicense] - Taxi dataset');
 ```
+
 6. For creating the **Medallion** table run the below query
 
 ``` sql
@@ -92,6 +96,7 @@ WITH
 )
 OPTION (LABEL = 'COPY : Load [dbo].[Time] - Taxi dataset');
 ```
+
 8. For creating the **Trip** table run the below query
 
 ``` sql
@@ -105,6 +110,7 @@ WITH
 )
 OPTION (LABEL = 'COPY : Load [dbo].[Trip] - Taxi dataset');
 ```
+
 9. For creating the **Weather** table run the below query
 
 ``` sql
@@ -128,8 +134,8 @@ OPTION (LABEL = 'COPY : Load [dbo].[Weather] - Taxi dataset');
 4. Expand **Tables**
 5. Right click on any table then select **New SQL Script > Select TOP 100 Rows**.
 
-![selecttop100](./assets/3_select_top100.JPG "Select top 100")
+   ![selecttop100](./assets/3_select_top100.JPG "Select top 100")
 
 7. Run the script to check the data loaded in the table.
 
-![RunQuery](./assets/4_query_result.JPG "run query")
+   ![RunQuery](./assets/4_query_result.JPG "run query")
