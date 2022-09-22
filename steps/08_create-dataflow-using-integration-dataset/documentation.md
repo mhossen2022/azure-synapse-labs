@@ -10,7 +10,7 @@ In this section, you will use integration datasets for creating a dataflow for l
  
  ![Dataflow](./assets/df2.jpg "Create Dataflow")
  
-2.	Create new Parameter and name as **_``tableName``_”**.
+2.	Create new Parameter and name as **_``tableName``_**.
 
  ![Dataflow](./assets/df3.jpg "Create Dataflow")
  
@@ -44,7 +44,7 @@ In this section, you will use integration datasets for creating a dataflow for l
 
 13.	Select Database **_adworks_**.
 
-14.	Set Table as **_$tableName_**.
+14.	Set Table as **_``$tableName``_**.
 
   ![Dataflow](./assets/df7.jpg "Create Dataflow")
   
