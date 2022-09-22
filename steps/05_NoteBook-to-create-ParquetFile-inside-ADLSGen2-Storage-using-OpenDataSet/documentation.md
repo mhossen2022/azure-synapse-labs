@@ -14,7 +14,7 @@ This notebook provides examples of how to write the output of Spark jobs directl
  ![addSqlScript](./assets/05-create_notebook_adls.jpg "create notebook adls")
  
 2.	Select the Spark Pool in the **_‘Attach To’_** section. 
-3.	In the properties section on the right pane , renaming the notebook as ``Open_DataSet_To_ADLS``.
+3.	In the properties section on the right pane , renaming the notebook as ``ntb_Open_DataSet_To_ADLS``.
 4.	Run the below scripts in the command cell. And use **_(+Code)_** icon for new cells.
  
  ![addSqlScript](./assets/05-run_notebook_adls.jpg "run notebook adls")
