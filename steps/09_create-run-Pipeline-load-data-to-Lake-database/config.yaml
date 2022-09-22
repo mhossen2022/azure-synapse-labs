@@ -1,4 +1,4 @@
-slug: querying-in-azure-cosmos-db 
-title: Querying in Azure Cosmos DB
+slug: create-run-Pipeline-load-data-to-Lake-database
+title: Create and run pipeline using the Data flow for loading the data to Lake database
 difficulty: Beginner
 validation_type: Basic
