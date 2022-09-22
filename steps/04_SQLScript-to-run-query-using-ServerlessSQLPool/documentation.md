@@ -10,7 +10,7 @@
 
 1.	Choose the specific serverless SQL pool(built-in) from the Connect to drop-down menu. And  if necessary, database can be selected.
 
-1.	In the properties section on the right pane renaming the notebook as  ``nyc_sql``
+1.	In the properties section on the right pane renaming the script as  ``nyc_sql``
 
 1.	Select the Run button to execute your SQL script and observe the results.
      
@@ -29,7 +29,6 @@ SELECT TOP 100 * FROM
     )
     AS [nyc];
 ```
-
 
 ii. This query will fetch number of rides per every year in increasing order.
 
