@@ -1,5 +1,5 @@
-title: Connected to Synapse workspace
-internal_name: Connected to Synapse workspace
+title: Connected Synapse workspace
+internal_name: Connected Synapse workspace
 vendor: azure
 runtime: python3.8
 memory: 128
