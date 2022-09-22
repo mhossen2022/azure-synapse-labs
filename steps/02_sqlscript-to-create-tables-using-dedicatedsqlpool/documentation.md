@@ -4,36 +4,39 @@ In this section, you will use dedicated SQL Pool to create tables.
 
 ## Prerequisites
 
-- Set Azure Active Directory admin 
+### Set Azure Active Directory admin 
   
-  1.Once you open workspace from resource group, click on the "Azure Active Directory" under settings using the left side navigation
+  1. Once you open workspace from resource group, click on the **Azure Active Directory** under settings using the left side navigation.
   
-  ![AdminSetting](./assets/prereq.JPG "Admin Setting")
+     ![AdminSetting](./assets/prereq.JPG "Admin Setting")
   
-  2.Select **Set Admin**
+  2. Select **_Set Admin_**.
   
-  3.Enter your userId or name or emailID for search and click **Select**
+  3. Enter your userId or name or emailID for search and click **Select**.
   
-  ![AdminSetting](./assets/prereq2.JPG "Admin Setting")
+     ![AdminSetting](./assets/prereq2.JPG "Admin Setting")
   
-  4.Click on **Save** 
+  4. Click on **_Save_** .
 
 
 ## Create Script
 
-1. In Synapse studio open **Develop** from the left side navigation
-2. Click on  **SQL Script** to open new sql script file.
+1.  In Synapse studio open **_Develop_** from the left side navigation.
 
-![openSQLScript](./assets/1_openSQLScript.JPG "Select resource groups")
+3.  Click on  **SQL Script** to open new sql script file.
 
-3. In the properties section rename the script to **"create_table_dedicated"**
-4. Select the **EnterpriseDW** from the Connect to dropdown.
+    ![openSQLScript](./assets/1_openSQLScript.JPG "Select resource groups")
 
-![openSQLScript](./assets/3_renameScript.JPG "rename sql script")
+3.  In the properties section rename the script to **_``create_table_dedicated``_** .
 
-5. For creating the **Date** table run the below query.
+5.  Select the **_EnterpriseDW_** from the Connect to dropdown.
 
-``` sql
+    ![openSQLScript](./assets/3_renameScript.JPG "rename sql script")
+
+5.   For creating the **Date** table , run the below query.
+   
+     
+   ``` sql
 CREATE TABLE [dbo].[Date]
 (
     [DateID] int NOT NULL,
@@ -75,7 +78,7 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 
-```
+  ```
 6.  For creating the **Geography** table run the below query.
 
 ``` sql
@@ -95,6 +98,7 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
+
 7. For creating the **HackneyLicense** table run the below query
 
 ``` sql
@@ -110,6 +114,7 @@ WITH
     CLUSTERED COLUMNSTORE INDEX
 );
 ```
+
 8. For creating the **Medallion** table run the below query
 
 ``` sql
@@ -202,10 +207,10 @@ WITH
 
 ## Validate Tables Created
 
-1. In Workspace open **Data** from the left side navigation
+1. In Workspace open **_Data_** from the left side navigation
 2. Expand **SQL database**
 3. Expand **EnterpriseDW (SQL)**
 4. Expand **Tables**
 5. Check the tables created.
 
-![TablesCreated](./assets/2_validateTablesCreated.JPG "Select resource groups")
+  ![TablesCreated](./assets/2_validateTablesCreated.JPG "Select resource groups")
