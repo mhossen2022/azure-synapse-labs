@@ -4,26 +4,26 @@ In this lab, you will be redirected to the resource group and using below steps 
 
 ## Prerequisites
 
--
-
-## Synapse Workspace and Storage accounts
+### Synapse Workspace and Storage accounts
 
 1. Synapse workspace and Storage account will be existing under resources
 
-    -	Primary Storage Account name starts with **“azwksdatalake”**
-    -	Raw Storage Account name starts with **“azrawdatalake”** 
-    -	Curated Storage Account name starts with **“azrcurateddatalake”** 
-    -	Synapse Workspace name starts with **“azsynapsewks”** 
+    -	Primary Storage Account name starts with **_``azwksdatalake``_**
+    -	Raw Storage Account name starts with **_``azrawdatalake``_** 
+    -	Curated Storage Account name starts with **_``azrcurateddatalake``_** 
+    -	Synapse Workspace name starts with **_``azsynapsewks``_** 
     
     
- ![storage](./assets/1_chk_storage_accounts.jpg "Select storage accounts")
+    ![storage](./assets/1_chk_storage_accounts.jpg "Select storage accounts")
 
 2. Note down the Raw Storage Account name, this will be used later in the lab.
-3. Select Synapse workspace. It will open synapse workspace overview.
-4. Click “Open” to open synapse studio
 
- ![ws](./assets/2_open_ws.jpg "open WS")
+4. Select Synapse workspace. It will open synapse workspace overview.
+
+6. Click “Open” to open synapse studio
+
+    ![ws](./assets/2_open_ws.jpg "open WS")
 
 5. It will be redirected to synapse workspace 
 
- ![viewws](./assets/3_ws.jpg "view WS")
+    ![viewws](./assets/3_ws.jpg "view WS")
