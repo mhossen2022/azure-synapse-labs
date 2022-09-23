@@ -101,15 +101,14 @@
 						}
 					}
 				},
-				{
+                {
 					"Name": "OrderDate",
 					"OriginDataTypeName": {
-						"TypeName": "date",
+						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Properties": {
-							"DateFormat": "YYYY-MM-DD",
-							"HIVE_TYPE_STRING": "date"
+							"HIVE_TYPE_STRING": "integer"
 						}
 					}
 				},
@@ -190,15 +189,15 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
-					"path": "abfss://raw@<adworksls>.dfs.core.windows.net/adworks/Sales",
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Sales",
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
-				"Location": "abfss://raw@<adworksls>.dfs.core.windows.net/adworks/Sales",
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Sales",
 				"Properties": {
-					"LinkedServiceName": "<adworksls>",
+					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
 					"LocationSetToDatabaseDefault": false
 				}
 			},
