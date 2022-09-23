@@ -13,137 +13,103 @@
 		},
 		"StorageDescriptor": {
 			"Columns": [
-				{
-					"Name": "Date",
-					"OriginDataTypeName": {
-						"TypeName": "date",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"DateFormat": "YYYY-MM-DD",
-							"HIVE_TYPE_STRING": "date"
-						}
-					}
-				},
-				{
-					"Name": "YYYYQ",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "Month",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "YYYYMM",
-					"OriginDataTypeName": {
-						"TypeName": "integer",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "integer"
-						}
-					}
-				},
-				{
-					"Name": "MonthName",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "MonthNumber",
-					"OriginDataTypeName": {
-						"TypeName": "short",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "short"
-						}
-					}
-				},
-				{
-					"Name": "MonthShort",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "Year",
-					"OriginDataTypeName": {
-						"TypeName": "short",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "short"
-						}
-					}
-				},
-				{
-					"Name": "QuarterNumber",
-					"OriginDataTypeName": {
-						"TypeName": "short",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "short"
-						}
-					}
-				},
-				{
-					"Name": "DayNumber",
-					"OriginDataTypeName": {
-						"TypeName": "short",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "short"
-						}
-					}
-				}
-			],
+                {
+                    "Name": "DateKey",
+                    "OriginDataTypeName": {
+                        "TypeName": "integer",
+                        "IsComplexType": false,
+                        "IsNullable": true,
+                        "Properties": {
+                            "HIVE_TYPE_STRING": "integer"
+                        }
+                    }
+                },
+                {
+                    "Name": "Date",
+                    "OriginDataTypeName": {
+                        "TypeName": "date",
+                        "IsComplexType": false,
+                        "IsNullable": true,
+                        "Properties": {
+                            "DateFormat": "MM/dd/YYYY",
+                            "HIVE_TYPE_STRING": "date"
+                        }
+                    }
+                },
+                {
+                    "Name": "FiscalYear",
+                    "OriginDataTypeName": {
+                        "TypeName": "string",
+                        "IsComplexType": false,
+                        "IsNullable": true,
+                        "Length": 8000,
+                        "Properties": {
+                            "HIVE_TYPE_STRING": "string"
+                        }
+                    }
+                },
+                {
+                    "Name": "FiscalQuarter",
+                    "OriginDataTypeName": {
+                        "TypeName": "string",
+                        "IsComplexType": false,
+                        "IsNullable": true,
+                        "Length": 8000,
+                        "Properties": {
+                            "HIVE_TYPE_STRING": "string"
+                        }
+                    }
+                },
+                {
+                    "Name": "Month",
+                    "OriginDataTypeName": {
+                        "TypeName": "string",
+                        "IsComplexType": false,
+                        "IsNullable": true,
+                        "Length": 8000,
+                        "Properties": {
+                            "HIVE_TYPE_STRING": "string"
+                        }
+                    }
+                },
+                {
+                    "Name": "FullDate",
+                    "OriginDataTypeName": {
+                        "TypeName": "string",
+                        "IsComplexType": false,
+                        "IsNullable": true,
+                        "Properties": {
+                            "HIVE_TYPE_STRING": "string"
+                        }
+                    }
+                },
+                {
+                    "Name": "MonthKey",
+                    "OriginDataTypeName": {
+                        "TypeName": "integer",
+                        "IsComplexType": false,
+                        "IsNullable": true,
+                        "Properties": {
+                            "HIVE_TYPE_STRING": "integer"
+                        }
+                    }
+                }
+            ],
 			"Format": {
 				"InputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
 				"OutputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
-					"path": "abfss://raw@<adworksls>.dfs.core.windows.net/adworks/Calendar",
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Calendar",
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
-				"Location": "abfss://raw@<adworksls>.dfs.core.windows.net/adworks/Calendar",
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Calendar",
 				"Properties": {
-					"LinkedServiceName": "<adworksls>",
+					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
 					"LocationSetToDatabaseDefault": false
 				}
 			},
