@@ -14,7 +14,7 @@
 		"ColumnRelationshipInformations": [
 			{
 				"FromColumnName": "OrderDate",
-				"ToColumnName": "Date"
+				"ToColumnName": "DateKey"
 			}
 		],
 		"RelationshipType": 0
