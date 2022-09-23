@@ -128,7 +128,7 @@
 					"OriginDataTypeName": {
 						"TypeName": "integer",
 						"IsComplexType": false,
-						"IsNullable": false,
+						"IsNullable": true,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -189,15 +189,15 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
-					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Sales",
+					"path": "abfss://raw@<adworksls>.dfs.core.windows.net/adworks/Sales",
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
-				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Sales",
+				"Location": "abfss://raw@<adworksls>.dfs.core.windows.net/adworks/Sales",
 				"Properties": {
-					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+					"LinkedServiceName": "<adworksls>",
 					"LocationSetToDatabaseDefault": false
 				}
 			},
