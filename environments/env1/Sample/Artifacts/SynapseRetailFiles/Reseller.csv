@@ -1,4 +1,4 @@
-PostalCode,CountryRegion,StateProvince,City,Reseller,BusinessType,ResellerId,ResellerKey
+PostalCode,CountryRegion,StateProvince,City,Reseller,BusinessType,ResellerKey,ResellerId
 98104,United States,Washington,Seattle,A Bike Store,Value Added Reseller,AW00000001,1
 98055,United States,Washington,Renton,Progressive Sports,Specialty Bike Shop,AW00000002,2
 75061,United States,Texas,Irving,Advanced Bike Components,Warehouse,AW00000003,3
