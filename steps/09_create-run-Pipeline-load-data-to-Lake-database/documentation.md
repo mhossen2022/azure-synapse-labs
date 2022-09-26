@@ -4,7 +4,7 @@ In this section, you will use data flow for creating a pipeline for loading data
 
 ## Create Pipeline
 
-  1.	Select integrate then  **+** icon and select  **_Pipeline_**, Name it as **_``Load CSV data to adworks``_**
+  1.	Select integrate then  **+** icon and select  **_Pipeline_**, Name it as **_``Load_CSV_data_to_adworks``_**
 
  ![pipeline](./assets/pl1.png "Create pipeline")
  
