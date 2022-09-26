@@ -4,7 +4,7 @@ param(
 )
 $WorkSpace = Get-AzResource -ResourceGroupName $Resourcegroupname -Resourcetype Microsoft.Synapse/workspaces
 $WorkSpacename = $WorkSpace.Name
-$pipeline = Get-AzSynapsePipeline -WorkspaceName $WorkSpacename -Name Load CSV_data_to_adworks
+$pipeline = Get-AzSynapsePipeline -WorkspaceName $WorkSpacename -Name Load_CSV_data_to_adworks
 if ($pipeline)
 {
     Write-Host "pipeline created"
