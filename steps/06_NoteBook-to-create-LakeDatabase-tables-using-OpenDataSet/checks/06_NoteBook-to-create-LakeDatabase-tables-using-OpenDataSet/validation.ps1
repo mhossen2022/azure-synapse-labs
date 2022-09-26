@@ -1,7 +1,9 @@
 param(
     [string]
-    $WorkSpacename
+    $Resourcegroupname
 )
+$WorkSpace = Get-AzResource -ResourceGroupName $Resourcegroupname -Resourcetype Microsoft.Synapse/workspaces
+$WorkSpacename = $WorkSpace.Name
 
 $notebook = Get-AzSynapseNotebook -WorkspaceName $WorkSpacename -Name ntb_Open_DataSet_To_LakeDB
 if ($notebook)
