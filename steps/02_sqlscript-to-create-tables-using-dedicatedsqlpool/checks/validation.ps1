@@ -1,7 +1,9 @@
 param(
     [string]
-    $WorkSpacename
+    $Resourcegroupname
 )
+$WorkSpace = Get-AzResource -ResourceGroupName $Resourcegroupname -Resourcetype Microsoft.Synapse/workspaces
+$WorkSpacename = $WorkSpace.Name
 $sqlscript = Get-AzSynapseSqlScript  -WorkspaceName $WorkSpacename -Name create_table_dedicated
 if ($sqlscript)
 {
