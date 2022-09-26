@@ -1,8 +1,9 @@
 param(
     [string]
-    $WorkSpacename
+    $Resourcegroupname
 )
-
+$WorkSpace = Get-AzResource -ResourceGroupName $Resourcegroupname -Resourcetype Microsoft.Synapse/workspaces
+$WorkSpacename = $WorkSpace.Name
 $dataset1 = Get-AzSynapseDataset -WorkspaceName $WorkSpacename -Name adworksraw
 if ($dataset1)
 {
