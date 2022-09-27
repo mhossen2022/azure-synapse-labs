@@ -26,7 +26,7 @@
 
 1) Repeat step 9 and 10 to create remaining relationships for **_FactSales_** table. Make sure you create all the 5 relationships same as mentioned in below snapshot.
 
-    ![table_relationships](./assets/12-table_column_relations.JPG "table relationships")
+    ![table_relationships](./assets/12-table_column_relations.jpg "table relationships")
 
 1) After successful creation of relationships make sure you Validate by clicking on **_Validate all_**.
 
