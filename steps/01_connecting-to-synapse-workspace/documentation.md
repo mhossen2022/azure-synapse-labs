@@ -30,4 +30,4 @@ In this lab, you will be redirected to the resource group and using below steps 
 6. Go to **_Manage_** tab from left side navigation and select **_Access Control_**
 7. Add yourself as the **_Synapse Administrator_**
 
-    ![Access](./assets/4_access.png "Access")
+    ![Access](./assets/4_access.jpg "Access")
