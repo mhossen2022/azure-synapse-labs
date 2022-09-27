@@ -21,7 +21,10 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
 1.	Set the  filepath to **``raw/SynapseRetailFiles``** and select **OK** .
     
     ![setProperties](./assets/07-raw-set-properties.jpg "set properties")
-    
+
+1.  **Clear** schema under section **_Schema_**.
+
+    ![setProperties](./assets/07-adworks_raw_clear.jpg "set properties")   
 
 1.	Select  **+** under Parameter section to create parameters.
     Create parameter with Name as *__folderPath__* with default value **``@dataset().folderPath``**.
@@ -53,6 +56,10 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
      ![setProperties](./assets/07-adwork-set-properties.jpg "set properties")
 
 1.	Set the  filepath to **``raw/SynapseRetailFiles``** and select **OK** .
+
+1.  **Clear** schema under section **_Schema_**.
+
+    ![setProperties](./assets/07-adworks_raw_clear.jpg "set properties")   
 
 1.	Select **+** under Parameter section to create parameters
     Create below mentioned two parameter:
