@@ -24,7 +24,7 @@
 
 1) For **_FactSales_** you need to create a relationship. Select a column **_``OrderDateKey``_** from **_FactSales_** tables(from table) and map it with **_``DateKey``_** column of **_DimTable_**( To Table) .
 
-1) Repeat step 9 and 10 to create remaining relationships for FactSales. Make sure you create all the 5 relationships as mentioned in below snapshot.
+1) Repeat step 9 and 10 to create remaining relationships for **_FactSales_** table. Make sure you create all the 5 relationships same as mentioned in below snapshot.
 
     ![table_relationships](./assets/10-table_column_relations.jpg "table relationships")
 
