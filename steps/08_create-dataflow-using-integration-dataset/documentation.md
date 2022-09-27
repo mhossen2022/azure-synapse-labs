@@ -61,6 +61,8 @@ In this section, you will use integration datasets for creating a dataflow for l
     
  ![Dataflow](./assets/df8.jpg "Create Dataflow")
 
+17. Then click on **Validate** to validate created dataflow. Once dataflow has been validated publish it.
+
      
 
 
