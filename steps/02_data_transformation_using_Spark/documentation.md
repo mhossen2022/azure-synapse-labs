@@ -1,5 +1,7 @@
 # Data transformation using Spark
 
+Apache Spark in Azure Synapse Analytics is one of Microsoft's implementations of Apache Spark in the cloud. Azure Synapse makes it easy to create and configure a serverless Apache Spark pool in Azure. Spark pools in Azure Synapse are compatible with Azure Storage and Azure Data Lake Generation 2 Storage. In this lab you will use Spark pools to process data stored in Azure.
+
 ## Create Parquet file in Data Lake Storage Gen2 (ADLS Gen2) using Open DataSet with Synapse Spark
 
 Azure Data Lake Storage Gen2 (ADLS Gen2) is used as the storage account associated with a Synapse workspace. A synapse workspace can have a default ADLS Gen2 storage account and additional linked storage accounts.
