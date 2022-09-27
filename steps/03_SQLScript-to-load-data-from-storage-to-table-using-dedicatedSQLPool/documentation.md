@@ -125,7 +125,8 @@ WITH
 )
 OPTION (LABEL = 'COPY : Load [dbo].[Weather] - Taxi dataset');
 ```
-
+13. Publish the script for future reference.
+ 
 ## Validate loading data
 
 1. In Workspace open **Data** from the left side navigation.
