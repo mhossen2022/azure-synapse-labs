@@ -176,6 +176,8 @@ Once executing all the code cells. Click **_Validate All_** and **_Publish All_*
 
 ![addSqlScript](./assets/05-publish_notebook_adls.jpg "publish notebook adls")
 
+
+
 ## Using Azure Open Datasets in Synapse - Enrich NYC Green Taxi Data with Holiday and Weather
 
 Synapse has Azure Open Datasets package pre-installed. This notebook provides examples of how to enrich NYC Green Taxi Data with Holiday and Weather with focusing on:
