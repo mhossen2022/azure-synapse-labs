@@ -74,8 +74,8 @@ from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 
 # Primary storage info
-account_name = ' <azrawStorageAccount> ' # fill in your primary account name
-container_name = 'raw' # fill in the container name
+account_name = ' <azrawStorageAccount> ' # fill in your raw account name
+container_name = 'raw'
 relative_path = ''
 
 adls_path = 'abfss://%s@%s.dfs.core.windows.net/%s' % (container_name, account_name, relative_path)
