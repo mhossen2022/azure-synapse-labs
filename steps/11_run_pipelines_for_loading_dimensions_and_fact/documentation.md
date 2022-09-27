@@ -1,8 +1,8 @@
 ## Run Pipelines for Loading Dimensions and Fact
 
-1. Select **_“Integrate”_** and execute pipelines in below mentioned sequence.
+1. Select **_Integrate_** and execute pipelines in below mentioned sequence.
 
-2. Select **_“IndependentDimensions”_**, then click on **_"Debug”_** or select **_“Trigger Now”_** option under **_“Add Trigger”_**
+2. Select **_IndependentDimensions_**, then click on **_Debug_** or select **_Trigger Now_** option under **_Add Trigger_**
 
 ![RunPipelines](./assets/11-1_execute_pipelines.jpg "Run Pipelines")
 
