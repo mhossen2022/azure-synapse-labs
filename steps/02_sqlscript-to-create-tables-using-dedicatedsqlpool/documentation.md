@@ -29,7 +29,7 @@ In this section, you will use dedicated SQL Pool to create tables.
 
 3.  In the properties section rename the script to **_``create_table_dedicated``_** .
 
-5.  Select the **_EnterpriseDW_** from the Connect to dropdown.
+5.  Select the **_EnterpriseDW_** from the **_Connect to_** dropdown.
 
     ![openSQLScript](./assets/3_renameScript.JPG "rename sql script")
 
