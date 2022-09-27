@@ -13,7 +13,7 @@ Synapse has Azure Open Datasets package pre-installed. This notebook provides ex
        ![createNotebooks](./assets/06-create_notebook_dl.jpg "create notebook")
   
 3.	Select the Spark Pool in the **_‘Attach To’_** section. 
-3.	In the properties section on the right pane rename the notebook as **ntb_Open_DataSet_To_LakeDB**
+3.	In the properties section on the right pane rename the notebook as ``**ntb_Open_DataSet_To_LakeDB**``
 4.	Run the below code in the command cell. And use **_(+Code)_** icon for new cells.
        ![runNotebooks](./assets/06-run_notebook_dl.jpg "run notebook")
        
