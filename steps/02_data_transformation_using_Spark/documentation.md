@@ -8,9 +8,10 @@ Azure Open Dataset
 
  - PublicHolidays
  - NycTlcGreen
+ - NoaaIsdWeather
 
 
-## Create Parquet file in Data Lake Storage Gen2 (ADLS Gen2) using Open DataSet with Synapse Spark
+## Create Parquet file in Data Lake Storage Gen2 (ADLS Gen2) using Open DataSet with Apache Spark
 
 Azure Data Lake Storage Gen2 (ADLS Gen2) is used as the storage account associated with a Synapse workspace. A synapse workspace can have a default ADLS Gen2 storage account and additional linked storage accounts.
 You can access data on ADLS Gen2 with Synapse Spark via the following URL:
