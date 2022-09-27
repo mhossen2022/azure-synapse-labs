@@ -4,11 +4,11 @@
 
 1) User has to navigate to the synapse workspace.
 
-1) On the left hand side , locate and click on the **_Data_** tab . Under **workspace** section you will find the **Lake database**.You need to select the **_``adworkstarget``_** database to create the relationship.
+1) On the left hand side of Synapse Workspace , locate and click on the **_Data_** tab . Under **workspace** section you will find the **Lake database**.You need to select the **_``adworkstarget``_** database to create the relationship.
  
     ![data_tab](./assets/10-Data_tab.jpg "data tab")
 
-1) To open the **adworkstarget** lake database , right click on **adworkstarget** database and click on open.
+1) To open the **adworkstarget** lake database , right click on **adworkstarget** database and click on **_Open_**.
     
      ![lake_db](./assets/10-open_lakedb.jpg "datalake")
 
