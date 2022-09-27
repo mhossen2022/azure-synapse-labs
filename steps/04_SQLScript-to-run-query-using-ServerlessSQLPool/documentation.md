@@ -8,7 +8,7 @@
 
 1.	Copy and paste the snippet on the place given below in SQL Scripts section
 
-1.	Choose the specific serverless SQL pool(built-in) from the Connect to drop-down menu. And  if necessary, database can be selected.
+1.	Choose the specific serverless SQL pool(built-in) from the Connect to drop-down menu. Or  if necessary, database can be selected.
 
 1.	In the properties section on the right pane renaming the script as  ``nyc_sql``
 
