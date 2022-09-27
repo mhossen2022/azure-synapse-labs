@@ -6,6 +6,6 @@
 
 ![RunPipelines](./assets/11-1_execute_pipelines.jpg "Run Pipelines")
 
-    - IndependentDimensions
-    - DependentDimensions
-    - FactTables 
+- IndependentDimensions
+- DependentDimensions
+- FactTables 
