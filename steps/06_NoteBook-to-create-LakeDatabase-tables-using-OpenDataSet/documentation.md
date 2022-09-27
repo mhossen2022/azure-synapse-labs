@@ -1,9 +1,9 @@
 ## Using Azure Open Datasets in Synapse - Enrich NYC Green Taxi Data with Holiday and Weather
 
 Synapse has Azure Open Datasets package pre-installed. This notebook provides examples of how to enrich NYC Green Taxi Data with Holiday and Weather with focusing on:
-•	Read Azure Open Dataset
-•	Manipulate the data to prepare for further analysis, including column projection, filtering, grouping and joins etc.
-•	Create a Spark table to be used in other notebooks for modeling training
+       -Read Azure Open Dataset
+       -Manipulate the data to prepare for further analysis, including column projection, filtering, grouping and joins etc.
+       -Create a Spark table to be used in other notebooks for modeling training
 
 ### Steps for creating a notebook:
 
