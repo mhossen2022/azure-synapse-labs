@@ -34,4 +34,6 @@
    
    ![publish](./assets/10-validate_publish.jpg "validate publish")
    
+   ![publish](./assets/10-tables_link.jpg "validate publish")
+   
  
