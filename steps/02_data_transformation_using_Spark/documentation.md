@@ -1,4 +1,4 @@
-# Data transformation using Spark
+# Data Ingestion and transformation using Apache Spark
 
 Apache Spark in Azure Synapse Analytics is one of Microsoft's implementations of Apache Spark in the cloud. Azure Synapse makes it easy to create and configure a serverless Apache Spark pool in Azure. Spark pools in Azure Synapse are compatible with Azure Storage and Azure Data Lake Generation 2 Storage. In this lab you will use Spark pools to process data stored in Azure.
 
