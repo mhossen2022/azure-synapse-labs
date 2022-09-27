@@ -5,7 +5,7 @@ In this lab, you will be redirected to the resource group and using below steps 
 
 ## Synapse Workspace and Storage accounts
 
-1. Synapse workspace and Storage account will be existing under resources
+1. Synapse workspace and Storage account will be existing under below resources
 
     -	Primary Storage Account name starts with **_``azwksdatalake``_**
     -	Raw Storage Account name starts with **_``azrawdatalake``_** 
