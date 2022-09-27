@@ -32,8 +32,9 @@
 
 1) Once clicked on **_Publish all_** the workspace is saved and relationships between the fact and dim tables are seen on the Develop pane with lines attached between tables.
    
-   ![publish](./assets/10-validate_publish.jpg "validate publish")
+   ![publish](./assets/10-validate_publish.jpg "validate and publish")
    
-   ![publish](./assets/10-tables_link.jpg "validate publish")
+   
+   ![link tables](./assets/10-tables_link.jpg "tables linked")
    
  
