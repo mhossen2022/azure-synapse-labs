@@ -1,6 +1,0 @@
-title: Create Parquet file in Data Lake Storage Gen2 (ADLS Gen2) using Open Dataset with Synapse Spark
-internal_name: Create Parquet file in Data Lake Storage Gen2 (ADLS Gen2) using Open Dataset with Synapse Spark
-vendor: azure
-runtime: python3.8
-memory: 128
-timeout: 10
