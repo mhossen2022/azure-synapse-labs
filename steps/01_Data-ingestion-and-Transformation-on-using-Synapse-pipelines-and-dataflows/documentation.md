@@ -1,4 +1,4 @@
-# Data_transformation_using_pipeline_dataflow_dataset
+# Data ingestion and transformation using Synapse pipelines and data flows
 ## Description:
 This Lab gives you the option to implement as well as execute integration Pipeline by typical data integration scenario in which data flows in different stages.
 At first extracts  Source data exists in the form of CSV files from the raw landing zone then  loads to a staging lake database (adworks) then  Data is transformed into a target database (adworkstarget)
