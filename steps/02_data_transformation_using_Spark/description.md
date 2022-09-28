@@ -1,1 +1,1 @@
-Data Ingestion and transformation using Apache Spark 
+Data Ingestion and transformation using Synapse Spark 
