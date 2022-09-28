@@ -1,8 +1,8 @@
-Data_transformation_using_pipeline_dataflow_dataset
-Description:
+# Data_transformation_using_pipeline_dataflow_dataset
+## Description:
 This Lab gives you the option to implement as well as execute integration Pipeline by typical data integration scenario in which data flows in different stages.
 At first extracts  Source data exists in the form of CSV files from the raw landing zone then  loads to a staging lake database (adworks) then  Data is transformed into a target database (adworkstarget)
-Prerequisets:
+## Prerequisets:
 1.	Add yourself as Active directory Admin to Synapse Workspace. 
  
 2.	Add yourself as the Synapse Administrator
@@ -14,13 +14,13 @@ Prerequisets:
 •	Curated Storage Account name starts with azrcurateddatalake
 •	Synapse Workspace name starts with azsynapsewks
 This lab automatically grant workspace identity data access to the workspace Data Lake Storage Gen2 account, using the Storage Blob Data Contributor role. 
-Source Data:
+## Source Data:
 •	This Lab uses Retail database as source  to quickly implement dataflows, datasets and integrate pipelines  for creating Facts and  dimensional tables.
 Retail includes the following technical assets
 •	Adventure Works sample CSV source files
 •	Integration pipelines, Dataflows and datasets.
 •	Staging and multi-dimensional lake databases
-1.	Exercise to Data ingestion and transformation using Synapse pipelines and data flows
+## 	Exercise to Data ingestion and transformation using Synapse pipelines and data flows
 ## Creating Data set from ADLS Gen2 storage
 
 In this section, you will use ADLS Gen2 Storage to create datasets. These datasets will be used further for creating the Data Flows.
@@ -98,5 +98,73 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
 
 
 
-3.	
+# Create Dataflow using the integration datasets
+
+In this section, you will use integration datasets for creating a dataflow for loading data into lake database.
+
+## Create Dataflow – adworks_DF
+
+1.	Select **_Develop_** from menu then  click on **+**  and select option **_Dataflow_** and give name as **_``adworks_DF``_** under properties.
+
+ ![Dataflow](./assets/df1.jpg "Create Dataflow")
+ 
+ ![Dataflow](./assets/df2.jpg "Create Dataflow")
+ 
+2.	Create new Parameter and name as **_``tableName``_**.
+
+ ![Dataflow](./assets/df3.jpg "Create Dataflow")
+ 
+3.	Click on **Add source**, it will display prepopulated options. Then select **AddSource**.
+
+ ![Dataflow](./assets/df4.jpg "Create Dataflow")
+
+4.	Under source settings give 
+
+5.	Output stream name as **_``CSVSource``_**.
+
+6.	Select sourcetype **_integration dataset_** .
+
+7.	Select dataset  as **_adworksraw_**.
+
+8.	Set below options as **true**.
+
+   i.	 Allow schema drift
+  ii.  Infer drifted column types
+
+  ![Dataflow](./assets/df5.jpg "Create Dataflow")
+  
+9.	Select **+** icon beside CSVSource and select **_Sink_** as source.
+
+  ![Dataflow](./assets/df6.jpg "Create Dataflow")
+  
+10.	Set output stream name as **_``adworksSink``_**.
+
+11.	Select incoming stream as **_CSVSource_**.
+
+12.	Select Sinktype as **_WorkspaceDB_**.
+
+13.	Select Database **_adworks_**.
+
+14.	Set Table as **_``$tableName``_**.
+
+  ![Dataflow](./assets/df7.jpg "Create Dataflow")
+  
+15.	Select **_Recreate table_** as Table action under settings.
+
+  ![Dataflow](./assets/df9.jpg "Create Dataflow")
+ 
+16.	Select **_Mapping_** and select below checkboxes
+    
+    i.	  Skip duplicate input column.
+    
+    ii.   Skip duplicate output column.
+    
+ ![Dataflow](./assets/df8.jpg "Create Dataflow")
+
+17. Then click on **Validate** to validate created dataflow. Once dataflow has been validated publish it.
+
+     
+
+
+
 
