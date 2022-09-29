@@ -190,7 +190,7 @@ In this section, you will use data flow for creating a pipeline for loading data
 
 ## Steps to Create Pipeline :
 
-  1.	Select integrate then  **+** icon and select  **_Pipeline_**, Name it as **_``Load_CSV_data_to_adworks``_**
+  1. Go to the Integrate tab. Select the **+** plus icon next to the pipelines header and select Pipeline and name it as **_``Load_CSV_data_to_adworks``_**
 
  ![pipeline](./assets/pl1.png "Create pipeline")
  
