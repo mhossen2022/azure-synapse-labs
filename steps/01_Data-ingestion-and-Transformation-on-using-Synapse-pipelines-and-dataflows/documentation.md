@@ -109,6 +109,7 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
     Create below mentioned two parameter:
     
        i.	Name as **``folderPath``** with default value **``@dataset().fileName``**.
+       
       ii.	Name as **``fileName``** with default value **``@dataset().folderPath``**.
     
     ![createParameter](./assets/07-adwork-create-parameters.jpg "create parameter")
@@ -149,6 +150,7 @@ In this section, you will use integration datasets for creating a dataflow for l
 8.	Set below options as **true**.
 
    i.	 Allow schema drift
+   
   ii.  Infer drifted column types
 
   ![Dataflow](./assets/df5.jpg "Create Dataflow")
