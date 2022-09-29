@@ -1,7 +1,7 @@
 # Data ingestion and transformation using Synapse pipelines and data flows
 ## Description:
-In this lab, gives you the option to implement as well as execute integration Pipeline by typical data integration scenario in which data flows in different stages.
-At first extracts  Source data exists in the form of CSV files from the raw landing zone then  loads to a staging lake database (adworks) then  Data is transformed into a target database (adworkstarget)
+This lab gives you the option to implement and execute integration Pipeline by typical data integration scenario where data flows in different stages.
+At first extracts  source data exists in the form of CSV files from the raw landing zone then  loads into a staging lake database (adworks), After that data will be transformed into a target database (adworkstarget) with the help of pipelines. 
 
 ## Prerequisites:
 ### Log-in to the Azure Portal
@@ -19,34 +19,34 @@ At first extracts  Source data exists in the form of CSV files from the raw land
 
   ![ws](./assets/2_open_ws.jpg "open WS")
 
-4. It will be redirected to synapse workspace.
-
-    ![views](./assets/3_ws.jpg "view WS")
-    
-5. If you get **Failed to load** message then follow step 6, else skip step 6.
+4. It will be redirected to synapse workspace with **Failed to load** message.
 
 ![views](./assets/01_failed.JPG "view WS")
     
-6.	Go to **_Manage_** tab from left side navigation and select **_Access Control_** and add yourself as the **_Synapse Administrator_**
+5.	In Synapse Studio, under  **_Manage_** tab, select **_Access Control_** and add yourself as the **_Synapse Administrator_**
 
     ![Access](./assets/4_access.JPG "Access")
   
+  ### Grant Storage Access
 This lab automatically grant workspace identity data access to the workspace Data Lake Storage Gen2 account, using the Storage Blob Data Contributor role. 
 
 ## Source Data:
 
-•	This Lab uses Retail database as source  to quickly implement dataflows, datasets and integrate pipelines  for creating Facts and  dimensional tables.
+This Lab uses Retail database as source  to quickly implement dataflows, datasets and integrate pipelines  for creating Facts and  dimensional tables.
+
 Retail includes the following technical assets
+
 •	Adventure Works sample CSV source files
+
 •	Integration pipelines, Dataflows and datasets.
+
 •	Staging and multi-dimensional lake databases
 
-## 	Exercise to Data ingestion and transformation using Synapse pipelines and data flows
 ## Creating Data set from ADLS Gen2 storage
 
 In this section, you will use ADLS Gen2 Storage to create datasets. These datasets will be used further for creating the Data Flows.
 
-### Create Dataset-raw
+### Steps for createing Dataset - raw :
 
 1.	Go to *__Data__* -- > Select *__Linked__* -- > Select *__Integrated dataset__* . It will open New integration dataset.
 
