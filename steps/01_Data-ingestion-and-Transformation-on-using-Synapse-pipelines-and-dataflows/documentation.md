@@ -49,7 +49,7 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
 
 ### Steps for createing Dataset - raw :
 
-1.	Go to the *__Data__* -- > Select *__Linked__* -- > Select *__Integrated dataset__* . It will open New integration dataset.
+1.	Go to the *__Data__* -- > Select *__Linked__* -- > select "_+_" (plus icon)--> Select *__Integrated dataset__* . It will open New integration dataset.
 
     ![integratedDataset](./assets/07-raw-integrated-dataset.jpg "select integrated dataset")
     
@@ -84,7 +84,7 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
 
 ### Create Dataset - adworksraw
 
-1.	Go to *__Data__* -- > Select *__Linked__* -- > Select *__Integrated dataset__* . It will open New integration dataset.
+1.	Go to *__Data__* -- > Select *__Linked__* -- >select "_+_" (plus icon)--> Select *__Integrated dataset__* . It will open New integration dataset.
     
     ![integratedDataset](./assets/07-adwork-integrated-dataset.jpg "select integrated dataset")
 
@@ -126,7 +126,7 @@ In this section, you will use integration datasets for creating a dataflow for l
 
 ## Create Dataflow – adworks_DF
 
-1.	Select **_Develop_** from menu then  click on **+**  and select option **_Dataflow_** and give name as **_``adworks_DF``_** under properties.
+1.	Go to **_Develop_** tab from left menu, select  **+** (plus icon) and select option **_Dataflow_** and name it as **_``adworks_DF``_** under properties.
 
  ![Dataflow](./assets/df1.jpg "Create Dataflow")
  
