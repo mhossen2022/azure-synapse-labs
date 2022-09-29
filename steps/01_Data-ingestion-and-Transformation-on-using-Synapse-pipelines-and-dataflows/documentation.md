@@ -1,7 +1,7 @@
 # Data ingestion and transformation using Synapse pipelines and data flows
 ## Description:
-This lab gives you the option to implement and execute integration Pipeline by typical data integration scenarios, where data flows in different stages.
-At first pipeline extracts  source data  from the raw landing zone then  loads into a staging lake database (adworks).
+This lab gives an option to implement and execute Pipeline by typical data integration scenarios, where data flows in different stages.
+A pipeline contains the logical flow for an execution of a set of activities. At first pipeline extracts  source data  from the raw landing zone, then  loads into a staging lake database (adworks).
 Using dimensional and muli-dimensional pipelines data will be transformed into a target database (adworkstarget). 
 
 ## Prerequisites:
@@ -47,7 +47,7 @@ Retail includes the following technical assets
 
 In this section, you will use ADLS Gen2 Storage to create datasets. These datasets will be used further for creating the Data Flows.
 
-### Steps for createing Dataset - raw :
+### Steps to create Dataset - raw :
 
 1.	Go to the *__Data__* -- > Select *__Linked__* -- > select "_+_" (plus icon)--> Select *__Integrated dataset__* . It will open New integration dataset.
 
@@ -82,7 +82,7 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
     ![setConnections](./assets/07-raw-set-connections.jpg "set connections")
 
 
-### Create Dataset - adworksraw
+### Steps to Create Dataset - adworksraw :
 
 1.	Go to *__Data__* -- > Select *__Linked__* -- >select "_+_" (plus icon)--> Select *__Integrated dataset__* . It will open New integration dataset.
     
@@ -124,7 +124,7 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
 
 In this section, you will use integration datasets for creating a dataflow for loading data into lake database.
 
-## Create Dataflow – adworks_DF
+## Steps to Create Dataflow – adworks_DF :
 
 1.	Go to **_Develop_** tab from left menu, select  **+** (plus icon) and select option **_Dataflow_** and name it as **_``adworks_DF``_** under properties.
 
@@ -188,7 +188,7 @@ In this section, you will use integration datasets for creating a dataflow for l
 
 In this section, you will use data flow for creating a pipeline for loading data into lake database.
 
-## Create Pipeline
+## Steps to Create Pipeline :
 
   1.	Select integrate then  **+** icon and select  **_Pipeline_**, Name it as **_``Load_CSV_data_to_adworks``_**
 
