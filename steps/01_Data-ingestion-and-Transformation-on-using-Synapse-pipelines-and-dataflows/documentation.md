@@ -23,7 +23,7 @@ At first extracts  Source data exists in the form of CSV files from the raw land
 
     ![views](./assets/3_ws.jpg "view WS")
     
-5. If you get **Failed to load** message then add follow step 6, else skip step 6.
+5. If you get **Failed to load** message then follow step 6, else skip step 6.
 
 ![views](./assets/01_failed.JPG "view WS")
     
