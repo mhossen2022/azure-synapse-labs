@@ -107,6 +107,7 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
 
 1.	Select **+** under Parameter section to create parameters
     Create below mentioned two parameter:
+    
        i.	Name as **``folderPath``** with default value **``@dataset().fileName``**.
       ii.	Name as **``fileName``** with default value **``@dataset().folderPath``**.
     
@@ -116,8 +117,6 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
     set filename as **``@dataset().fileName``** and set first row as Header as **``True``**.
     
     ![setConnections](./assets/07-adwork-set-connections.jpg "set connections")
-
-
 
 # Create Dataflow using the integration datasets
 
