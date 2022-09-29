@@ -4,7 +4,7 @@ This Lab gives you the option to implement as well as execute integration Pipeli
 At first extracts  Source data exists in the form of CSV files from the raw landing zone then  loads to a staging lake database (adworks) then  Data is transformed into a target database (adworkstarget)
 ## Prerequisites:
 1.	Add yourself as Active directory Admin to Synapse Workspace. 
- 
+ ![setadmin](./assets/az1.jpg "set admin")
 2.	Add yourself as the Synapse Administrator
 3.	
 4.	Synapse workspace and Storage account would be existing under below resources
