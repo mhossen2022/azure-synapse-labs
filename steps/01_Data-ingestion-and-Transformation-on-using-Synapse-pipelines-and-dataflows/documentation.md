@@ -2,6 +2,7 @@
 ## Description:
 In this lab, gives you the option to implement as well as execute integration Pipeline by typical data integration scenario in which data flows in different stages.
 At first extracts  Source data exists in the form of CSV files from the raw landing zone then  loads to a staging lake database (adworks) then  Data is transformed into a target database (adworkstarget)
+
 ## Prerequisites:
 ### Log-in to the Azure Portal
 1. In a new window, sign in to the **Azure Portal** (<https://portal.azure.com>).
@@ -14,17 +15,21 @@ At first extracts  Source data exists in the form of CSV files from the raw land
 
  ![setadmin](./assets/01_setadmin.JPG "set admin")
  
-3. Click **_Open_** to open synapse studio.
+3. Select **_Overview_** and  Click **_Open_** to open synapse studio.
 
   ![ws](./assets/2_open_ws.jpg "open WS")
 
-5. It will be redirected to synapse workspace.
+4. It will be redirected to synapse workspace.
 
     ![views](./assets/3_ws.jpg "view WS")
     
+5. If you get **Failed to load** message then add follow step 6, else skip step 6.
+
+![views](./assets/01_failed.JPG "view WS")
+    
 6.	Add yourself as the Synapse Administrator
 
- ![setadmin](./assets/01_setadmin.jpg "set admin")
+ ![setadmin](./assets/01_failed.JPG "set admin")
  
 7.	Synapse workspace and Storage account would be existing under below resources
 8.	Note down the Raw Storage Account name, this will be used later in the lab.
