@@ -131,7 +131,7 @@ In this section, you will use integration datasets for creating a dataflow for l
  
  ![Dataflow](./assets/df2.jpg "Create Dataflow")
  
-2.	Create new Parameter and name as **_``tableName``_**.
+2.	Create new Parameter and name as **_``tableName``_** and leave **_Defaultvalue_** as empty.
 
  ![Dataflow](./assets/df3.jpg "Create Dataflow")
  
