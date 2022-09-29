@@ -7,15 +7,19 @@ At first extracts  Source data exists in the form of CSV files from the raw land
 1. In a new window, sign in to the **Azure Portal** (<https://portal.azure.com>).
 
 2.  In the **Resource groups** blade, navigate to created resource group and select the created  **Synampse Workspace**.
+
    ![The Synapse Workspace is highlighted](./assets/01_Synapse.JPG "Select the synapse workspace")  
    
 3.	Open Synapse workspace and add yourself as Active directory Admin. 
+
  ![setadmin](./assets/az1.jpg "set admin")
  
 2.	Add yourself as the Synapse Administrator
- ![setadmin](./assets/az1.jpg "set admin")
+
+ ![setadmin](./assets/01_setadmin.jpg "set admin")
  
 3. Click **_Open_** to open synapse studio.
+
   ![ws](./assets/2_open_ws.jpg "open WS")
 
 5. It will be redirected to synapse workspace.
