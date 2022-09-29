@@ -164,9 +164,7 @@ In this section, you will use integration datasets for creating a dataflow for l
 
 12.	Select Sinktype as **_WorkspaceDB_**.
 
-13.	Select Database **_adworks_**.
-
-14.	Set Table as **_``$tableName``_**.
+13.	Select Database **_adworks_** and Table as **_``$tableName``_**.
 
   ![Dataflow](./assets/df7.jpg "Create Dataflow")
   
@@ -174,7 +172,7 @@ In this section, you will use integration datasets for creating a dataflow for l
 
   ![Dataflow](./assets/df9.jpg "Create Dataflow")
  
-16.	Select **_Mapping_** and select below checkboxes
+16.	Select below checkboxes under **_Mapping_** section 
     
     i.	  Skip duplicate input column.
     
