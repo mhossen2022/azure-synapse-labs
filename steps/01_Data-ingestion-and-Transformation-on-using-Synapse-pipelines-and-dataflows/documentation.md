@@ -33,7 +33,7 @@ This lab automatically grant workspace identity data access to the workspace Dat
 
 ## Source Data:
 
-This Lab uses Retail database as source  to quickly implement dataflows, datasets and integrate pipelines  for creating Facts and  dimensional tables.
+This Lab uses Retail database as source  to quickly implement dataflows, datasets and integrate pipelines and activities for creating Facts and  dimensional tables.
 
 Retail includes the following technical assets
 
@@ -49,7 +49,7 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
 
 ### Steps for createing Dataset - raw :
 
-1.	Go to *__Data__* -- > Select *__Linked__* -- > Select *__Integrated dataset__* . It will open New integration dataset.
+1.	Go to the *__Data__* -- > Select *__Linked__* -- > Select *__Integrated dataset__* . It will open New integration dataset.
 
     ![integratedDataset](./assets/07-raw-integrated-dataset.jpg "select integrated dataset")
     
