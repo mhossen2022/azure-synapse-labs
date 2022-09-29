@@ -27,19 +27,14 @@ At first extracts  Source data exists in the form of CSV files from the raw land
 
 ![views](./assets/01_failed.JPG "view WS")
     
-6.	Add yourself as the Synapse Administrator
+6.	Go to **_Manage_** tab from left side navigation and select **_Access Control_** and add yourself as the **_Synapse Administrator_**
 
- ![setadmin](./assets/01_failed.JPG "set admin")
- 
-7.	Synapse workspace and Storage account would be existing under below resources
-8.	Note down the Raw Storage Account name, this will be used later in the lab.
-•	Primary Storage Account name starts with azwksdatalake
-•	Raw Storage Account name starts with azrawdatalake
-•	Curated Storage Account name starts with azrcurateddatalake
-•	Synapse Workspace name starts with azsynapsewks
+    ![Access](./assets/4_access.JPG "Access")
+  
 This lab automatically grant workspace identity data access to the workspace Data Lake Storage Gen2 account, using the Storage Blob Data Contributor role. 
 
 ## Source Data:
+
 •	This Lab uses Retail database as source  to quickly implement dataflows, datasets and integrate pipelines  for creating Facts and  dimensional tables.
 Retail includes the following technical assets
 •	Adventure Works sample CSV source files
