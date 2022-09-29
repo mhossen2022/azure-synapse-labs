@@ -169,11 +169,11 @@ In this section, you will use integration datasets for creating a dataflow for l
 
   ![Dataflow](./assets/df7.jpg "Create Dataflow")
   
-15.	Select **_Recreate table_** as Table action under settings.
+14.	Select **_Recreate table_** as Table action under settings.
 
   ![Dataflow](./assets/df9.jpg "Create Dataflow")
  
-16.	Select below checkboxes under **_Mapping_** section 
+15.	Select below checkboxes under **_Mapping_** section 
     
     i.	  Skip duplicate input column.
     
@@ -181,7 +181,7 @@ In this section, you will use integration datasets for creating a dataflow for l
     
  ![Dataflow](./assets/df8.jpg "Create Dataflow")
 
-17. Then click on **Validate** to validate created dataflow. Once dataflow has been validated publish it.
+16. Then click on **Validate** to validate created dataflow. Once dataflow has been validated publish it.
 
 # Create and run pipeline using the Data flow for loading the data to Lake database
 
@@ -256,6 +256,9 @@ Select Variable to create below pipeline variables
         ![pipeline](./assets/pl9.png "Create pipeline")
    
   18. Then Validate pipeline by clicking **_Validate_** and Publish it.
+  19. After publishing pipline,Select **_Debug_** to run **_Load CSV data to adworks_**
+  
+  ![pipeline](./assets/01_runpipeline.JPG "run pipeline")  
      
 # Create Dataflow – FactSales_DF
 
