@@ -16,7 +16,7 @@ Using dimensional and muli-dimensional pipelines data will be transformed into a
 
  ![setadmin](./assets/01_setadmin.JPG "set admin")
  
-3. Select **_Overview_** and  Click **_Open_** to open synapse studio.
+3. In the  **_Overview_** section of synapseworkspace select **_Open_** to open synapse studio.
 
   ![ws](./assets/2_open_ws.jpg "open WS")
 
