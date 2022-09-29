@@ -1,7 +1,8 @@
 # Data ingestion and transformation using Synapse pipelines and data flows
 ## Description:
 This lab gives you the option to implement and execute integration Pipeline by typical data integration scenarios, where data flows in different stages.
-At first extracts  source data exists in the form of CSV files from the raw landing zone then  loads into a staging lake database (adworks), After that data will be transformed into a target database (adworkstarget) with the help of pipelines. 
+At first pipeline extracts  source data  from the raw landing zone then  loads into a staging lake database (adworks).
+Using dimensional and muli-dimensional pipelines data will be transformed into a target database (adworkstarget). 
 
 ## Prerequisites:
 ### Log-in to the Azure Portal
