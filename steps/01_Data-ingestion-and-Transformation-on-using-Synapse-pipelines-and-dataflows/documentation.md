@@ -261,7 +261,7 @@ Select Variable to create below pipeline variables
   
   ![pipeline](./assets/01_runpipeline.JPG "run pipeline")  
      
-### Create Dataflow – FactSales_DF
+### Steps to create Dataflow – FactSales_DF
 
 1.	Open FactSales_DF under **_Develop -> DataFlows -> FactSales_DF_**
 
@@ -331,13 +331,14 @@ Select Variable to create below pipeline variables
 
 1. Select **_Integrate_** and execute pipelines in below mentioned sequence.
 
-2. Select **_IndependentDimensions_**, then click on **_Debug_** or select **_Trigger Now_** option under **_Add Trigger_**
-
-![RunPipelines](./assets/11-1_execute_pipelines.jpg "Run Pipelines")
-
 - IndependentDimensions
 - DependentDimensions
 - FactTables 
+
+2. To run pipeline,  click on **_Debug_** or select **_Trigger Now_** option under **_Add Trigger_**
+
+![RunPipelines](./assets/11-1_execute_pipelines.jpg "Run Pipelines")
+
 ## Relationship between dimension and fact tables
 
 ### Steps to create relationships between tables :
