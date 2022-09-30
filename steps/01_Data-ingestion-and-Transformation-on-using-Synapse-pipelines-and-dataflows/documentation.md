@@ -120,11 +120,11 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
     
     ![setConnections](./assets/07-adwork-set-connections.jpg "set connections")
 
-# Create Dataflow using the integration datasets
+## Create Dataflow using the integration datasets
 
 In this section, you will use integration datasets for creating a dataflow for loading data into lake database.
 
-## Steps to Create Dataflow – adworks_DF :
+### Steps to Create Dataflow – adworks_DF :
 
 1.	Go to **_Develop_** tab from left menu, select  **+** (plus icon) and select option **_Dataflow_** and name it as **_``adworks_DF``_** under properties.
 
@@ -184,11 +184,11 @@ In this section, you will use integration datasets for creating a dataflow for l
 
 16. Then click on **Validate** to validate created dataflow. Once dataflow has been validated publish it.
 
-# Create and run pipeline using the Data flow for loading the data to Lake database
+## Create and run pipeline using the Data flow for loading the data to Lake database
 
 In this section, you will use data flow for creating a pipeline for loading data into lake database.
 
-## Steps to Create Pipeline :
+### Steps to Create Pipeline :
 
   1. Go to the Integrate tab. Select the **+** plus icon next to the pipelines header and select Pipeline and name it as **_``Load_CSV_data_to_adworks``_**
 
@@ -261,7 +261,7 @@ Select Variable to create below pipeline variables
   
   ![pipeline](./assets/01_runpipeline.JPG "run pipeline")  
      
-# Create Dataflow – FactSales_DF
+### Create Dataflow – FactSales_DF
 
 1.	Open FactSales_DF under **_Develop -> DataFlows -> FactSales_DF_**
 
@@ -340,7 +340,7 @@ Select Variable to create below pipeline variables
 - FactTables 
 ## Relationship between dimension and fact tables
 
-## Steps to create relationships between tables :
+### Steps to create relationships between tables :
 
 1) User has to navigate to the synapse workspace.
 
