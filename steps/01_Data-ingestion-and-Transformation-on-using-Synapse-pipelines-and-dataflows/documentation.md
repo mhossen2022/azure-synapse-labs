@@ -321,7 +321,7 @@ Select Variable to create below pipeline variables
 
 ![sinkType](./assets/10-14_sink_type.jpg "sink type")
 
-16.	Click on **_Validate_** to  validate dataflow.
+16. After successful creation of dataflow make sure you Validate by clicking on  **_Validate_** .
 
 ![validate](./assets/10-15_validate.jpg "validate")
 
@@ -338,7 +338,7 @@ Select Variable to create below pipeline variables
 - IndependentDimensions
 - DependentDimensions
 - FactTables 
-# Relationship between dimension and fact tables
+## Relationship between dimension and fact tables
 
 ## Steps to create relationships between tables :
 
