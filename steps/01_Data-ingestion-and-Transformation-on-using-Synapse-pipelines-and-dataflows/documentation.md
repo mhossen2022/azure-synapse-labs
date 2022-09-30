@@ -12,7 +12,7 @@ Using dimensional and muli-dimensional pipelines data will be transformed into a
 
    ![The Synapse Workspace is highlighted](./assets/01_Synapse.JPG "Select the synapse workspace")  
    
-3.	Open Synapse workspace and add yourself as Active directory Admin. 
+3.	To Set Azure Active Directory admin,  open workspace and click on the Azure Active Directory under settings using the left side navigation
 
  ![setadmin](./assets/01_setadmin.JPG "set admin")
  
