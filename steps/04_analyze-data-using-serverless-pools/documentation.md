@@ -62,7 +62,7 @@ Data sources represent connection string information that describes where your d
 
 ```sql
 CREATE EXTERNAL DATA SOURCE ecdc_cases WITH (
-    LOCATION = 'https://<rawstorageaccountName>.blob.core.windows.net/raw/yellow/puYear=2022/',
+    LOCATION = 'https://<rawstorageaccountName>.blob.core.windows.net/raw/',
     CREDENTIAL = scpCred
 );
 ```
@@ -72,7 +72,7 @@ Once you set up your data sources, you can use the OPENROWSET function to explor
 
 ```sql
 select top 10  *
-from openrowset(bulk 'puMonth=01/yellow.parquet',
+from openrowset(bulk 'holiday.parquet',
                 data_source = 'ecdc_cases',
                
                 format='parquet') as a
@@ -92,16 +92,16 @@ Once you define the schemas, you can create external tables that are referencing
 
 ```sql
 create external table ecdc_adls.cases (
-    countryOrRegion                  varchar(256),
-    holidayName                        varchar(256),
-    normalizeHolidayName                      varchar(256),
-    isPaidTimeOff                       varchar(256),
-    countryRegionCode                      varchar(256),
+    countryOrRegion          varchar(256),
+    holidayName              varchar(256),
+    normalizeHolidayName     varchar(256),
+    isPaidTimeOff            varchar(256),
+    countryRegionCode        varchar(16),
     date                     date
     
 ) with (
     data_source= ecdc_cases,
-    location = 'holiday.parquet/part-00000-451415c2-10e1-4777-b19e-851ecba334e9-c000.snappy.parquet',
+    location = 'holiday.parquet',
     file_format = ParquetFormat
 );   
 ```
