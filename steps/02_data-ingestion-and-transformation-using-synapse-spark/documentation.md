@@ -550,6 +550,8 @@ In particular, we'll analyze the New York City (NYC) Taxi dataset. The data is a
     from azureml.opendatasets import NycTlcYellow
     from datetime import datetime
     from dateutil import parser
+    ```
+    ```python
     end_date = parser.parse('2018-06-06')
     start_date = parser.parse('2018-05-01')
     nyc_tlc = NycTlcYellow(start_date=start_date, end_date=end_date)
