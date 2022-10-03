@@ -583,7 +583,7 @@ As a data analyst, you have a wide range of tools available to help you extract 
 
 First, we'll perform exploratory data analysis by Apache Spark SQL and magic commands with the Azure Synapse notebook. After we have our query, we'll visualize the results by using the built-in chart options capability.
 
-Within your notebook, create a new cell and copy the following code. By using this query, we want to understand how the average tip amounts have changed over the period we've selected. This query will also help us identify other useful insights, including the minimum/maximum tip amount per day and the average fare amount.
+1. Within your notebook, create a new cell and copy the following code. By using this query, we want to understand how the average tip amounts have changed over the period we've selected. This query will also help us identify other useful insights, including the minimum/maximum tip amount per day and the average fare amount.
 
 ```SQL
 %%sql
@@ -597,5 +597,18 @@ FROM taxi_dataset
 GROUP BY day_of_month
 ORDER BY day_of_month ASC
 ```
+2. After our query finishes running, we can visualize the results by switching to the chart view. This example creates a line chart by specifying the day_of_month field as the key and avgTipAmount as the value. After you've made the selections, select Apply to refresh your chart.
 
 ### Visualize data
+
+In addition to the built-in notebook charting options, you can use popular open-source libraries to create your own visualizations. In the following examples, we'll use Seaborn and Matplotlib. These are commonly used Python libraries for data visualization.
+
+1. To make development easier and less expensive, we'll downsample the dataset. We'll use the built-in Apache Spark sampling capability. In addition, both Seaborn and Matplotlib require a Pandas DataFrame or NumPy array. To get a Pandas DataFrame, use the toPandas() command to convert the DataFrame.
+
+```Python
+# To make development easier, faster, and less expensive, downsample for now
+sampled_taxi_df = filtered_df.sample(True, 0.001, seed=1234)
+
+# The charting package needs a Pandas DataFrame or NumPy array to do the conversion
+sampled_taxi_pd_df = sampled_taxi_df.toPandas()
+```
