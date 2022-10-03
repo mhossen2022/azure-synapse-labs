@@ -14,7 +14,7 @@ Azure Open Dataset
  - NoaaIsdWeather
 
 
-## Access data on Azure Data Lake Storage Gen2 (ADLS Gen2) with Synapse Spark
+## Exercise 1 : Access data on Azure Data Lake Storage Gen2 (ADLS Gen2) with Synapse Spark
 
 Azure Data Lake Storage Gen2 (ADLS Gen2) is used as the storage account associated with a Synapse workspace. A synapse workspace can have a default ADLS Gen2 storage account and additional linked storage accounts.
 You can access data on ADLS Gen2 with Synapse Spark via the following URL:
@@ -190,7 +190,7 @@ Once executing all the code cells. Click **_Validate All_** and **_Publish All_*
 
 
 
-## Using Azure Open Datasets in Synapse - Enrich NYC Green Taxi Data with Holiday and Weather
+## Exercise 2 : Using Azure Open Datasets in Synapse - Enrich NYC Green Taxi Data with Holiday and Weather
 
 Synapse has Azure Open Datasets package pre-installed. This notebook provides examples of how to enrich NYC Green Taxi Data with Holiday and Weather with focusing on:
 
@@ -527,3 +527,20 @@ spark.sql("SELECT COUNT(*) FROM nyc_taxi_holiday_weather").show();
 5)	Make sure you have **_nyc_taxi_holiday_weather table created_**.
 
        ![validateNotebooks](./assets/06-validate_notebook_dl.jpg "validate notebook")
+
+## Exercise 3 : Analyze data with Apache Spark
+
+In this tutorial, you'll learn how to perform exploratory data analysis by using Azure Open Datasets and Apache Spark. You can then visualize the results in a Synapse Studio notebook in Azure Synapse Analytics.
+
+In particular, we'll analyze the New York City (NYC) Taxi dataset. The data is available through Azure Open Datasets. This subset of the dataset contains information about yellow taxi trips: information about each trip, the start and end time and locations, the cost, and other interesting attributes.
+
+### Download and prepare the data
+
+ 1. Create a new notebook as created in above exercises and name it ``ntb_Analyze_and_Visualize_data``.
+ 2. In this tutorial, we'll use several different libraries to help us visualize the dataset. To do this analysis, import the following libraries:
+ 
+   ```python
+   import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+   ```
