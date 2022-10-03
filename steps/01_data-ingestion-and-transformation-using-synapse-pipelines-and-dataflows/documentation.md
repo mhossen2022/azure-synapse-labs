@@ -39,6 +39,9 @@ On the Synapse Studio home page, select the Manage tab in the left navigation
 Under External connections, select Linked services.
 ![LinkedService](./assets/01_LinkedService.jpg "LinkedService")
 
+### Pipeline
+A pipeline contains the logical flow for an execution of a set of activities. In this lab you are going do an excersize, where copy CSV files from raw datalake storage and stored into datalake database (adworks)
+
 ## Source Data:
 
 This Lab uses Retail database as source  to quickly implement dataflows, datasets and integrate pipelines and activities for creating Facts and  dimensional tables.
@@ -265,7 +268,7 @@ Select Variable to create below pipeline variables
         ![pipeline](./assets/pl9.png "Create pipeline")
    
   18. Then Validate pipeline by clicking **_Validate_** and Publish it.
-  19. After publishing pipline,Select **_Debug_** to run **_Load CSV data to adworks_**
+  19. To debug the pipeline, select Debug on the toolbar. You see the status of the pipeline run in the Output tab at the bottom of the window.
   
   ![pipeline](./assets/01_runpipeline.JPG "run pipeline")  
      
