@@ -147,7 +147,7 @@ In this section, you will use integration datasets for creating a dataflow for l
 
  ![Dataflow](./assets/df3.jpg "Create Dataflow")
  
-3.	Click on **Add source**, it will display prepopulated options. Then select **AddSource**.
+3.	In the data flow canvas, add a source by clicking on the **AddSource** box.
 
  ![Dataflow](./assets/df4.jpg "Create Dataflow")
 
