@@ -1,6 +1,0 @@
-title: Create Relationships between Dimensions and Fact
-internal_name: Create Relationships between Dimensions and Fact
-vendor: azure
-runtime: python3.8
-memory: 128
-timeout: 10
