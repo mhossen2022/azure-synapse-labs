@@ -1,1 +1,1 @@
-Data Ingestion and transformation using Synapse Spark 
+Data Ingestion and transformation using Synapse pipeline and dataflows 
