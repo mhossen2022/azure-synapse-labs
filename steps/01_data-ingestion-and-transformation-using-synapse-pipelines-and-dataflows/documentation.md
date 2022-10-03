@@ -272,7 +272,12 @@ Select Variable to create below pipeline variables
   19. To debug the pipeline, select Debug on the toolbar. You see the status of the pipeline run in the Output tab at the bottom of the window.
   
   ![pipeline](./assets/01_runpipeline.JPG "run pipeline")  
-     
+   
+  20. To Trigger and monitor the pipeline, Select Add Trigger on the toolbar, and then select Trigger Now. On the Pipeline Run page, select OK.
+  21. Go to the Monitor tab located in the left sidebar. You see a pipeline run that is triggered by a manual trigger.
+
+  ![pipeline](./assets/01_Trigger.jpg "Trigger pipeline")  
+
 ### Steps to create Dataflow – FactSales_DF
 
 1.	Open FactSales_DF under **_Develop -> DataFlows -> FactSales_DF_**
