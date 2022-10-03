@@ -40,7 +40,7 @@ Under External connections, select Linked services.
 ![LinkedService](./assets/01_LinkedService.jpg "LinkedService")
 
 ### Pipeline
-A pipeline contains the logical flow for an execution of a set of activities. In this lab you are going do an excersize, where copy CSV files from raw datalake storage and stored into datalake database (adworks)
+A pipeline contains the logical flow for an execution of a set of activities. In this lab you are going do an excersize, where copy CSV files from raw datalake storage and stored into lake database (adworks)
 
 ## Source Data:
 
@@ -201,7 +201,8 @@ In this section, you will use data flow for creating a pipeline for loading data
 
 ### Steps to Create Pipeline :
 
-  1. Go to the Integrate tab. Select the **+** plus icon next to the pipelines header and select Pipeline and name it as **_``Load_CSV_data_to_adworks``_**
+  1. Go to the Integrate tab. Select the **+** plus icon next to the pipelines header and select Pipeline.
+  2. In the Properties settings page of the pipeline, enter **_``Load_CSV_data_to_adworks``_** for Name.
 
  ![pipeline](./assets/pl1.png "Create pipeline")
  
