@@ -1,6 +1,0 @@
-title: Create and run pipeline using the Data flow for loading the data to Lake database
-internal_name: Create and run pipeline using the Data flow for loading the data to Lake database
-vendor: azure
-runtime: python3.8
-memory: 128
-timeout: 10
