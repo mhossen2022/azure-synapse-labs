@@ -40,7 +40,7 @@ Under External connections, select Linked services.
 ![LinkedService](./assets/01_LinkedService.jpg "LinkedService")
 
 ### Pipeline
-A pipeline contains the logical flow for an execution of a set of activities. In this lab you are going do an excersize, where copy CSV files from raw datalake storage and stored into lake database (adworks)
+A pipeline contains the logical flow for an execution of a set of activities. In this lab you are going do an excersize, where it facilitates you to copy CSV files from raw datalake storage and stored into lake database (adworks)
 
 ## Source Data:
 
@@ -167,7 +167,7 @@ In this section, you will use integration datasets for creating a dataflow for l
 
   ![Dataflow](./assets/df5.jpg "Create Dataflow")
   
-9.	Select **+** icon beside CSVSource and select **_Sink_** as source.
+9.	Next to your source **_CSVSource_** node on the data flow canvas, click on the (+) plus icon to add a new transformation and select **_Sink_** as source.
 
   ![Dataflow](./assets/df6.jpg "Create Dataflow")
   
