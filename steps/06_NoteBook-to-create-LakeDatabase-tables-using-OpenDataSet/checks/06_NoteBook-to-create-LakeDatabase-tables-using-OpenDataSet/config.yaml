@@ -1,6 +1,0 @@
-title: Using Azure Open Datasets in Synapse - Enrich NYC Green Taxi Data with Holiday and Weather
-internal_name: Using Azure Open Datasets in Synapse - Enrich NYC Green Taxi Data with Holiday and Weather
-vendor: azure
-runtime: python3.8
-memory: 128
-timeout: 10
