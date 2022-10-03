@@ -36,7 +36,7 @@ In Azure Synapse Analytics, a linked service is where you define your connection
 In this lab we are going to use Azure Data Lake Storage Gen2 (ADLS Gen2) linked services.
 On the Synapse Studio home page, select the Manage tab in the left navigation
 Under External connections, select Linked services.
-![LinkedService](./assets/01_LinkedService.JPG "LinkedService")
+![LinkedService](./assets/01_LinkedService.jpg "LinkedService")
 
 ## Source Data:
 
