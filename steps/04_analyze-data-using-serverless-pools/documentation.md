@@ -14,6 +14,87 @@ You need to create a custom database where you will store your external tables a
 CREATE DATABASE Ldw
       COLLATE Latin1_General_100_BIN2_UTF8;
 ```
+This collation will provide the optimal performance while reading Parquet and Cosmos DB. If you don't want to specify the database collation, make sure that you specify this collation in the column definition.
+
+### Configure data sources and formats
+
+As a prerequisite, you will need to create a master key in the database:
+
+```sql
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
+```
+
+1. You need to configure data source and specify file format of remotely stored data, this will require to create a SCOPED CREDENTIAL
+
+Replace secret-key place holder with scret key generated
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL MyCosmosDbAccountCredential
+WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+     SECRET = '<secret-key>';
+```
+### Steps to generate secret key
+
+2. External file formats define the structure of the files stored on external data source.
+
+```sql
+CREATE EXTERNAL FILE FORMAT ParquetFormat WITH (  FORMAT_TYPE = PARQUET );
+GO
+CREATE EXTERNAL FILE FORMAT CsvFormat WITH (  FORMAT_TYPE = DELIMITEDTEXT );
+```
+
+3. Create data source
+Data sources represent connection string information that describes where your data is placed and how to authenticate to your data source.
+
+```sql
+CREATE EXTERNAL DATA SOURCE ecdc_cases WITH (
+    LOCATION = 'https://<rawstorageaccountName>.blob.core.windows.net/raw/yellow/puYear=2022/',
+    CREDENTIAL = scpCred
+);
+```
+### Explore your data
+
+Once you set up your data sources, you can use the OPENROWSET function to explore your data. The OPENROWSET function reads content of a remote data source (for example file) and returns the content as a set of rows.
+
+```sql
+select top 10  *
+from openrowset(bulk 'puMonth=01/yellow.parquet',
+                data_source = 'ecdc_cases',
+               
+                format='parquet') as a
+```
+
+### Create external tables on Azure storage
+
+Once you discover the schema, you can create external tables and views on top of your external data sources. The good practice is to organize your tables and views in databases schemas. In the following query you can create a schema where you will place all objects that are accessing ECDC COVID data set in Azure data Lake storage:
+
+```sql
+create schema ecdc_adls;
+```
+
+The database schemas are useful for grouping the objects and defining permissions per schema.
+
+Once you define the schemas, you can create external tables that are referencing the files. The following external table is referencing the ECDC COVID parquet file placed in the Azure storage:
+
+```sql
+create external table ecdc_adls.cases (
+    countryOrRegion                  varchar(256),
+    holidayName                        varchar(256),
+    normalizeHolidayName                      varchar(256),
+    isPaidTimeOff                       varchar(256),
+    countryRegionCode                      varchar(256),
+    date                     date
+    
+) with (
+    data_source= ecdc_cases,
+    location = 'holiday.parquet/part-00000-451415c2-10e1-4777-b19e-851ecba334e9-c000.snappy.parquet',
+    file_format = ParquetFormat
+);   
+```
+### Validate External Table created
+
+1. Goto 
+
 
 ### Exercise 2 : SQL Script to run query using Serverless SQL Pool
 
