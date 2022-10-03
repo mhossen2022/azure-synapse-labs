@@ -577,6 +577,25 @@ In particular, we'll analyze the New York City (NYC) Taxi dataset. The data is a
      
 ### Analyze data
 
+As a data analyst, you have a wide range of tools available to help you extract insights from the data. In this part of the tutorial, we'll walk through a few useful tools available within Azure Synapse Analytics notebooks. In this analysis, we want to understand the factors that yield higher taxi tips for our selected period.
+
 #### Apache Spark SQL Magic
+
+First, we'll perform exploratory data analysis by Apache Spark SQL and magic commands with the Azure Synapse notebook. After we have our query, we'll visualize the results by using the built-in chart options capability.
+
+Within your notebook, create a new cell and copy the following code. By using this query, we want to understand how the average tip amounts have changed over the period we've selected. This query will also help us identify other useful insights, including the minimum/maximum tip amount per day and the average fare amount.
+
+```SQL
+%%sql
+SELECT 
+    day_of_month
+    , MIN(tipAmount) AS minTipAmount
+    , MAX(tipAmount) AS maxTipAmount
+    , AVG(tipAmount) AS avgTipAmount
+    , AVG(fareAmount) as fareAmount
+FROM taxi_dataset 
+GROUP BY day_of_month
+ORDER BY day_of_month ASC
+```
 
 ### Visualize data
