@@ -1,6 +1,6 @@
 ## Analyze data using serverless pools
 
-### Exercise 1 : Create Logical Data Warehouse with serverless SQL pool
+## Exercise 1 : Create Logical Data Warehouse with serverless SQL pool
 
 In this tutorial, you will learn how to create a Logical Data Warehouse (LDW) on top of Azure storage
 
@@ -96,7 +96,7 @@ create external table ecdc_adls.cases (
 1. Goto 
 
 
-### Exercise 2 : SQL Script to run query using Serverless SQL Pool
+## Exercise 2 : SQL Script to run query using Serverless SQL Pool
 
 ### Authoring SQL Script and Run the SQL script:
 
