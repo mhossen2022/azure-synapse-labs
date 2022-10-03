@@ -612,3 +612,53 @@ sampled_taxi_df = filtered_df.sample(True, 0.001, seed=1234)
 # The charting package needs a Pandas DataFrame or NumPy array to do the conversion
 sampled_taxi_pd_df = sampled_taxi_df.toPandas()
 ```
+2. We want to understand the distribution of tips in our dataset. We'll use Matplotlib to create a histogram that shows the distribution of tip amount and count. Based on the distribution, we can see that tips are skewed toward amounts less than or equal to $10.
+
+```Python
+# Look at a histogram of tips by count by using Matplotlib
+
+ax1 = sampled_taxi_pd_df['tipAmount'].plot(kind='hist', bins=25, facecolor='lightblue')
+ax1.set_title('Tip amount distribution')
+ax1.set_xlabel('Tip Amount ($)')
+ax1.set_ylabel('Counts')
+plt.suptitle('')
+plt.show()
+```
+
+3. Next, we want to understand the relationship between the tips for a given trip and the day of the week. Use Seaborn to create a box plot that summarizes the trends for each day of the week.
+
+```Python
+# View the distribution of tips by day of week using Seaborn
+ax = sns.boxplot(x="day_of_week", y="tipAmount",data=sampled_taxi_pd_df, showfliers = False)
+ax.set_title('Tip amount distribution per day')
+ax.set_xlabel('Day of Week')
+ax.set_ylabel('Tip Amount ($)')
+plt.show()
+```
+
+4. Another hypothesis of ours might be that there's a positive relationship between the number of passengers and the total taxi tip amount. To verify this relationship, run the following code to generate a box plot that illustrates the distribution of tips for each passenger count.
+
+```Python
+# How many passengers tipped by various amounts 
+ax2 = sampled_taxi_pd_df.boxplot(column=['tipAmount'], by=['passengerCount'])
+ax2.set_title('Tip amount by Passenger count')
+ax2.set_xlabel('Passenger count')
+ax2.set_ylabel('Tip Amount ($)')
+ax2.set_ylim(0,30)
+plt.suptitle('')
+plt.show()
+```
+
+5. Last, we want to understand the relationship between the fare amount and the tip amount. Based on the results, we can see that there are several observations where people don't tip. However, we also see a positive relationship between the overall fare and tip amounts.
+
+```Python
+# Look at the relationship between fare and tip amounts
+
+ax = sampled_taxi_pd_df.plot(kind='scatter', x= 'fareAmount', y = 'tipAmount', c='blue', alpha = 0.10, s=2.5*(sampled_taxi_pd_df['passengerCount']))
+ax.set_title('Tip amount by Fare amount')
+ax.set_xlabel('Fare Amount ($)')
+ax.set_ylabel('Tip Amount ($)')
+plt.axis([-2, 80, -2, 20])
+plt.suptitle('')
+plt.show()
+```
