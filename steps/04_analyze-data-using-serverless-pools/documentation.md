@@ -1,4 +1,21 @@
-## SQL Script to run query using Serverless SQL Pool
+## Analyze data using serverless pools
+
+### Exercise 1 : Create Logical Data Warehouse with serverless SQL pool
+
+In this tutorial, you will learn how to create a Logical Data Warehouse (LDW) on top of Azure storage
+
+LDW is a relational layer built on top of Azure data sources such as Azure Data Lake storage (ADLS), Azure Cosmos DB analytical storage, or Azure Blob storage.
+
+### Create an LDW database
+
+You need to create a custom database where you will store your external tables and views that are referencing external data sources.
+
+```sql
+CREATE DATABASE Ldw
+      COLLATE Latin1_General_100_BIN2_UTF8;
+```
+
+### Exercise 2 : SQL Script to run query using Serverless SQL Pool
 
 ### Authoring SQL Script and Run the SQL script:
 
