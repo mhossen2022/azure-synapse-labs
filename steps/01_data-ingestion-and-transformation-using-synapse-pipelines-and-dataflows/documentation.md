@@ -31,6 +31,13 @@ Using dimensional and muli-dimensional pipelines data will be transformed into a
   ### Grant Storage Access
 This lab automatically grant workspace identity data access to the workspace Data Lake Storage Gen2 account, using the Storage Blob Data Contributor role. 
 
+### Linked Services
+In Azure Synapse Analytics, a linked service is where you define your connection information to other services.
+In this lab we are going to use Azure Data Lake Storage Gen2 (ADLS Gen2) linked services.
+On the Synapse Studio home page, select the Manage tab in the left navigation
+Under External connections, select Linked services.
+![LinkedService](./assets/01_LinkedService.JPG "LinkedService")
+
 ## Source Data:
 
 This Lab uses Retail database as source  to quickly implement dataflows, datasets and integrate pipelines and activities for creating Facts and  dimensional tables.
