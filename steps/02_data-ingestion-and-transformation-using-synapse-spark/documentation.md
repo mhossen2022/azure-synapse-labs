@@ -541,6 +541,42 @@ In particular, we'll analyze the New York City (NYC) Taxi dataset. The data is a
  
    ```python
    import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
+   import seaborn as sns
+   import pandas as pd
    ```
+  3. Because the raw data is in a Parquet format, you can use the Spark context to pull the file into memory as a DataFrame directly. Create a Spark DataFrame by        retrieving the data via the Open Datasets API. Here, we use the Spark DataFrame schema on read properties to infer the datatypes and schema. 
+  
+    ```python
+from azureml.opendatasets import NycTlcYellow
+from datetime import datetime
+from dateutil import parser
+
+end_date = parser.parse('2018-06-06')
+start_date = parser.parse('2018-05-01')
+nyc_tlc = NycTlcYellow(start_date=start_date, end_date=end_date)
+df = nyc_tlc.to_spark_dataframe()
+    ```
+    
+  4. After the data is read, we'll want to do some initial filtering to clean the dataset. We might remove unneeded columns and add columns that extract important        information. In addition, we'll filter out anomalies within the dataset.
+     
+     ```python
+     # Filter the dataset 
+from pyspark.sql.functions import *
+
+filtered_df = df.select('vendorID', 'passengerCount', 'tripDistance','paymentType', 'fareAmount', 'tipAmount'\
+                                , date_format('tpepPickupDateTime', 'hh').alias('hour_of_day')\
+                                , dayofweek('tpepPickupDateTime').alias('day_of_week')\
+                                , dayofmonth(col('tpepPickupDateTime')).alias('day_of_month'))\
+                            .filter((df.passengerCount > 0)\
+                                & (df.tipAmount >= 0)\
+                                & (df.fareAmount >= 1) & (df.fareAmount <= 250)\
+                                & (df.tripDistance > 0) & (df.tripDistance <= 200))
+
+filtered_df.createOrReplaceTempView("taxi_dataset")
+     ```
+     
+### Analyze data
+
+#### Apache Spark SQL Magic
+
+### Visualize data
