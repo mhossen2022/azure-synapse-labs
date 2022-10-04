@@ -668,3 +668,5 @@ plt.suptitle('')
 plt.show()
 ```
 ![visual](./assets/v4.JPG "visual")
+
+Once executing all the code cells. Click **Publish All** at the top.
