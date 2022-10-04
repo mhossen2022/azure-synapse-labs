@@ -1,4 +1,4 @@
-## Analyze data using serverless pools
+# Analyze data using serverless pools
 
 ## Exercise 1 : Create Logical Data Warehouse with serverless SQL pool
 
