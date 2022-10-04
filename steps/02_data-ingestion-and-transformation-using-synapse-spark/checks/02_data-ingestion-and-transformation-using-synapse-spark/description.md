@@ -1,1 +1,1 @@
-Check if the User Successfully used SQL Script to create tables using dedicated SQL Pool
+Check if the User Successfully used Notebook to Data Ingestion and transformation using Spark
