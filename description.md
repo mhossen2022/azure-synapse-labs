@@ -1,20 +1,14 @@
-You can use Azure Database Migration Service to migrate the databases from a SQL Server instance to [Azure SQL Database](https://github.com/MicrosoftDocs/azure-docs/blob/main/azure/sql-database). In this tutorial, you migrate the [Sample](https://github.com/MicrosoftDocs/azure-docs/blob/main/sql/samples/adventureworks-install-configure#download-backup-files) database from SQL Server 2019 to Azure SQL Database by using Azure Database Migration Service.
+In this lab, you will taken through a series of steps to implement key features of Azure Synapse
 
-In this Lab, you will learn how to:
+## Learning Objectives
+The objective of this lab is to provide participants solid understanding and experience of developing applications using Azure Synapse. The following are the main topics covered in the lab.
 
-- Use the Data Migration Service to migrate the database sample data.
-- Create a migration project by using Azure Database Migration Service.
-- Run the migration.
-- Monitor the migration.
+-Data ingestion and transformation using Synapse pipelines and data flows
+-Data Ingestion and transformation using Synapse Spark
+-Analyze data using Synapse Dedicated Pool
+-Analyze data using Serverless pools
+-Data warehouse Optimization
 
+## Intended Audience
 
-### Learning Objectives
-
-Upon completion of this lab, you will be able to:
-
-- Migrate Azure SQL server to Azure SQL Managed Instance
-- Connect to an Azure SQL Managed Instance and SQL server through DMS
-
-### Intended Audience
-
-- Microsoft CSA Team members
+Architects and developers responsible for designinging, building, and troubleshooting  Azure Synapse solutions
