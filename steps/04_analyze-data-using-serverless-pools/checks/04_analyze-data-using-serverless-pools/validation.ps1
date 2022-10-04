@@ -13,3 +13,12 @@ else
 {
     Write-Host "Sql Script nyc_sql not created"
 }
+$sqlscript1 = Get-AzSynapseSqlScript  -WorkspaceName $WorkSpacename -Name sql_create_external_table
+if ($sqlscript1)
+{
+    Write-Host "Sql Script sql_create_external_table created"
+}
+else
+{
+    Write-Host "Sql Script sql_create_external_table not created"
+}
