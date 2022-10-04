@@ -30,6 +30,21 @@ CREATE DATABASE Ldw
 ```
 This collation will provide the optimal performance while reading Parquet and Cosmos DB. If you don't want to specify the database collation, make sure that you specify this collation in the column definition.
 
+### Steps to generate secret key
+   
+   1. In the resource group click on the raw storage account name.
+   
+   2. Select **container** from the left side navigation and click on **Raw**.
+   
+   3. Select **Shared access tokens** from the left side navigation and click on **Generate SAS token and URL**.
+     
+   ![sas](./assets/sas.JPG "sas")
+     
+   4. Copy **"Blob SAS token"** which can be used as secret key.
+     
+   ![token](./assets/token.JPG "token")
+ 
+
 ### Configure data sources and formats
 
 As a prerequisite, you will need to create a master key in the database:
@@ -37,18 +52,7 @@ As a prerequisite, you will need to create a master key in the database:
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
 ```
-### Steps to generate secret key
-   
-   a. In the resource group click on the raw storage account name.
-   b. Select **container** from the left side navigation and click on **Raw**.
-   c. Select **Shared access tokens** from the left side navigation and click on **Generate SAS token and URL**
-     
-           ![sas](./assets/sas.JPG "sas")
-     
-   d. Copy **"Blob SAS token"** which can be used as secret key
-     
-           ![token](./assets/token.JPG "token")
-      
+
 1. You need to configure data source and specify file format of remotely stored data, this will require to create a SCOPED CREDENTIAL
 
      Replace <secret-key> place holder with secret key generated above
