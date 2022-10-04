@@ -652,7 +652,7 @@ ax2.set_ylim(0,30)
 plt.suptitle('')
 plt.show()
 ```
-![visual](./assets/v3.JPG =100x20 "visual")
+![visual](./assets/v3.JPG "visual")
 
 5. Last, we want to understand the relationship between the fare amount and the tip amount. Based on the results, we can see that there are several observations where people don't tip. However, we also see a positive relationship between the overall fare and tip amounts.
 
