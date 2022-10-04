@@ -287,6 +287,24 @@ Select Variable to create below pipeline variables
   21. Go to the Monitor tab located in the left sidebar. You see a pipeline run that is triggered by a manual trigger.
 
   ![pipeline](./assets/01-Trigger.jpg "Trigger pipeline")  
+  
+  ## Run Pipelines for Loading Dimensions and Fact
+
+1. Select **_Integrate_** and execute pipelines in below mentioned sequence.
+
+- IndependentDimensions
+
+## DataFlow
+ ![pipeline](./assets/01_independent.jpg "IndependentDimensions pipeline")  
+
+- DependentDimensions
+
+## DataFlow
+ ![pipeline](./assets/01_dependent.jpg "IndependentDimensions pipeline")  
+ 
+2. To run pipeline,  click on **_Debug_** or select **_Trigger Now_** option under **_Add Trigger_**
+
+![RunPipelines](./assets/11-1_execute_pipelines.jpg "Run Pipelines")
 
 ### Steps to create Dataflow – FactSales_DF
 
@@ -353,18 +371,6 @@ Select Variable to create below pipeline variables
 ![validate](./assets/10-15_validate.jpg "validate")
 
 17. Once dataflow has been validated **_Publish_** dataflow.
-
-## Run Pipelines for Loading Dimensions and Fact
-
-1. Select **_Integrate_** and execute pipelines in below mentioned sequence.
-
-- IndependentDimensions
-- DependentDimensions
-- FactTables 
-
-2. To run pipeline,  click on **_Debug_** or select **_Trigger Now_** option under **_Add Trigger_**
-
-![RunPipelines](./assets/11-1_execute_pipelines.jpg "Run Pipelines")
 
 ## Relationship between dimension and fact tables
 
