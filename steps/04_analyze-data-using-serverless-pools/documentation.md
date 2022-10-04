@@ -65,8 +65,6 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
 
 2. External file formats define the structure of the files stored on external data source.
      
-     Run
-     
      ```sql
      CREATE EXTERNAL FILE FORMAT ParquetFormat WITH (  FORMAT_TYPE = PARQUET );
      GO
