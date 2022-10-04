@@ -110,7 +110,7 @@ The database schemas are useful for grouping the objects and defining permission
 Once you define the schemas, you can create external tables that are referencing the files. The following external table is referencing the Holiday parquet file placed in the Azure storage:
 
 ```sql
-create external table holiday_adls.cases (
+create external table holiday_adls.holiday (
     countryOrRegion          varchar(256),
     holidayName              varchar(256),
     normalizeHolidayName     varchar(256),
@@ -126,8 +126,13 @@ create external table holiday_adls.cases (
 ```
 ### Validate External Table created
 
-1. Goto 
+1. Goto Data Tab --> Workspace --> SQL database
+2. Expand Ldw Database
+3. Expand External tables
+4. Check for **holiday_adls.holiday**    
+5. Right click on **holiday_adls.holiday** and Select Top 100 rows      
 
+    ![et](./assets/et.JPG "External table") 
 
 ## Exercise 2 : SQL Script to run query using Serverless SQL Pool
 
