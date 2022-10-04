@@ -1,11 +1,20 @@
 # Querying data using Synapse Dedicated Pool
 
 ## Description
-Azure Synapse SQL is a big data analytic service that enables you to query and analyze your data using the T-SQL language. 
 Dedicated SQL pool stores data in relational tables with columnar storage. This format significantly reduces the data storage costs, and improves query performance. Once data is stored, you can run analytics at massive scale
 
 ## Prerequisites
-
+  1. Once you open workspace from resource group, click on the **Azure Active Directory** under settings using the left side navigation.
+  
+     ![AdminSetting](./assets/prereq.JPG "Admin Setting")
+  
+  2. Select **_Set Admin_**.
+  
+  3. Enter your userId or name or emailID for search and click **Select**.
+  
+     ![AdminSetting](./assets/prereq2.JPG "Admin Setting")
+  
+  4. Click on **_Save_** .
 
 ## Data Source
 
