@@ -14,7 +14,7 @@ This is a deployment accelerator based on the reference architecture described i
 
 The scope of this deployment accelerator is illustrated in the diagram below.
 
-![Achitecture Components](./Diagrams/ArchitectureWorkloads.png)
+![Achitecture Components](./steps/01_data-ingestion-and-transformation-using-synapse-pipelines-and-dataflows/assets/synapse.JPG)
 
 
 #### Synapse Analytics
@@ -27,5 +27,5 @@ EnterpriseDW                   |Synapse SQL pool           | [DW100](https://azu
 azwksdatalake*suffix*          |Storage account            | [Standard LRS](https://azure.microsoft.com/pricing/details/storage/blobs/)                      | No           |
 azrawdatalake*suffix*          |Storage account            | [Standard GRS](https://azure.microsoft.com/pricing/details/storage/blobs/)                      | No           |
 azcurateddatalake*suffix*      |Storage account            | [Standard GRS](https://azure.microsoft.com/pricing/details/storage/blobs/)                      | No           |
-SynapsePostDeploymentScript    |Deployment Script          | N/A                                                                                             | No           | Deployment script resources will be automatically deleted after 24hs.
+SynapsePostDeploymentScript    |Deployment Script          | N/A                                                                                             | No           | 
 
