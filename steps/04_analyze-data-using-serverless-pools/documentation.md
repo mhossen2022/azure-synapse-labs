@@ -51,14 +51,13 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
       
 1. You need to configure data source and specify file format of remotely stored data, this will require to create a SCOPED CREDENTIAL
 
-Replace <secret-key> place holder with secret key generated above
+     Replace <secret-key> place holder with secret key generated above
 
      ```sql
      CREATE DATABASE SCOPED CREDENTIAL scpCred
      WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
           SECRET = '<secret-key>';
      ```
-
 
 2. External file formats define the structure of the files stored on external data source.
 
