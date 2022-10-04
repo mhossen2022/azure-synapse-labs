@@ -6,6 +6,10 @@ In this tutorial, you will learn how to create a Logical Data Warehouse (LDW) on
 
 LDW is a relational layer built on top of Azure data sources such as Azure Data Lake storage (ADLS), Azure Cosmos DB analytical storage, or Azure Blob storage.
 
+### Data Flow
+
+![dataflow](./assets/DF3.JPG "add sql script")
+
 1. After opening Synapse Studio, navigate to **_Develop_** menu at left side, then select the **"+"** icon and choose SQL script.
      
      ![addSqlScript](./assets/04-add_sql_script.jpg "add sql script")
