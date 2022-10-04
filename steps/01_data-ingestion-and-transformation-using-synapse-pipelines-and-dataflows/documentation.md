@@ -288,6 +288,10 @@ Select Variable to create below pipeline variables
 
   ![pipeline](./assets/01-Trigger.jpg "Trigger pipeline")  
   
+  22. After successfull execution of pipeline, verify loaded data under Data--> Lake database (adworks) --> run select script with New SQL Script option.
+  
+   ![adworks script](./assets/01_LoadSQL.jpg "adworks script")    
+  
   ## Run Pipelines for Loading IndependentDimensions and DependentDimensions tables
 
 1. Select **_Integrate_** and execute pipelines in below mentioned sequence.
@@ -375,6 +379,11 @@ Select Variable to create below pipeline variables
 ![validate](./assets/10-15_validate.jpg "validate")
 
 17. Once dataflow has been validated **_Publish_** dataflow.
+
+ ## Run Pipelines for Loading Fact tables
+
+1. Select **_Integrate_** and execute pipeline - **_FactTables_** .
+2.  After successfull execution of pipeline, verify loaded data under Data--> Lake database (adworkstarget)-->FactSales (Table) --> run select script with New SQL Script option.
 
 ## Relationship between dimension and fact tables
 
