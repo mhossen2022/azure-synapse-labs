@@ -65,11 +65,11 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
 
 2. External file formats define the structure of the files stored on external data source.
 
-   ```sql
-   CREATE EXTERNAL FILE FORMAT ParquetFormat WITH (  FORMAT_TYPE = PARQUET );
-   GO
-   CREATE EXTERNAL FILE FORMAT CsvFormat WITH (  FORMAT_TYPE = DELIMITEDTEXT );
-   ```
+     ```sql
+     CREATE EXTERNAL FILE FORMAT ParquetFormat WITH (  FORMAT_TYPE = PARQUET );
+     GO
+     CREATE EXTERNAL FILE FORMAT CsvFormat WITH (  FORMAT_TYPE = DELIMITEDTEXT );
+     ```
 
 3. Create data source
 Data sources represent connection string information that describes where your data is placed and how to authenticate to your data source.
