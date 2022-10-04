@@ -219,7 +219,13 @@ WITH
 
 # SQL Script to load data using dedicated SQL Pool
 
-In this section, you will use dedicated SQL Pool to load tables using the files stored in the ADLS Gen2 storage.
+In this section, you will use dedicated SQL Pool to load tables using the files stored in the ADLS Gen2 storage by **COPY** Command which Copies data from source to destination
+
+### Benefits
+1. Retrieves data from all files from the folder and all its subfolders. 
+2. Supports multiple locations from the same storage account, separated by comma
+3. Supports Azure Data Lake Storage (ADLS) Gen 2 and Azure Blob Storage. 
+4. Supports CSV, PARQUET, ORC file formats 
 
 ## Steps to Create Script:
 
