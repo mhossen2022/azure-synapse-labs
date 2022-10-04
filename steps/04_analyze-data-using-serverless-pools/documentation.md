@@ -49,9 +49,9 @@ This collation will provide the optimal performance while reading Parquet and Co
 
 As a prerequisite, you will need to create a master key in the database:
 
-```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
-```
+     ```sql
+     CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
+     ```
 
 1. You need to configure data source and specify file format of remotely stored data, this will require to create a SCOPED CREDENTIAL
 
