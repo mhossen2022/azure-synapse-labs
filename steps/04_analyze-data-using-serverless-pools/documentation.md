@@ -53,6 +53,8 @@ This collation will provide the optimal performance while reading Parquet and Co
 
 As a prerequisite, you will need to create a master key in the database:
 
+change database to **Lwd** before executing below scripts.
+
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
  ```
