@@ -626,6 +626,7 @@ ax1.set_ylabel('Counts')
 plt.suptitle('')
 plt.show()
 ```
+![visual](./assets/v1.jpg "visual")
 
 3. Next, we want to understand the relationship between the tips for a given trip and the day of the week. Use Seaborn to create a box plot that summarizes the trends for each day of the week.
 
@@ -637,6 +638,7 @@ ax.set_xlabel('Day of Week')
 ax.set_ylabel('Tip Amount ($)')
 plt.show()
 ```
+![visual](./assets/v2.jpg "visual")
 
 4. Another hypothesis of ours might be that there's a positive relationship between the number of passengers and the total taxi tip amount. To verify this relationship, run the following code to generate a box plot that illustrates the distribution of tips for each passenger count.
 
@@ -650,6 +652,7 @@ ax2.set_ylim(0,30)
 plt.suptitle('')
 plt.show()
 ```
+![visual](./assets/v3.jpg "visual")
 
 5. Last, we want to understand the relationship between the fare amount and the tip amount. Based on the results, we can see that there are several observations where people don't tip. However, we also see a positive relationship between the overall fare and tip amounts.
 
@@ -664,3 +667,4 @@ plt.axis([-2, 80, -2, 20])
 plt.suptitle('')
 plt.show()
 ```
+![visual](./assets/v4.jpg "visual")
