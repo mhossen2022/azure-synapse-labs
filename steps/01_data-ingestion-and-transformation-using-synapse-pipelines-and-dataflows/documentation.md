@@ -389,6 +389,10 @@ Select Variable to create below pipeline variables
 
 ## Relationship between dimension and fact tables
 
+### Data Model
+
+![DataModel](./assets/01_FactSales_datamodel.jpg "Fact sales Data Model")
+
 ### Steps to create relationships between tables :
 
 1) User has to navigate to the synapse workspace.
