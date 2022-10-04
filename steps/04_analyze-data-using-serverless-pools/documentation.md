@@ -8,7 +8,7 @@ LDW is a relational layer built on top of Azure data sources such as Azure Data 
 
 ### Data Flow
 
-![dataflow](./assets/DF3.JPG "add sql script")
+![dataflow](./assets/DF3.JPG "dataflow")
 
 1. After opening Synapse Studio, navigate to **_Develop_** menu at left side, then select the **"+"** icon and choose SQL script.
      
