@@ -1,1 +1,1 @@
-SQL Script to create tables using dedicated SQL Pool
+Datawarehouse optimization and analysis of data using dedicated pools
