@@ -40,14 +40,24 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
 
 1. You need to configure data source and specify file format of remotely stored data, this will require to create a SCOPED CREDENTIAL
 
-Replace secret-key place holder with scret key generated
+Replace <secret-key> place holder with secret key generated (explained below)
 
 ```sql
-CREATE DATABASE SCOPED CREDENTIAL MyCosmosDbAccountCredential
+CREATE DATABASE SCOPED CREDENTIAL scpCred
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
      SECRET = '<secret-key>';
 ```
 ### Steps to generate secret key
+     
+     a. In the resource group click on the raw storage account name.
+     b. Select container from the left side navigation and click on "Raw".
+     c. Select **Shared access tokens** from the left side navigation and click on ** Generate SAS token and URL **
+     
+     ![sas](./assets/sas.JPG "sas")
+     
+     d. Copy "Blob SAS token" which can be used as secret key
+     
+      ![token](./assets/token.JPG "token")
 
 2. External file formats define the structure of the files stored on external data source.
 
@@ -59,9 +69,10 @@ CREATE EXTERNAL FILE FORMAT CsvFormat WITH (  FORMAT_TYPE = DELIMITEDTEXT );
 
 3. Create data source
 Data sources represent connection string information that describes where your data is placed and how to authenticate to your data source.
-
+Replace <rawstorageaccountName> place holder with the Raw strorage account name.
+     
 ```sql
-CREATE EXTERNAL DATA SOURCE ecdc_cases WITH (
+CREATE EXTERNAL DATA SOURCE holiday_data WITH (
     LOCATION = 'https://<rawstorageaccountName>.blob.core.windows.net/raw/',
     CREDENTIAL = scpCred
 );
@@ -73,25 +84,25 @@ Once you set up your data sources, you can use the OPENROWSET function to explor
 ```sql
 select top 10  *
 from openrowset(bulk 'holiday.parquet',
-                data_source = 'ecdc_cases',
+                data_source = 'holiday_data',
                
                 format='parquet') as a
 ```
 
 ### Create external tables on Azure storage
 
-Once you discover the schema, you can create external tables and views on top of your external data sources. The good practice is to organize your tables and views in databases schemas. In the following query you can create a schema where you will place all objects that are accessing ECDC COVID data set in Azure data Lake storage:
+Once you discover the schema, you can create external tables and views on top of your external data sources. The good practice is to organize your tables and views in databases schemas. In the following query you can create a schema where you will place all objects that are accessing Holiday data set in Azure data Lake storage:
 
 ```sql
-create schema ecdc_adls;
+create schema holiday_adls;
 ```
 
 The database schemas are useful for grouping the objects and defining permissions per schema.
 
-Once you define the schemas, you can create external tables that are referencing the files. The following external table is referencing the ECDC COVID parquet file placed in the Azure storage:
+Once you define the schemas, you can create external tables that are referencing the files. The following external table is referencing the Holiday parquet file placed in the Azure storage:
 
 ```sql
-create external table ecdc_adls.cases (
+create external table holiday_adls.cases (
     countryOrRegion          varchar(256),
     holidayName              varchar(256),
     normalizeHolidayName     varchar(256),
@@ -100,7 +111,7 @@ create external table ecdc_adls.cases (
     date                     date
     
 ) with (
-    data_source= ecdc_cases,
+    data_source= holiday_data,
     location = 'holiday.parquet',
     file_format = ParquetFormat
 );   
