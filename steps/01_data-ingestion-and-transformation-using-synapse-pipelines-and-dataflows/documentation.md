@@ -45,6 +45,9 @@ A pipeline contains the logical flow for an execution of a set of activities. In
 ### Dataflows
 Data flows are visually designed data transformations in Azure Synapse Analytics. Data flows allow data engineers to develop data transformation logic without writing code. The resulting data flows are executed as activities within Azure Synapse Analytics pipelines that use scaled-out Apache Spark clusters.
 
+### Dataset
+Integration Dataset is a reference dataset to specify the location and structure of your data within a data store which can be used in your pipeline activities and dataflows.
+
 ## Source Data:
 
 This Lab uses Retail database as source  to quickly implement dataflows, datasets and integrate pipelines and activities for creating Facts and  dimensional tables.
