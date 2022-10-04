@@ -23,6 +23,10 @@ You can access data on ADLS Gen2 with Synapse Spark via the following URL:
  
 This notebook provides examples of how to write the output of Spark jobs directly into an ADLS Gen2 location and how to write the output of Spark jobs directly into an ADLS Gen2 location.
 
+## Data Flow
+
+![dataflow](./assets/DF1.JPG "dataflow")
+
 **Steps for creating notebook:**
 
 1.	In Synapse Studio, under **_Develop_** tab, click on the **_+(add new resource)_**  icon, select **_Notebook_**.
@@ -197,6 +201,10 @@ Synapse has Azure Open Datasets package pre-installed. This notebook provides ex
        - Read Azure Open Dataset
        - Manipulate the data to prepare for further analysis, including column projection, filtering, grouping and joins etc.
        - Create a Spark table to be used in other notebooks for modeling training
+
+## Data Flow
+
+![dataflow](./assets/DF2.JPG "dataflow")
 
 ### Steps for creating a notebook:
 
