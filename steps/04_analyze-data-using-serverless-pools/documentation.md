@@ -47,7 +47,7 @@ This collation will provide the optimal performance while reading Parquet and Co
 
 ### Configure data sources and formats
 
-As a prerequisite, you will need to create a master key in the database:
+     As a prerequisite, you will need to create a master key in the database:
 
      ```sql
      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
