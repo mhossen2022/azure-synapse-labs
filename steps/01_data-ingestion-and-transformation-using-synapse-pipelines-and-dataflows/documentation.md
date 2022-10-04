@@ -310,11 +310,13 @@ Select Variable to create below pipeline variables
 
 ![RunPipelines](./assets/11-1_execute_pipelines.jpg "Run Pipelines")
 
-## Dataflow – FactSales_DF
+## Create Dataflow – FactSales_DF
+
+### Dataflow – FactSales_DF
 
 ![pipeline](./assets/01_FactSales.jpg "FactSales pipeline")  
 
-### Steps to create Dataflow – FactSales_DF
+## Steps to create Dataflow – FactSales_DF
 
 1.	Open FactSales_DF under **_Develop -> DataFlows -> FactSales_DF_**
 
