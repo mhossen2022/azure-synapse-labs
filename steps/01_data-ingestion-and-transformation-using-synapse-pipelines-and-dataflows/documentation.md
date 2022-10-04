@@ -60,6 +60,14 @@ Retail includes the following technical assets
 
 •	Staging and multi-dimensional lake databases
 
+## Create and run pipeline using the Data flow for loading the data to Lake database
+
+In this section, you will use data flow for creating a pipeline for loading data into lake database.
+
+## DataFlow
+
+ ![LoadCSVDataFlow](./assets/01_LoadCSV.jpg "Load CSV to database")
+
 ## Creating Data set from ADLS Gen2 storage
 
 In this section, you will use ADLS Gen2 Storage to create datasets. These datasets will be used further for creating the Data Flows.
@@ -200,10 +208,6 @@ In this section, you will use integration datasets for creating a dataflow for l
  ![Dataflow](./assets/df8.jpg "Create Dataflow")
 
 16. Then click on **Validate** to validate created dataflow. Once dataflow has been validated publish it.
-
-## Create and run pipeline using the Data flow for loading the data to Lake database
-
-In this section, you will use data flow for creating a pipeline for loading data into lake database.
 
 ### Steps to Create Pipeline :
 
