@@ -38,16 +38,16 @@ As a prerequisite, you will need to create a master key in the database:
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
 ```
 ### Steps to generate secret key
+   
+   a. In the resource group click on the raw storage account name.
+   b. Select **container** from the left side navigation and click on **Raw**.
+   c. Select **Shared access tokens** from the left side navigation and click on **Generate SAS token and URL**
      
-     a. In the resource group click on the raw storage account name.
-     b. Select container from the left side navigation and click on "Raw".
-     c. Select **Shared access tokens** from the left side navigation and click on ** Generate SAS token and URL **
+           ![sas](./assets/sas.JPG "sas")
      
-     ![sas](./assets/sas.JPG "sas")
+   d. Copy **"Blob SAS token"** which can be used as secret key
      
-     d. Copy "Blob SAS token" which can be used as secret key
-     
-      ![token](./assets/token.JPG "token")
+           ![token](./assets/token.JPG "token")
       
 1. You need to configure data source and specify file format of remotely stored data, this will require to create a SCOPED CREDENTIAL
 
@@ -61,11 +61,11 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
 
 2. External file formats define the structure of the files stored on external data source.
 
-     ```sql
-     CREATE EXTERNAL FILE FORMAT ParquetFormat WITH (  FORMAT_TYPE = PARQUET );
-     GO
-     CREATE EXTERNAL FILE FORMAT CsvFormat WITH (  FORMAT_TYPE = DELIMITEDTEXT );
-     ```
+   ```sql
+   CREATE EXTERNAL FILE FORMAT ParquetFormat WITH (  FORMAT_TYPE = PARQUET );
+   GO
+   CREATE EXTERNAL FILE FORMAT CsvFormat WITH (  FORMAT_TYPE = DELIMITEDTEXT );
+   ```
 
 3. Create data source
 Data sources represent connection string information that describes where your data is placed and how to authenticate to your data source.
