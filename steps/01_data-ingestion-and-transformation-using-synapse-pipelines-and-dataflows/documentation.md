@@ -42,7 +42,7 @@ Under External connections, select Linked services.
 ### Pipeline
 A pipeline contains the logical flow for an execution of a set of activities. In this lab you are going do an excersize, where it facilitates you to copy CSV files from raw datalake storage and stored into lake database (adworks)
 
-###Dataflows
+### Dataflows
 Data flows are visually designed data transformations in Azure Synapse Analytics. Data flows allow data engineers to develop data transformation logic without writing code. The resulting data flows are executed as activities within Azure Synapse Analytics pipelines that use scaled-out Apache Spark clusters.
 
 ## Source Data:
