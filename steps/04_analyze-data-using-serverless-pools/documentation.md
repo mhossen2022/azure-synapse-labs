@@ -37,16 +37,6 @@ As a prerequisite, you will need to create a master key in the database:
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Azure@123';
 ```
-
-1. You need to configure data source and specify file format of remotely stored data, this will require to create a SCOPED CREDENTIAL
-
-Replace <secret-key> place holder with secret key generated (explained below)
-
-```sql
-CREATE DATABASE SCOPED CREDENTIAL scpCred
-WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-     SECRET = '<secret-key>';
-```
 ### Steps to generate secret key
      
      a. In the resource group click on the raw storage account name.
@@ -58,25 +48,36 @@ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
      d. Copy "Blob SAS token" which can be used as secret key
      
       ![token](./assets/token.JPG "token")
+      
+1. You need to configure data source and specify file format of remotely stored data, this will require to create a SCOPED CREDENTIAL
+
+Replace <secret-key> place holder with secret key generated above
+
+     ```sql
+     CREATE DATABASE SCOPED CREDENTIAL scpCred
+     WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+          SECRET = '<secret-key>';
+     ```
+
 
 2. External file formats define the structure of the files stored on external data source.
 
-```sql
-CREATE EXTERNAL FILE FORMAT ParquetFormat WITH (  FORMAT_TYPE = PARQUET );
-GO
-CREATE EXTERNAL FILE FORMAT CsvFormat WITH (  FORMAT_TYPE = DELIMITEDTEXT );
-```
+     ```sql
+     CREATE EXTERNAL FILE FORMAT ParquetFormat WITH (  FORMAT_TYPE = PARQUET );
+     GO
+     CREATE EXTERNAL FILE FORMAT CsvFormat WITH (  FORMAT_TYPE = DELIMITEDTEXT );
+     ```
 
 3. Create data source
 Data sources represent connection string information that describes where your data is placed and how to authenticate to your data source.
 Replace <rawstorageaccountName> place holder with the Raw strorage account name.
      
-```sql
-CREATE EXTERNAL DATA SOURCE holiday_data WITH (
-    LOCATION = 'https://<rawstorageaccountName>.blob.core.windows.net/raw/',
-    CREDENTIAL = scpCred
-);
-```
+     ```sql
+     CREATE EXTERNAL DATA SOURCE holiday_data WITH (
+         LOCATION = 'https://<rawstorageaccountName>.blob.core.windows.net/raw/',
+         CREDENTIAL = scpCred
+     );
+     ```
 ### Explore your data
 
 Once you set up your data sources, you can use the OPENROWSET function to explore your data. The OPENROWSET function reads content of a remote data source (for example file) and returns the content as a set of rows.
