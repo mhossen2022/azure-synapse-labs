@@ -1,5 +1,3 @@
-# Querying data using Synapse Dedicated Pool
-
 ## Description
 Dedicated SQL pool stores data in relational tables with columnar storage. This format significantly reduces the data storage costs, and improves query performance. Once data is stored, you can run analytics at massive scale
 
