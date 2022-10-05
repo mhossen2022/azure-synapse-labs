@@ -6,15 +6,7 @@
         "Microsoft.Authorization/*/Delete",
         "Microsoft.Authorization/*/Write",
         "Microsoft.Authorization/elevateAccess/Action",
-        "Microsoft.MarketplaceOrdering/*",
-        "Microsoft.Compute/virtualMachines/Write",
-        "Microsoft.Sql/servers/Write",
-        "Microsoft.Compute/disks/Write",
-        "Microsoft.Resources/deploymentScripts/*",
-        "Microsoft.ManagedIdentity/userAssignedIdentities/*",
-        "Microsoft.ContainerInstance/containerGroups/*",
-        "Microsoft.Storage/storageAccounts/fileServices/read",
-        "Microsoft.Storage/storageAccounts/fileServices/shares/read"
+        "Microsoft.MarketplaceOrdering/*"
       ]
     }
   ],
@@ -35,8 +27,8 @@
       }
     }
   },
-  "displayName": "Azure SQL Migration Policy",
-  "description": "This policy restricts what is allowed in the Azure SQL Migration Lab.",
+  "displayName": "Azure Synapse Migration Policy",
+  "description": "This policy restricts what is allowed in the Azure Synapse Lab.",
   "policyRule": {
     "if": {
       "anyOf": [
@@ -64,29 +56,12 @@
     },
     "allowedServices": {
       "value": [
-        "Microsoft.Compute/virtualMachines",
-        "Microsoft.DataMigration/services",
-        "Microsoft.Network/networkInterfaces",
-        "Microsoft.Network/networkSecurityGroups",
-        "Microsoft.Network/publicIPAddresses",
-        "Microsoft.Network/virtualNetworks",
-        "Microsoft.Storage/storageAccounts",
-        "Microsoft.Sql/servers",
-        "Microsoft.Compute/virtualMachines/extensions",
-        "Microsoft.Network/virtualNetworks/subnets",
-        "Microsoft.Compute/disks",
-        "Microsoft.DataMigration/services/projects",
-        "Microsoft.DataMigration/sqlMigrationServices",
-        "Microsoft.Sql/servers/databases",
-        "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
-        "Microsoft.Resources/deploymentScripts",
-        "Microsoft.ContainerInstance/containerGroups",
-        "Microsoft.ManagedIdentity/userAssignedIdentities",
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.Storage/storageAccounts/blobServices",
-        "Microsoft.Storage/storageAccounts/blobServices/containers",
-        "Microsoft.Sql/managedInstances",
-        "Microsoft.Network/routeTables"
+        "Microsoft.Synapse",
+        "Microsoft.Network",
+        "Microsoft.Authorization",
+        "Microsoft.ManagedIdentity",
+        "Microsoft.KeyVault",
+        "Microsoft.Storage"
       ]
     }
   }
