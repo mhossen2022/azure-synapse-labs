@@ -19,6 +19,20 @@ One Azure Active Directory account, either an individual or security group accou
   
   4. Click on **_Save_** .
 
+### Steps to generate secret key(will be used in load data Exercise)
+
+   1. In the resource group click on the raw storage account name. Also note down the raw storage account name for further references
+   
+   2. Select **container** from the left side navigation and click on **Raw**.
+   
+   3. Select **Shared access tokens** from the left side navigation and click on **Generate SAS token and URL**.
+     
+   ![sas](./assets/sas.JPG "sas")
+     
+   4. Copy **"Blob SAS token"** which can be used as secret key.
+     
+   ![token](./assets/token.JPG "token")
+
 ## Exercise
 
 ### Steps to create tables using dedicated SQL Pool with different distributions, partitions and indexes
