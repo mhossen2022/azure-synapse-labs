@@ -19,7 +19,7 @@ One Azure Active Directory account, either an individual or security group accou
   
   4. Click on **_Save_** .
 
-## Data Source
+## Exercise
 
 ### Steps to create tables using dedicated SQL Pool
 
