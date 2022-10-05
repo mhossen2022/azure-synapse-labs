@@ -33,7 +33,7 @@ One Azure Active Directory account, either an individual or security group accou
      
    ![token](./assets/token.JPG "token")
 
-## Exercise
+## Exercise 1
 
 ### Steps to create tables using dedicated SQL Pool with different distributions, partitions and indexes
 
@@ -303,7 +303,9 @@ In this section, you will use dedicated SQL Pool to load tables using the files 
 3. Supports Azure Data Lake Storage (ADLS) Gen 2 and Azure Blob Storage. 
 4. Supports CSV, PARQUET, ORC file formats 
 
-## Steps to Create Script:
+## Exercise 2
+
+### Steps to load data by COPY INTO command using dedicated SQL Pool:
 
 1.  In Workspace open **_Develop_** from the left side navigation.
 
@@ -317,13 +319,14 @@ In this section, you will use dedicated SQL Pool to load tables using the files 
 
   ![renameSQLScript](./assets/2_rename_load_script.JPG "rename script")
 
-5.  Replace the **azrawStorageAccount** placeholder with the **_``Raw storage account``_** name before running the below sql script.
+5.  Replace the **azrawStorageAccount** placeholder with the **_``Raw storage account``_** name before running the below sql script. (ref prerequisite section)
 
     ```sh
     eg. https://azrawdatalakefa256z.dfs.core.windows.net/raw/date.csv
     ```
 	
-6.  For loading the **Date** table run the below query.
+6.  Replace **SAS SECRET KEY** placeholder with **"Blob SAS token"** (ref prerequisite section)
+7.  For loading the **Date** table run the below query.
 
 ``` sql
 COPY INTO [dbo].[Date]
@@ -332,13 +335,14 @@ WITH
 (
     FILE_TYPE = 'CSV',
 	FIELDTERMINATOR = ',',
-	FIELDQUOTE = ''
+	FIELDQUOTE = '',
+    CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<SAS SECRET KEY>')
 )
 OPTION (LABEL = 'COPY : Load [dbo].[Date] - Taxi dataset');
 
 ```
 
-7.  For creating the **Geography** table run the below query.
+8.  For creating the **Geography** table run the below query.
 
 ``` sql
 COPY INTO [dbo].[Geography]
@@ -347,12 +351,13 @@ WITH
 (
     FILE_TYPE = 'CSV',
 	FIELDTERMINATOR = ',',
-	FIELDQUOTE = ''
+	FIELDQUOTE = '',
+    CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<SAS SECRET KEY>')
 )
 OPTION (LABEL = 'COPY : Load [dbo].[Geography] - Taxi dataset');
 ```
 
-8. For creating the **HackneyLicense** table run the below query.
+9. For creating the **HackneyLicense** table run the below query.
 
 ``` sql
 COPY INTO [dbo].[HackneyLicense]
@@ -361,12 +366,13 @@ WITH
 (
     FILE_TYPE = 'CSV',
 	FIELDTERMINATOR = ',',
-	FIELDQUOTE = ''
+	FIELDQUOTE = '',
+    CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<SAS SECRET KEY>')
 )
 OPTION (LABEL = 'COPY : Load [dbo].[HackneyLicense] - Taxi dataset');
 ```
 
-9. For creating the **Medallion** table run the below query.
+10. For creating the **Medallion** table run the below query.
 
 ``` sql
 COPY INTO [dbo].[Medallion]
@@ -375,11 +381,12 @@ WITH
 (
     FILE_TYPE = 'CSV',
 	FIELDTERMINATOR = ',',
-	FIELDQUOTE = ''
+	FIELDQUOTE = '',
+    CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<SAS SECRET KEY>')
 )
 OPTION (LABEL = 'COPY : Load [dbo].[Medallion] - Taxi dataset');
 ```
-10. For creating the **Time** table run the below query.
+11. For creating the **Time** table run the below query.
 
 ``` sql
 COPY INTO [dbo].[Time]
@@ -388,12 +395,13 @@ WITH
 (
     FILE_TYPE = 'CSV',
 	FIELDTERMINATOR = ',',
-	FIELDQUOTE = ''
+	FIELDQUOTE = '',
+    CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<SAS SECRET KEY>')
 )
 OPTION (LABEL = 'COPY : Load [dbo].[Time] - Taxi dataset');
 ```
 
-11. For creating the **Trip** table run the below query.
+12. For creating the **Trip** table run the below query.
 
 ``` sql
 COPY INTO [dbo].[Trip]
@@ -402,12 +410,13 @@ WITH
 (
    FILE_TYPE = 'CSV',
 	FIELDTERMINATOR = ',',
-	FIELDQUOTE = ''
+	FIELDQUOTE = '',
+    CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<SAS SECRET KEY>')
 )
 OPTION (LABEL = 'COPY : Load [dbo].[Trip] - Taxi dataset');
 ```
 
-12. For creating the **Weather** table run the below query.
+13. For creating the **Weather** table run the below query.
 
 ``` sql
 COPY INTO [dbo].[Weather]
@@ -416,12 +425,13 @@ WITH
 (
     FILE_TYPE = 'CSV',
 	FIELDTERMINATOR = ',',
-	FIELDQUOTE = ''
+	FIELDQUOTE = '',
+    CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<SAS SECRET KEY>')
 	
 )
 OPTION (LABEL = 'COPY : Load [dbo].[Weather] - Taxi dataset');
 ```
-13. Publish the script for future reference.
+14. Publish the script for future reference.
  
 ## Validate loading data
 
