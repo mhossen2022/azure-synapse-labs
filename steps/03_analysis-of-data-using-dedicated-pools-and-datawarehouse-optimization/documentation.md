@@ -21,7 +21,7 @@ One Azure Active Directory account, either an individual or security group accou
 
 ## Exercise
 
-### Steps to create tables using dedicated SQL Pool
+### Steps to create tables using dedicated SQL Pool with different distributions, partitions and indexes
 
 In this section, you will use dedicated SQL Pool to create tables.
 
@@ -29,20 +29,84 @@ In this section, you will use dedicated SQL Pool to create tables.
 
 1.  In Synapse studio open **_Develop_** from the left side navigation.
 
-3.  Click on  **SQL Script** to open new sql script file.
+2.  Click on  **SQL Script** to open new sql script file.
 
     ![openSQLScript](./assets/1_openSQLScript.JPG "Select resource groups")
 
 3.  In the properties section rename the script to **_``create_table_dedicated``_** .
 
-5.  Select the **_EnterpriseDW_** from the **_Connect to_** dropdown.
+4.  Select the **_EnterpriseDW_** from the **_Connect to_** dropdown.
 
     ![openSQLScript](./assets/3_renameScript.JPG "rename sql script")
 
-5.   For creating the **Date** table , run the below query.
-   
-     
-   ``` sql
+## Distributions
+
+### Round-robin distributed
+Distributes table rows evenly across all distributions at random.
+
+5.  For creating the **Geography** table using Round-robin distribution run the below query.
+
+``` sql
+CREATE TABLE [dbo].[Geography]
+(
+    [GeographyID] int NOT NULL,
+    [ZipCodeBKey] varchar(10) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [County] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [City] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [State] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [Country] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [ZipCode] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
+WITH
+(
+    DISTRIBUTION = ROUND_ROBIN,
+    CLUSTERED COLUMNSTORE INDEX
+);
+```
+### Hash distributed
+Distributes table rows across the Compute nodes by using a deterministic hash function to assign each row to one distribution.
+
+6. For creating the **HackneyLicense** table using Hash distribution run the below query
+
+``` sql
+CREATE TABLE [dbo].[HackneyLicense]
+(
+    [HackneyLicenseID] int NOT NULL,
+    [HackneyLicenseBKey] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [HackneyLicenseCode] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
+WITH
+(
+    DISTRIBUTION = HASH([HackneyLicenseID]),
+    CLUSTERED COLUMNSTORE INDEX
+);
+```
+### Replicated distributed
+Full copy of table accessible on each distribution.
+
+7. For creating the **Medallion** table using Replicate distribution run the below query
+
+``` sql
+CREATE TABLE [dbo].[Medallion]
+(
+    [MedallionID] int NOT NULL,
+    [MedallionBKey] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [MedallionCode] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
+WITH
+(
+    DISTRIBUTION = REPLICATE,
+    CLUSTERED COLUMNSTORE INDEX
+);
+```
+## Partitions
+Table partitions divide data into smaller groups In most cases, partitions are created on a date column Supported on all table types
+#### RANGE RIGHT – Used for time partitions
+#### RANGE LEFT – Used for number partitions
+
+8.   For creating the **Date** table using RANGE RIGHT partition run the below query.
+
+``` sql
 CREATE TABLE [dbo].[Date]
 (
     [DateID] int NOT NULL,
@@ -81,62 +145,28 @@ CREATE TABLE [dbo].[Date]
 WITH
 (
     DISTRIBUTION = ROUND_ROBIN,
-    CLUSTERED COLUMNSTORE INDEX
+    CLUSTERED COLUMNSTORE INDEX,
+    PARTITION (
+[Date] RANGE RIGHT FOR VALUES (
+'2000-01-01', '2001-01-01', '2002-01-01',
+'2003-01-01', '2004-01-01', '2005-01-01',
+'2006-01-01', '2007-01-01', '2008-01-01',
+'2009-01-01', '2010-01-01', '2011-01-01',
+'2012-01-01', '2013-01-01', '2014-01-01',
+'2015-01-01'
+)
+)
 );
 
   ```
-6.  For creating the **Geography** table run the below query.
+## Indexes
+### Clustered Columnstore index (Default Primary)
+Highest level of data compression and Best overall query performance. 
+### Nonclustered indexes (Secondary)
+Enable ordering of multiple columns in a table, Allows multiple nonclustered on a single table, Can be created on any of the above primary indexes,
+More performant lookup queries
 
-``` sql
-CREATE TABLE [dbo].[Geography]
-(
-    [GeographyID] int NOT NULL,
-    [ZipCodeBKey] varchar(10) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-    [County] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-    [City] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-    [State] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-    [Country] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-    [ZipCode] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
-)
-WITH
-(
-    DISTRIBUTION = ROUND_ROBIN,
-    CLUSTERED COLUMNSTORE INDEX
-);
-```
-
-7. For creating the **HackneyLicense** table run the below query
-
-``` sql
-CREATE TABLE [dbo].[HackneyLicense]
-(
-    [HackneyLicenseID] int NOT NULL,
-    [HackneyLicenseBKey] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-    [HackneyLicenseCode] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
-)
-WITH
-(
-    DISTRIBUTION = ROUND_ROBIN,
-    CLUSTERED COLUMNSTORE INDEX
-);
-```
-
-8. For creating the **Medallion** table run the below query
-
-``` sql
-CREATE TABLE [dbo].[Medallion]
-(
-    [MedallionID] int NOT NULL,
-    [MedallionBKey] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-    [MedallionCode] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
-)
-WITH
-(
-    DISTRIBUTION = ROUND_ROBIN,
-    CLUSTERED COLUMNSTORE INDEX
-);
-```
-9. For creating the **Time** table run the below query
+9. For creating the **Time** table using Clustered Columnstore index and Nonclustered indexes run the below query
 
 ``` sql
 CREATE TABLE [dbo].[Time]
@@ -156,8 +186,13 @@ WITH
     DISTRIBUTION = ROUND_ROBIN,
     CLUSTERED COLUMNSTORE INDEX
 );
+
+CREATE INDEX HourNumberIndex ON Time(HourNumber);
 ```
-10. For creating the **Trip** table run the below query
+### Clustered index (Primary)
+Performant for looking up a single to few rows
+
+10. For creating the **Trip** table using clustered index run the below query
 
 ``` sql
 CREATE TABLE [dbo].[Trip]
@@ -189,10 +224,13 @@ CREATE TABLE [dbo].[Trip]
 WITH
 (
     DISTRIBUTION = ROUND_ROBIN,
-    CLUSTERED COLUMNSTORE INDEX
+    CLUSTERED INDEX (MedallionID)
 );
 ```
-11. For creating the **Weather** table run the below query
+### Heap (Primary)
+Faster loading and landing temporary data and Best for small lookup tables
+
+11. For creating the **Weather** table using Heap run the below query
 
 ``` sql
 CREATE TABLE [dbo].[Weather]
@@ -205,7 +243,7 @@ CREATE TABLE [dbo].[Weather]
 WITH
 (
     DISTRIBUTION = ROUND_ROBIN,
-    CLUSTERED COLUMNSTORE INDEX
+    HEAP
 );
 ```
 12. Publish the script for future references. 
@@ -221,6 +259,25 @@ WITH
 
   ![TablesCreated](./assets/2_validateTablesCreated.JPG "Select resource groups")
 
+## Distributed table design recommendations
+
+### Hash Distribution
+Large fact tables exceeding several GBs with frequent inserts should use a hash distribution.
+
+### Round Robin Distribution
+Potentially useful tables created from raw input and Temporary staging tables used in data preparation.
+
+### Replicated Tables
+Lookup tables that range in size from 100’s MBs to 1.5 GBs should be replicated. Works best when table size is less than 2 GB compressed.
+
+## Choosing the right index
+1. Clustered Columnstore indexes (CCI) are best for fact tables.
+2. CCI offer the highest level of data compression and best query performance for tables with over 100 million rows.
+3. Heap tables are best for small lookup tables and recommended for tables with less than 100 million rows.
+4. Clustered Indexes may outperform CCI when very few rows need to be retrieved quickly.
+5. Add non-clustered indexes to improve performance for less selective queries
+6. Each additional index added to a table increases storage space required and processing time during data loads.
+7. Speed load performance by staging data in heap tables and temporary tables prior to running transformations.
 
 # SQL Script to load data using dedicated SQL Pool
 
