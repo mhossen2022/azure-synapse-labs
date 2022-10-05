@@ -2,6 +2,11 @@
 Dedicated SQL pool stores data in relational tables with columnar storage. This format significantly reduces the data storage costs, and improves query performance. Once data is stored, you can run analytics at massive scale
 
 ## Prerequisites
+There are two administrative accounts (**SQL admin username** and **SQL Active Directory admin**) that act as administrators.
+#### SQL Active Directory admin
+One Azure Active Directory account, either an individual or security group account, can also be configured as an administrator. It's optional to configure an Azure AD administrator, but an Azure AD administrator must be configured if you want to use Azure AD accounts to connect to Synapse SQL.
+1. The Azure Active Directory admin account controls access to dedicated SQL pools, while Synapse RBAC roles are used to control access to serverless pools, for example, the Synapse Administrator role. Changing the Azure Active Directory administrator account will only affect the account's access to dedicated SQL pools.
+
   1. Once you open workspace from resource group, click on the **Azure Active Directory** under settings using the left side navigation.
   
      ![AdminSetting](./assets/prereq.JPG "Admin Setting")
