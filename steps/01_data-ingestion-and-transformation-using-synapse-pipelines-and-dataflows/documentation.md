@@ -12,10 +12,6 @@ Using dimensional and muli-dimensional pipelines data will be transformed into a
 
    ![The Synapse Workspace is highlighted](./assets/01_Synapse.JPG "Select the synapse workspace")  
    
-3.	To Set Azure Active Directory admin,  open workspace and click on the Azure Active Directory under settings using the left side navigation
-
- ![setadmin](./assets/01_setadmin.JPG "set admin")
- 
 3. In the  **_Overview_** section of synapseworkspace select **_Open_** to open synapse studio.
 
   ![ws](./assets/2_open_ws.jpg "open WS")
@@ -30,6 +26,8 @@ Using dimensional and muli-dimensional pipelines data will be transformed into a
   
   ### Grant Storage Access
 This lab automatically grant workspace identity data access to the workspace Data Lake Storage Gen2 account, using the Storage Blob Data Contributor role. 
+
+## Brief description of the topics covered in lab exercise
 
 ### Linked Services
 In Azure Synapse Analytics, a linked service is where you define your connection information to other services.
@@ -60,7 +58,7 @@ Retail includes the following technical assets
 
 •	Staging and multi-dimensional lake databases
 
-## Create and run pipeline using the Data flow for loading the data to Lake database
+## Exercise 1 : Create and run pipeline using the Data flow for loading the data to Lake database
 
 In this section, you will use data flow for creating a pipeline for loading data into lake database.
 
@@ -68,11 +66,11 @@ In this section, you will use data flow for creating a pipeline for loading data
 
  ![LoadCSVDataFlow](./assets/01_LoadCSV.jpg "Load CSV to database")
 
-## Creating Data set from ADLS Gen2 storage
+## Step 1 : Creating Data set from ADLS Gen2 storage
 
 In this section, you will use ADLS Gen2 Storage to create datasets. These datasets will be used further for creating the Data Flows.
 
-### Steps to create Dataset - raw :
+### Step 1a : Steps to create Dataset - raw :
 
 1.	Go to the *__Data__* -- > Select *__Linked__* -- > select "_+_" (plus icon)--> Select *__Integrated dataset__* . It will open New integration dataset.
 
@@ -107,7 +105,7 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
     ![setConnections](./assets/07-raw-set-connections.jpg "set connections")
 
 
-### Steps to Create Dataset - adworksraw :
+### Step 1b : Steps to Create Dataset - adworksraw :
 
 1.	Go to *__Data__* -- > Select *__Linked__* -- >select "_+_" (plus icon)--> Select *__Integrated dataset__* . It will open New integration dataset.
     
@@ -145,7 +143,7 @@ In this section, you will use ADLS Gen2 Storage to create datasets. These datase
     
     ![setConnections](./assets/07-adwork-set-connections.jpg "set connections")
 
-## Create Dataflow using the integration datasets
+## Step 2 : Create Dataflow using the integration datasets
 
 In this section, you will use integration datasets for creating a dataflow for loading data into lake database.
 
@@ -209,7 +207,7 @@ In this section, you will use integration datasets for creating a dataflow for l
 
 16. Then click on **Validate** to validate created dataflow. Once dataflow has been validated publish it.
 
-### Steps to Create Pipeline :
+### Step 3 : Steps to Create Pipeline :
 
   1. Go to the Integrate tab. Select the **+** plus icon next to the pipelines header and select Pipeline.
   2. In the Properties settings page of the pipeline, enter **_``Load_CSV_data_to_adworks``_** for Name.
@@ -292,31 +290,31 @@ Select Variable to create below pipeline variables
   
    ![adworks script](./assets/01_LoadSQL.jpg "adworks script")    
   
-  ## Run Pipelines for Loading IndependentDimensions and DependentDimensions tables
+  ## Exercise 2 : Run Pipelines for Loading IndependentDimensions and DependentDimensions tables
 
 1. Select **_Integrate_** and execute pipelines in below mentioned sequence.
 
 - IndependentDimensions
 
-## DataFlow to load IndependentDimensions
+## Step 1 : DataFlow to load IndependentDimensions
  ![pipeline](./assets/01_independent.jpg "IndependentDimensions pipeline")  
 
 - DependentDimensions
 
-## DataFlow to load DependentDimensions
+## Step 2 : DataFlow to load DependentDimensions
  ![pipeline](./assets/01_dependent.jpg "dependentDimensions pipeline")  
  
 2. To run pipeline,  click on **_Debug_** or select **_Trigger Now_** option under **_Add Trigger_**
 
 ![RunPipelines](./assets/11-1_execute_pipelines.jpg "Run Pipelines")
 
-## Create Dataflow – FactSales_DF
+## Exercise 3 : Create Dataflow – FactSales_DF
 
 ### Dataflow – FactSales_DF
 
 ![pipeline](./assets/01_FactSales.jpg "FactSales pipeline")  
 
-## Steps to create Dataflow – FactSales_DF
+## Step 1 : Steps to create Dataflow – FactSales_DF
 
 1.	Open FactSales_DF under **_Develop -> DataFlows -> FactSales_DF_**
 
@@ -382,12 +380,12 @@ Select Variable to create below pipeline variables
 
 17. Once dataflow has been validated **_Publish_** dataflow.
 
- ## Run Pipelines for Loading Fact tables
+ ## Step 2 : Run Pipelines for Loading Fact tables
 
 1. Select **_Integrate_** and execute pipeline - **_FactTables_** .
 2.  After successfull execution of pipeline, verify loaded data under Data--> Lake database (adworkstarget)-->FactSales (Table) --> run select script with New SQL Script option.
 
-## Relationship between dimension and fact tables
+## Exercise 4 : Relationship between dimension and fact tables
 
 ### Data Model
 
