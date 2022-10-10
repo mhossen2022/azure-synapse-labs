@@ -346,7 +346,7 @@ Select Variable to create below pipeline variables
 
 ![lookup](./assets/10-08_lookup.jpg "lookup")
 
-8.	Select  Lookup stram as **_``ResellerCustomerSelect``_** from dropdown and add lookup condition as **_``ResellerID == ResellerId_lookup``_**
+8.	Select  Lookup stream as **_``ResellerCustomerSelect``_** from dropdown and add lookup condition as **_``ResellerID == ResellerId_lookup``_**
 
 ![lookupStream](./assets/10-09_lookup_stream.jpg "lookup stream")
 
